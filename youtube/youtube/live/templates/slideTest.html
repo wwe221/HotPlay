@@ -10,7 +10,9 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <style>
-    .container {}
+    .container {
+        
+    }
 
     .w-30 {
         margin: auto;
@@ -20,7 +22,7 @@
 </style>
 
 <body>
-    <p>
+    <p class="font-weight-bold">
         근데 꼭 방송들을 db에 넣어야 하나?
         정렬할때는 굳이 필요 없을 듯
         근데 채널돌리기 할때는 꼭 필요해
@@ -119,7 +121,7 @@
                     $('.youtube').append(data);
                 },
                 error: function (data) {
-                    alert("삭제 실패");
+                    alert("youtube fail");
                 }
             })
             $.ajax({
@@ -133,7 +135,7 @@
                     $('.twitch').append(data);
                 },
                 error: function (data) {
-                    alert("삭제 실패");
+                    alert("twitch fail");
                 }
             })
             $.ajax({
@@ -147,8 +149,7 @@
                     $('.afreeca').append(data);
                 },
                 error: function (data) {
-                    alert("삭제 실패");
-                }
+                    alert("afreeca fail");                }
             })
         });
     </script>

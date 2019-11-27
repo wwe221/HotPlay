@@ -42,14 +42,18 @@ def getYoutube():
         embed = f'{embed}{key[1]}'
         l = (f"https://www.youtube.com{tmp.select_one('.yt-lockup-title a')['href']}")        
         c = (tmp.select_one('.yt-user-name').text)
-        v = (tmp.select_one('ul .yt-lockup-meta-info li').text)        
+        vs = (tmp.select_one('ul .yt-lockup-meta-info li').text).split('명')
+        v =vs[0]
+        if len(t) > 20:
+            text_over_flag= 1
         bang = {
             'title':t,
             'embed':embed,
             'link':l,
             'channel':c,
             'viewer':v,
-            'img':img
+            'img':img,
+            'tof':text_over_flag
         }
         lives.append(bang)
     return lives
@@ -79,6 +83,8 @@ def getTwitch():
         total_views = tmp['channel']['views']
         now_views = tmp['viewers']
         followers = tmp['channel']['followers']
+        if len(title) > 20:
+            text_over_flag= 1
         bang = {            
             'title':title,
             'embed':u,
@@ -86,11 +92,12 @@ def getTwitch():
             'channel':c,
             'viewer':now_views,
             'img':thumbnail,
+            'tof':text_over_flag,
         }
         lives.append(bang)    
     return lives
 def getAfreeca():
-    path ='C:/chromedriver'
+    path ='Y:/chromedriver'
     url = "http://www.afreecatv.com/"
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
@@ -112,6 +119,8 @@ def getAfreeca():
         thumbnail = tmp.select_one('.thumb img')['src']
         channel = tmp.select_one('.nick').text
         link = tmp.select_one('.box_link')['href']
+        if len(title) > 20:
+            text_over_flag= 1
         bang = {
             'title':title,
             'embed':link,
@@ -119,6 +128,7 @@ def getAfreeca():
             'channel':channel,
             'viewer':viewer,
             'img':thumbnail,
+            'tof':text_over_flag,
         }
         lives.append(bang)
     return lives

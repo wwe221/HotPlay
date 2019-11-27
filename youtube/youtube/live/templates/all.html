@@ -1,29 +1,23 @@
 <tbody>
     {% for tmp in lives %}
     <tr>
-        <!-- <td>
-            <img src="{{tmp.img}}">
-        </td>
-        <td>
-            {{tmp.title}}
-        </td>
-        <td>
-            {{tmp.link}}
-        </td>
-        <td>
-            {{tmp.channel}}
-        </td>
-        <td>
-            {{tmp.viewer}}
-        </td>  -->
         <td>
             <div class="card" style="width: 20rem;">
+                <!-- onclick="location.href='{{tmp.link}}'" -->
                 <img src="{{tmp.img}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{tmp.title}}</h5>
-                    <p class="card-text">{{tmp.channel}}</p>
-                    <p class="card-text">{{tmp.link}}</p>
-                    <a href="#" class="btn btn-primary">{{tmp.viewer}}</a>
+                <div class="card-body text-left">
+                    <p class="font-weight-bold mb-1">
+                        {% if tmp.tof == 1 %}
+                        {{tmp.title|slice:":20"}}...                          
+                        {% else %}
+                        {{tmp.title}}
+                        {% endif %}
+                    </p>
+                    <p class="text-monospace">{{tmp.channel}}
+                            <span class="font-weight-lighter">{{tmp.viewer}}</span>
+                    </p>
+                    <!-- <p class="card-text">{{tmp.link}}</p> -->
+                    <!-- <a href="#" class="btn btn-primary">{{tmp.viewer}}</a> -->
                 </div>
             </div>
         </td>
