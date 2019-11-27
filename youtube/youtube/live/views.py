@@ -15,7 +15,9 @@ def main(request):
         'lives': data
     }
     return render(request, 'main.html',context)
+def slideTest(request):
 
+    return render(request, 'slideTest.html')
 def allHTML(request):    
     html = getTwitch()
     context ={
@@ -88,7 +90,7 @@ def getTwitch():
         lives.append(bang)    
     return lives
 def getAfreeca():
-    path ='Y:/chromedriver'
+    path ='C:/chromedriver'
     url = "http://www.afreecatv.com/"
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
@@ -110,7 +112,6 @@ def getAfreeca():
         thumbnail = tmp.select_one('.thumb img')['src']
         channel = tmp.select_one('.nick').text
         link = tmp.select_one('.box_link')['href']
-        print(viewer)
         bang = {
             'title':title,
             'embed':link,
@@ -121,3 +122,22 @@ def getAfreeca():
         }
         lives.append(bang)
     return lives
+def ret_youtube(request):
+    lives= getYoutube()
+    context={
+        'lives':lives
+    }
+    return render(request,'all.html',context)
+
+def ret_twitch(request):
+    lives= getTwitch()
+    context={
+        'lives':lives
+    }
+    return render(request,'all.html',context)
+def ret_afreeca(request):
+    lives= getAfreeca()
+    context={
+        'lives':lives
+    }
+    return render(request,'all.html',context)

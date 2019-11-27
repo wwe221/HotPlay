@@ -1,3 +1,32 @@
-{% for tmp in data %}
-    {{tmp}} <br><br><br>
-{% endfor %}
+<tbody>
+    {% for tmp in lives %}
+    <tr>
+        <!-- <td>
+            <img src="{{tmp.img}}">
+        </td>
+        <td>
+            {{tmp.title}}
+        </td>
+        <td>
+            {{tmp.link}}
+        </td>
+        <td>
+            {{tmp.channel}}
+        </td>
+        <td>
+            {{tmp.viewer}}
+        </td>  -->
+        <td>
+            <div class="card" style="width: 20rem;">
+                <img src="{{tmp.img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{tmp.title}}</h5>
+                    <p class="card-text">{{tmp.channel}}</p>
+                    <p class="card-text">{{tmp.link}}</p>
+                    <a href="#" class="btn btn-primary">{{tmp.viewer}}</a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
