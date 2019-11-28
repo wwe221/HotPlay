@@ -3,16 +3,20 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import requests
 import json
+import time
+from .models import Stream
 # Create your views here.
 def main(request):
-    lives= getYoutube()
+    test = getbysele()
+    #lives= getYoutube()
     # context= {
     #     'lives':lives,
     # }    
     # return render(request, 'main.html',context)
     data = getAfreeca()
     context = {
-        'lives': data
+        'lives': data,
+        'test':test
     }
     return render(request, 'main.html',context)
 def slideTest(request):
@@ -24,7 +28,21 @@ def allHTML(request):
         'lives':html
     }
     return render(request, 'twitch.html',context)
-
+def getbysele():
+    url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
+    path ='C:/chromedriver'
+    options = webdriver.ChromeOptions()
+    browser = webdriver.Chrome(path,chrome_options=options)
+    browser.get(url)
+    html = browser.page_source
+    browser.quit()
+    soup = BeautifulSoup(html,'html.parser')
+    primary = soup.select_one('.contents')
+    # item_sctions = primary.select('.ytd-item-section-renderers')
+    # for tmp in item_sctions:
+    #     print(tmp)
+    return soup
+    
 def getYoutube():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'    
     data = requests.get(url).text
@@ -33,6 +51,7 @@ def getYoutube():
     test=html.select('.channels-content-item')
     contents = html.select('.feed-item-main-content')
     lives =[]
+    length = len(test)
     for tmp in test:
         img = tmp.select_one('img')['data-thumb']
         t = (tmp.select_one('.yt-lockup-title a')['title'])
@@ -42,10 +61,30 @@ def getYoutube():
         embed = f'{embed}{key[1]}'
         l = (f"https://www.youtube.com{tmp.select_one('.yt-lockup-title a')['href']}")        
         c = (tmp.select_one('.yt-user-name').text)
-        vs = (tmp.select_one('ul .yt-lockup-meta-info li').text).split('명')
-        v =vs[0]
+        vs = (tmp.select_one('ul .yt-lockup-meta-info li').text)        
+        text_over_flag= 0        
         if len(t) > 20:
-            text_over_flag= 1
+            text_over_flag= 1        
+        if vs[0:2] =='시작':
+            continue
+        if vs[0:2] =='조회':            
+            continue
+        cma = vs.split('명')
+        a = 0
+        for tp in cma[0].split(','):
+            a *=1000
+            a += int(tp)
+        print(a)
+        v = a
+        stream = Stream()        
+        stream.channel_name = c
+        stream.title = t
+        stream.stream_url = l
+        stream.stream_embed_url = embed
+        stream.stream_views = v
+        stream.stream_thumbnail = img
+        stream.platform = 1
+        stream.save()
         bang = {
             'title':t,
             'embed':embed,
@@ -53,10 +92,14 @@ def getYoutube():
             'channel':c,
             'viewer':v,
             'img':img,
-            'tof':text_over_flag
-        }
+            'tof':text_over_flag,
+        }  
         lives.append(bang)
-    return lives
+    context = {
+        'lives':lives,
+        'length':length
+    }
+    return context
 def getTwitch():    
     url = "https://api.twitch.tv/kraken/streams/"
     params ={
@@ -71,6 +114,7 @@ def getTwitch():
     data = requests.get(url, params = params , headers= headers)
     jsons = data.json()['streams']
     lives= []
+    length = len(jsons)
     for tmp in jsons:
         c = tmp['channel']['display_name']
         g = tmp['game']
@@ -86,6 +130,7 @@ def getTwitch():
         text_over_flag= 0
         if len(title) > 20:
             text_over_flag= 1
+            
         bang = {            
             'title':title,
             'embed':u,
@@ -96,10 +141,14 @@ def getTwitch():
             'tof':text_over_flag,
         }
         lives.append(bang)    
-    return lives
+    context = {
+        'lives':lives,
+        'length':length
+    }
+    return context
 def getAfreeca():
-    path ='C:/chromedriver'
     url = "http://www.afreecatv.com/"
+    path ='C:/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
@@ -113,6 +162,7 @@ def getAfreeca():
     onAir = soup.select_one('.onAir')
     lists = onAir.select('li')
     lives=[]
+    length=len(lists)
     for tmp in lists:        
         title = tmp.select_one('.subject').text
         v = tmp.select_one('.viewer').text.split(' ')
@@ -120,8 +170,29 @@ def getAfreeca():
         thumbnail = tmp.select_one('.thumb img')['src']
         channel = tmp.select_one('.nick').text
         link = tmp.select_one('.box_link')['href']
+        text_over_flag= 0    
         if len(title) > 20:
             text_over_flag= 1
+        if vs[0:2] =='시작':
+            continue
+        if vs[0:2] =='조회':            
+            continue
+        cma = vs.split('명')
+        a = 0
+        for tp in cma[0].split(','):
+            a *=1000
+            a += int(tp)
+        print(a)
+        v = a
+        stream = Stream()        
+        stream.channel_name = c
+        stream.title = t
+        stream.stream_url = l
+        stream.stream_embed_url = embed
+        stream.stream_views = v
+        stream.stream_thumbnail = img
+        stream.platform = 1
+        stream.save()
         bang = {
             'title':title,
             'embed':link,
@@ -129,26 +200,39 @@ def getAfreeca():
             'channel':channel,
             'viewer':viewer,
             'img':thumbnail,
-            'tof':text_over_flag,
+            'tof':text_over_flag,            
         }
         lives.append(bang)
-    return lives
+    context = {
+        'lives':lives,
+        'length':length
+    }
+    return context
 def ret_youtube(request):
-    lives= getYoutube()
+    get = getYoutube()
+    lives = get['lives']
+    length = get['length']
     context={
-        'lives':lives
+        'lives':lives,
+        'length':length
     }
     return render(request,'all.html',context)
 
 def ret_twitch(request):
-    lives= getTwitch()
+    get= getTwitch()
+    lives = get['lives']
+    length = get['length']
     context={
-        'lives':lives
+        'lives':lives,
+        'length':length
     }
     return render(request,'all.html',context)
 def ret_afreeca(request):
-    lives= getAfreeca()
+    get= getAfreeca()
+    lives = get['lives']
+    length = get['length']
     context={
-        'lives':lives
+        'lives':lives,
+        'length':length
     }
     return render(request,'all.html',context)
