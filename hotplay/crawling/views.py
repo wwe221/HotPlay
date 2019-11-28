@@ -83,6 +83,7 @@ def getTwitch():
         total_views = tmp['channel']['views']
         now_views = tmp['viewers']
         followers = tmp['channel']['followers']
+        text_over_flag= 0
         if len(title) > 20:
             text_over_flag= 1
         bang = {            
@@ -97,7 +98,7 @@ def getTwitch():
         lives.append(bang)    
     return lives
 def getAfreeca():
-    path ='Y:/chromedriver'
+    path ='C:/chromedriver'
     url = "http://www.afreecatv.com/"
     options = webdriver.ChromeOptions()
     options.add_argument('headless')

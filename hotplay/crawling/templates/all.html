@@ -6,12 +6,12 @@
                 <!-- onclick="location.href='{{tmp.link}}'" -->
                 <img src="{{tmp.img}}" class="card-img-top" alt="...">
                 <div class="card-body text-left">
-                    <p class="font-weight-bold mb-1">
-                        {% if tmp.tof == 1 %}
+                    <p class="font-weight-bold mb-1" data-toggle="tooltip" data-placement="top" title="{{tmp.title}}">
+                    {% if tmp.tof == 1 %}
                         {{tmp.title|slice:":20"}}...                          
-                        {% else %}
+                    {% else %}
                         {{tmp.title}}
-                        {% endif %}
+                    {% endif %}
                     </p>
                     <p class="text-monospace">{{tmp.channel}}
                             <span class="font-weight-lighter">{{tmp.viewer}}</span>

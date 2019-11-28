@@ -5,3 +5,6 @@ import json
 # Create your views here.
 def index(request):
     return render(request, 'index.html') 
+
+def getlives(request):
+    return render(request , 'slide.html')

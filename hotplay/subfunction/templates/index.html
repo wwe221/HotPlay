@@ -1,9 +1,7 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,9 +48,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-
 </head>
-
+{% block stylesheet %}
+{% endblock %}
 <body id="page-top" class="sidebar-toggled">
 
   <!-- Page Wrapper -->
@@ -177,7 +175,6 @@
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-
       <!-- Main Content -->
       <div id="content">
 
@@ -342,7 +339,6 @@
             </li>
 
             <div class="topbar-divider d-none d-sm-block"></div>
-
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -378,17 +374,19 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-
+        <div class="container-fluid">          
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+          
             <h1 class="h3 mb-0 text-gray-800">10초 영상 자리</h1>
-
+            {% block randomBox %}
+            {% endblock %}
           </div>
 
           <!-- Content Row -->
           <div class="row">
             <h1>플랫폼별 영상자리</h1>
+            {% block streamList %}
+            {% endblock %}
           </div>
 
 
