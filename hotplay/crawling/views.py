@@ -30,7 +30,7 @@ def allHTML(request):
     return render(request, 'twitch.html',context)
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='C:/chromedriver'
+    path ='Y:/chromedriver'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -148,7 +148,7 @@ def getTwitch():
     return context
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='C:/chromedriver'
+    path ='Y:/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
@@ -166,7 +166,7 @@ def getAfreeca():
     for tmp in lists:        
         title = tmp.select_one('.subject').text
         v = tmp.select_one('.viewer').text.split(' ')
-        viewer = v[0]
+        vs = v[0]
         thumbnail = tmp.select_one('.thumb img')['src']
         channel = tmp.select_one('.nick').text
         link = tmp.select_one('.box_link')['href']
@@ -185,20 +185,20 @@ def getAfreeca():
         print(a)
         v = a
         stream = Stream()        
-        stream.channel_name = c
-        stream.title = t
-        stream.stream_url = l
-        stream.stream_embed_url = embed
+        stream.channel_name = channel
+        stream.title = title
+        stream.stream_url = link
+        stream.stream_embed_url = link
         stream.stream_views = v
-        stream.stream_thumbnail = img
-        stream.platform = 1
+        stream.stream_thumbnail = thumbnail
+        stream.platform = 2
         stream.save()
         bang = {
             'title':title,
             'embed':link,
             'link':link,   
             'channel':channel,
-            'viewer':viewer,
+            'viewer':vs,
             'img':thumbnail,
             'tof':text_over_flag,            
         }
