@@ -1,29 +1,29 @@
 <tbody>
     <tr>
-            <td>
-                {{length}}
+        <td>
+            {{length}}
 
-            </td>
+        </td>
     </tr>
     {% for tmp in lives %}    
     <tr>
         <td>
             <div class="card" style="width: 20rem;">
-                <!-- onclick="location.href='{{tmp.link}}'" -->
-                <img src="{{tmp.img}}" class="card-img-top" alt="...">
+                <!-- onclick="location.href='{{tmp.stream_url}}'" -->
+                <img src="{{tmp.stream_thumbnail}}" class="card-img-top" alt="...">
                 <div class="card-body text-left">
                     <p class="font-weight-bold mb-1" data-toggle="tooltip" data-placement="top" title="{{tmp.title}}">
                     {% if tmp.tof == 1 %}
-                        {{tmp.title|slice:":20"}}...                          
+                        {{tmp.title|slice:":20"}}...
                     {% else %}
                         {{tmp.title}}
                     {% endif %}
                     </p>
-                    <p class="text-monospace">{{tmp.channel}}
-                            <span class="font-weight-lighter">{{tmp.viewer}}</span>
+                    <p class="text-monospace">{{tmp.channel_name}}
+                        <span class="font-weight-lighter">{{tmp.stream_views}}</span>
                     </p>
-                    <!-- <p class="card-text">{{tmp.link}}</p> -->
-                    <!-- <a href="#" class="btn btn-primary">{{tmp.viewer}}</a> -->
+                    <!-- <p class="card-text">{{tmp.stream_url}}</p> -->
+                    <!-- <a href="#" class="btn btn-primary">{{tmp.stream_views}}</a> -->
                 </div>
             </div>
         </td>

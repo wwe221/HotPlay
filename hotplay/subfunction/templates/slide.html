@@ -18,13 +18,7 @@
                 <iframe class="d-block w-100" width="500" height="300" src="https://www.youtube.com/embed/v5IYlkZEPxA"
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-            </div>
-            <!-- <div class="carousel-item">
-                <iframe class="d-block w-100" width="500" height="300"
-                    src="http://play.afreecatv.com/ehdgkr6283/219030378" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div> -->
+            </div>            
             <div class="carousel-item">
                 <iframe class="d-block w-100" width="500" height="300" src="https://player.twitch.tv/?channel=scump"
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -91,15 +85,15 @@
                 function () { //슬라이드가 이동 할 때 마다.                                 
                     var currentIndex = $('div.active').index() + 1; // 현재 슬라이드
                     var totalIndex = $('.carousel-item').length; // 전체 슬라이드
+                    // 슬라이드 이동 할 때 마다 지금 화면에 녀석을 넣기?  
                 })
-            // 해당 줄(list)을 하나 삭제해야함
             var id = $(this).data('id');
             console.log(id);
             $.ajax({
                 url: '{% url "live:get_youtube" %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
+                    csrfmiddlewaretoken: '{{csrf_token}}'
                 },
                 success: function (data) {
                     $('#youtube-be4').hide()
@@ -113,7 +107,7 @@
                 url: '{% url "live:get_twitch" %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
+                    csrfmiddlewaretoken: '{{csrf_token}}'
                 },
                 success: function (data) {
                     $('#twitch-be4').hide()
@@ -127,7 +121,7 @@
                 url: '{% url "live:get_afreeca" %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
+                    csrfmiddlewaretoken: '{{csrf_token}}'
                 },
                 success: function (data) {
                     $('#afreeca-be4').hide()

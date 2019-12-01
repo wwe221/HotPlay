@@ -42,7 +42,9 @@ def getbysele():
     # for tmp in item_sctions:
     #     print(tmp)
     return soup
-    
+def getAllStream(platform):
+    Streams = Stream.objects.filter(platform=platform)
+    return 
 def getYoutube():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'    
     data = requests.get(url).text
@@ -60,7 +62,7 @@ def getYoutube():
         key = link.split('=')
         embed = f'{embed}{key[1]}'
         l = (f"https://www.youtube.com{tmp.select_one('.yt-lockup-title a')['href']}")        
-        c = (tmp.select_one('.yt-user-name').text)
+        channel = (tmp.select_one('.yt-user-name').text)
         vs = (tmp.select_one('ul .yt-lockup-meta-info li').text)        
         text_over_flag= 0        
         if len(t) > 20:
@@ -74,32 +76,24 @@ def getYoutube():
         for tp in cma[0].split(','):
             a *=1000
             a += int(tp)
-        print(a)
         v = a
-        stream = Stream()        
-        stream.channel_name = c
+        stream = Stream()
+        stream.channel_name = channel
         stream.title = t
         stream.stream_url = l
         stream.stream_embed_url = embed
         stream.stream_views = v
         stream.stream_thumbnail = img
         stream.platform = 1
+        stream.tof=text_over_flag
         stream.save()
-        bang = {
-            'title':t,
-            'embed':embed,
-            'link':l,
-            'channel':c,
-            'viewer':v,
-            'img':img,
-            'tof':text_over_flag,
-        }  
-        lives.append(bang)
-    context = {
-        'lives':lives,
-        'length':length
-    }
-    return context
+        lives.append(channel)      
+    before = Stream.objects.filter(platform=1)
+    for tmp in before:
+        t = tmp.channel_name
+        if not t in lives:
+            tmp.delete()
+    return
 def getTwitch():    
     url = "https://api.twitch.tv/kraken/streams/"
     params ={
@@ -116,7 +110,7 @@ def getTwitch():
     lives= []
     length = len(jsons)
     for tmp in jsons:
-        c = tmp['channel']['display_name']
+        channel = tmp['channel']['display_name']
         g = tmp['game']
         name = tmp['channel']['name']
         logo = tmp['channel']['logo']
@@ -130,22 +124,23 @@ def getTwitch():
         text_over_flag= 0
         if len(title) > 20:
             text_over_flag= 1
-            
-        bang = {            
-            'title':title,
-            'embed':u,
-            'link':u,   
-            'channel':c,
-            'viewer':now_views,
-            'img':thumbnail,
-            'tof':text_over_flag,
-        }
-        lives.append(bang)    
-    context = {
-        'lives':lives,
-        'length':length
-    }
-    return context
+        stream = Stream()        
+        stream.channel_name = channel
+        stream.title = title
+        stream.stream_url = u
+        stream.stream_embed_url = u
+        stream.stream_views = now_views
+        stream.stream_thumbnail = thumbnail
+        stream.platform = 0
+        stream.tof=text_over_flag
+        stream.save() 
+        lives.append(channel)
+    before = Stream.objects.filter(platform=0)
+    for tmp in before:
+        t = tmp.channel_name
+        if not t in lives:
+            tmp.delete()
+    return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
     path ='Y:/chromedriver'
@@ -182,9 +177,8 @@ def getAfreeca():
         for tp in cma[0].split(','):
             a *=1000
             a += int(tp)
-        print(a)
         v = a
-        stream = Stream()        
+        stream = Stream()
         stream.channel_name = channel
         stream.title = title
         stream.stream_url = link
@@ -192,26 +186,20 @@ def getAfreeca():
         stream.stream_views = v
         stream.stream_thumbnail = thumbnail
         stream.platform = 2
+        stream.tof=text_over_flag
         stream.save()
-        bang = {
-            'title':title,
-            'embed':link,
-            'link':link,   
-            'channel':channel,
-            'viewer':vs,
-            'img':thumbnail,
-            'tof':text_over_flag,            
-        }
-        lives.append(bang)
-    context = {
-        'lives':lives,
-        'length':length
-    }
-    return context
+        lives.append(channel)
+    before = Stream.objects.filter(platform=2)
+    for tmp in before:
+        t = tmp.channel_name
+        if not t in lives:
+            tmp.delete()
+    return
 def ret_youtube(request):
-    get = getYoutube()
-    lives = get['lives']
-    length = get['length']
+    getYoutube()
+    stream = Stream.objects.filter(platform=1)
+    lives = stream
+    length = len(stream)
     context={
         'lives':lives,
         'length':length
@@ -219,18 +207,20 @@ def ret_youtube(request):
     return render(request,'all.html',context)
 
 def ret_twitch(request):
-    get= getTwitch()
-    lives = get['lives']
-    length = get['length']
+    getTwitch()
+    stream = Stream.objects.filter(platform=0)
+    lives = stream
+    length = len(stream)
     context={
         'lives':lives,
         'length':length
     }
     return render(request,'all.html',context)
 def ret_afreeca(request):
-    get= getAfreeca()
-    lives = get['lives']
-    length = get['length']
+    getAfreeca()
+    stream = Stream.objects.filter(platform=2)
+    lives = stream
+    length = len(stream)
     context={
         'lives':lives,
         'length':length
