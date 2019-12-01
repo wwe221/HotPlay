@@ -15,12 +15,16 @@
         data-interval="false">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <iframe class="d-block w-100" width="500" height="300" src="https://www.youtube.com/embed/v5IYlkZEPxA"
+                <input type="hidden" id="stream-url-1" value="https://player.twitch.tv/?channel=handongsuk">
+                <img id="thumbnail-1" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_handongsuk-320x180.jpg">
+                <iframe id="stream-1" class="d-block w-100" width="500" height="300" src=""
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-            </div>            
+            </div>           
             <div class="carousel-item">
-                <iframe class="d-block w-100" width="500" height="300" src="https://player.twitch.tv/?channel=scump"
+                <input type="hidden" id="stream-url-2" value="https://www.youtube.com/embed/dTwj7PhpY9M">
+                <img id="thumbnail-2" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_lucia94-320x180.jpg">
+                <iframe id="stream-2"class="d-block w-100" width="500" height="300" src=""
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
@@ -82,10 +86,24 @@
     <script>
         $(function () {
             $('#carouselExampleControls').on('slide.bs.carousel',
-                function () { //슬라이드가 이동 할 때 마다.                                 
-                    var currentIndex = $('div.active').index() + 1; // 현재 슬라이드
-                    var totalIndex = $('.carousel-item').length; // 전체 슬라이드
-                    // 슬라이드 이동 할 때 마다 지금 화면에 녀석을 넣기?  
+                function () { //슬라이드가 이동 시작 , 이전 녀석의 영상을 썸네일로 바꾸고 이동한다.
+                    var cur = $('div.active').index() + 1;
+                    var total = $('.carousel-item').length; 
+                    $('#thumbnail-'+cur).show()
+                    $('#stream-'+cur).attr('src','')               
+                })
+            $('#carouselExampleControls').on('slid.bs.carousel',
+                function () { //슬라이드가 이동 완료 시 썸네일을 영상으로 바꾼다
+                    var cur = $('div.active').index() + 1; // 현재 슬라이드
+                    var total = $('.carousel-item').length; // 전체 슬라이드
+                    var url = $('#stream-url-'+cur).val();
+                    $('#thumbnail-'+cur).hide()
+                    $('#stream-'+cur).attr('src',url)
+                // 슬라이드 이동 할 때 마다 지금 화면에 녀석을 넣기?
+                // 이전 화면은 어떡하냐?
+                // 현재 화면만 영상을 로딩하고
+                // 다음 화면이랑 이전 화면은 주소만 뒤에서 갖고 있다가 불러오는게 좋을 것 같다.
+                // 현재 슬라이드가 되면 iframe 으로 바꾸고, 아니면 url만 어디에 갖고 있으면 되겠군.
                 })
             var id = $(this).data('id');
             console.log(id);
@@ -93,7 +111,7 @@
                 url: '{% url "live:get_youtube" %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}'
+                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
                 },
                 success: function (data) {
                     $('#youtube-be4').hide()
@@ -107,7 +125,7 @@
                 url: '{% url "live:get_twitch" %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}'
+                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
                 },
                 success: function (data) {
                     $('#twitch-be4').hide()
@@ -121,7 +139,7 @@
                 url: '{% url "live:get_afreeca" %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}'
+                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
                 },
                 success: function (data) {
                     $('#afreeca-be4').hide()
