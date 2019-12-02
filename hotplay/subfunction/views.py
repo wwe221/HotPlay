@@ -8,3 +8,6 @@ def index(request):
 
 def getlives(request):
     return render(request , 'slide.html')
+
+def double_screen(request):
+    return render(request, 'double_screen.html')

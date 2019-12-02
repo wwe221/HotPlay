@@ -108,11 +108,12 @@
                 })
             var id = $(this).data('id');
             console.log(id);
+            
             $.ajax({
                 url: '{% url "live:get_slide" %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
+                    csrfmiddlewaretoken: '{{csrf_token}}' 
                 },
                 success: function (data) {
                     $('.carousel-inner').append(data);
@@ -122,10 +123,10 @@
                 }
             })
             $.ajax({
-                url: '{% url "live:get_twitch" %}',
+                url: '{% url "live:get_all" 0 %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
+                    csrfmiddlewaretoken: '{{csrf_token}}'
                 },
                 success: function (data) {
                     $('#twitch-be4').hide()
@@ -136,10 +137,10 @@
                 }
             })
             $.ajax({
-                url: '{% url "live:get_youtube" %}',
+                url: '{% url "live:get_all" 1 %}',
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
+                    csrfmiddlewaretoken: '{{csrf_token}}'
                 },
                 success: function (data) {
                     $('#youtube-be4').hide()
@@ -150,7 +151,7 @@
                 }
             })
             $.ajax({
-                url: '{% url "live:get_afreeca" %}',
+                url: '{% url "live:get_all" 2 %}',
                 method: 'POST',
                 data: {
                     csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해

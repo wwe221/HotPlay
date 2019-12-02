@@ -11,6 +11,6 @@ urlpatterns = [
     path('youtube/',views.ret_youtube,name='get_youtube'),
     path('twitch/',views.ret_twitch,name='get_twitch'),
     path('afreeca/',views.ret_afreeca,name='get_afreeca'),
-    path('getAll/<int:platform>',views.getAllStream,name='get_all'),
+    path('getAll/<int:platform>',views.ret_stream,name='get_all'),
     path('getslide/',views.getslide,name='get_slide'),
 ]

@@ -41,7 +41,7 @@ def allHTML(request):
     return render(request, 'twitch.html',context)
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='C:/chromedriver'
+    path ='Y:/chromedriver'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -53,9 +53,6 @@ def getbysele():
     # for tmp in item_sctions:
     #     print(tmp)
     return soup
-def getAllStream(platform):
-    Streams = Stream.objects.filter(platform=platform)
-    return 
 def getYoutube():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'    
     data = requests.get(url).text
@@ -162,7 +159,7 @@ def getTwitch():
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='C:/chromedriver'
+    path ='Y:/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
@@ -218,6 +215,8 @@ def getAfreeca():
             tmp.delete()
     print("getAfreeca done")
     return
+
+
 def ret_youtube(request):
     stream = Stream.objects.filter(platform=1)
     lives = stream
@@ -247,6 +246,17 @@ def ret_afreeca(request):
     }
     return render(request,'all.html',context)
 
+def ret_stream(request,platform):
+    if platform < 3:
+        stream = Stream.objects.filter(platform=platform)
+    else :
+        stream= Stream.objects.all().order_by('stream_views')
+    length = len(stream)
+    context={
+        'lives':stream,
+        'length':length
+    }
+    return render(request,'all.html',context)
 def getslide(request):    
     stream = Stream.objects.all()
     lives = list(stream)
