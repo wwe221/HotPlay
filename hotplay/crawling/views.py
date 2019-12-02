@@ -1,11 +1,22 @@
 from django.shortcuts import render
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from .models import Stream
 import requests
 import json
 import time
-from .models import Stream
+import random
+import threading
 # Create your views here.
+
+def frequnctly():
+    print("--------@@@@@@@@@@@---------")
+    getYoutube()
+    getTwitch()
+    getAfreeca()   
+    threading.Timer(600,frequnctly).start()
+
+    return
 def main(request):
     test = getbysele()
     #lives= getYoutube()
@@ -30,7 +41,7 @@ def allHTML(request):
     return render(request, 'twitch.html',context)
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='Y:/chromedriver'
+    path ='C:/chromedriver'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -77,7 +88,10 @@ def getYoutube():
             a *=1000
             a += int(tp)
         v = a
-        stream = Stream()
+        if Stream.objects.filter(channel_name=channel).exists():
+            stream = Stream.objects.get(channel_name=channel)
+        else:
+            stream = Stream()   
         stream.channel_name = channel
         stream.title = t
         stream.stream_url = l
@@ -93,6 +107,7 @@ def getYoutube():
         t = tmp.channel_name
         if not t in lives:
             tmp.delete()
+    print("getYoutube done")
     return
 def getTwitch():    
     url = "https://api.twitch.tv/kraken/streams/"
@@ -124,11 +139,14 @@ def getTwitch():
         text_over_flag= 0
         if len(title) > 20:
             text_over_flag= 1
-        stream = Stream()        
+        if Stream.objects.filter(channel_name=channel).exists():
+            stream = Stream.objects.get(channel_name=channel)
+        else:
+            stream = Stream()         
         stream.channel_name = channel
         stream.title = title
         stream.stream_url = u
-        stream.stream_embed_url = u
+        stream.stream_embed_url = f'https://player.twitch.tv/?channel={name}'
         stream.stream_views = now_views
         stream.stream_thumbnail = thumbnail
         stream.platform = 0
@@ -140,10 +158,11 @@ def getTwitch():
         t = tmp.channel_name
         if not t in lives:
             tmp.delete()
+    print("getTwitch done")
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='Y:/chromedriver'
+    path ='C:/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
@@ -158,7 +177,7 @@ def getAfreeca():
     lists = onAir.select('li')
     lives=[]
     length=len(lists)
-    for tmp in lists:        
+    for tmp in lists:
         title = tmp.select_one('.subject').text
         v = tmp.select_one('.viewer').text.split(' ')
         vs = v[0]
@@ -178,7 +197,10 @@ def getAfreeca():
             a *=1000
             a += int(tp)
         v = a
-        stream = Stream()
+        if Stream.objects.filter(channel_name=channel).exists():
+            stream = Stream.objects.get(channel_name=channel)
+        else:
+            stream = Stream()                        
         stream.channel_name = channel
         stream.title = title
         stream.stream_url = link
@@ -194,9 +216,9 @@ def getAfreeca():
         t = tmp.channel_name
         if not t in lives:
             tmp.delete()
+    print("getAfreeca done")
     return
 def ret_youtube(request):
-    getYoutube()
     stream = Stream.objects.filter(platform=1)
     lives = stream
     length = len(stream)
@@ -207,7 +229,6 @@ def ret_youtube(request):
     return render(request,'all.html',context)
 
 def ret_twitch(request):
-    getTwitch()
     stream = Stream.objects.filter(platform=0)
     lives = stream
     length = len(stream)
@@ -217,7 +238,6 @@ def ret_twitch(request):
     }
     return render(request,'all.html',context)
 def ret_afreeca(request):
-    getAfreeca()
     stream = Stream.objects.filter(platform=2)
     lives = stream
     length = len(stream)
@@ -226,3 +246,12 @@ def ret_afreeca(request):
         'length':length
     }
     return render(request,'all.html',context)
+
+def getslide(request):    
+    stream = Stream.objects.all()
+    lives = list(stream)
+    lives = random.sample(lives,10)
+    context ={
+        'lives':lives
+    }
+    return render(request,'carousel_slide.html',context)

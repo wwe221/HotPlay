@@ -8,23 +8,21 @@
         float: left;
         width: 20rem;
     }
+    .slide-thumbnail{
+        width:500px;
+        heught:300px;
+    }
 </style>
 {% endblock %}
 {% block randomBox %}
-    <div id="carouselExampleControls" class="carousel slide" style="width:50%;" data-ride="carousel"
+    <div id="carouselExampleControls" class="container carousel slide" style="width:50%;" data-ride="carousel"
         data-interval="false">
         <div class="carousel-inner">
             <div class="carousel-item active">
+                <input type="hidden" class="idstore" value="1">
                 <input type="hidden" id="stream-url-1" value="https://player.twitch.tv/?channel=handongsuk">
                 <img id="thumbnail-1" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_handongsuk-320x180.jpg">
                 <iframe id="stream-1" class="d-block w-100" width="500" height="300" src=""
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>           
-            <div class="carousel-item">
-                <input type="hidden" id="stream-url-2" value="https://www.youtube.com/embed/dTwj7PhpY9M">
-                <img id="thumbnail-2" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_lucia94-320x180.jpg">
-                <iframe id="stream-2"class="d-block w-100" width="500" height="300" src=""
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
@@ -87,18 +85,21 @@
         $(function () {
             $('#carouselExampleControls').on('slide.bs.carousel',
                 function () { //슬라이드가 이동 시작 , 이전 녀석의 영상을 썸네일로 바꾸고 이동한다.
-                    var cur = $('div.active').index() + 1;
-                    var total = $('.carousel-item').length; 
+                    var cur = $('div.active').find('input')[0]['value'];
+                    var total = $('.carousel-item').length;
+                    $('#stream-'+cur).hide()
                     $('#thumbnail-'+cur).show()
-                    $('#stream-'+cur).attr('src','')               
+                    $('#stream-'+cur).attr('src','')
                 })
             $('#carouselExampleControls').on('slid.bs.carousel',
                 function () { //슬라이드가 이동 완료 시 썸네일을 영상으로 바꾼다
-                    var cur = $('div.active').index() + 1; // 현재 슬라이드
+                    var cur = $('div.active').find('input')[0]['value']; // 현재 슬라이드
+                    console.log(cur)
                     var total = $('.carousel-item').length; // 전체 슬라이드
                     var url = $('#stream-url-'+cur).val();
                     $('#thumbnail-'+cur).hide()
                     $('#stream-'+cur).attr('src',url)
+                    $('#stream-'+cur).show()                    
                 // 슬라이드 이동 할 때 마다 지금 화면에 녀석을 넣기?
                 // 이전 화면은 어떡하냐?
                 // 현재 화면만 영상을 로딩하고
@@ -108,17 +109,16 @@
             var id = $(this).data('id');
             console.log(id);
             $.ajax({
-                url: '{% url "live:get_youtube" %}',
+                url: '{% url "live:get_slide" %}',
                 method: 'POST',
                 data: {
                     csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
                 },
                 success: function (data) {
-                    $('#youtube-be4').hide()
-                    $('.youtube').append(data);
+                    $('.carousel-inner').append(data);
                 },
                 error: function (data) {
-                    alert("youtube fail");
+                    alert("getSlide fail");
                 }
             })
             $.ajax({
@@ -133,6 +133,20 @@
                 },
                 error: function (data) {
                     alert("twitch fail");
+                }
+            })
+            $.ajax({
+                url: '{% url "live:get_youtube" %}',
+                method: 'POST',
+                data: {
+                    csrfmiddlewaretoken: '{{csrf_token}}' // post로 보내주기 때문에 필요해
+                },
+                success: function (data) {
+                    $('#youtube-be4').hide()
+                    $('.youtube').append(data);
+                },
+                error: function (data) {
+                    alert("youtube fail");
                 }
             })
             $.ajax({
