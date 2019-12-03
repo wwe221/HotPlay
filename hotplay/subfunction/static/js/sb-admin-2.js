@@ -4,8 +4,10 @@
   // Toggle the side navigation
   $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
     $("body").toggleClass("sidebar-toggled");
+    // ex) $('p').toggleClass('xyz') p 요소에 xyz 클래스가 없으면 추가하고, 있으면 제거
     $(".sidebar").toggleClass("toggled");
     if ($(".sidebar").hasClass("toggled")) {
+      // hasClass() 특정 클래스가 있는지 찾는다. 있으면 true, 없으면 false 
       $('.sidebar .collapse').collapse('hide');
     };
   });
