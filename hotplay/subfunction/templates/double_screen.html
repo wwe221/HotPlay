@@ -1,0 +1,74 @@
+{% extends 'index.html' %}
+{% block stylesheet %}
+<style>
+    .w-30 {
+        margin: auto;
+        float: left;
+        width: 20rem;
+    }
+    .btn-close{
+        display:none;
+    }
+</style>
+{% endblock %}
+{% block randomBox %}
+<div class="multiscreen row row-cols-2">
+    <span class="col target-screen-left">
+        <iframe id="screen-left" class="d-block w-100" width="500" height="300" src="" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button class="btn btn-warning btn-close" id="btn-close-left" data-target="left">X</button>
+    </span>
+    <span class="col target-screen-right">
+        <iframe id="screen-right" class="d-block w-100" width="500" height="300" src="" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="btn btn-warning btn-close" id="btn-close-right" data-target="right">X</button>
+    </span>
+</div>
+{% endblock %}
+{% block streamList %}
+<div class="container">
+    <span class="w-30 lists">
+        
+    </span>    
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<script src="https://kit.fontawesome.com/41ac120a10.js" crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        $(document).on('click', '.multi-btn' ,function () {
+            var target = $(this).data('target')    
+            $('#screen-'+target).attr('src',$(this).val())
+            $('#btn-close-'+target).show()
+        });
+        $(document).on('click', '.btn-close',function(){
+            var target = $(this).data('target')
+            $('#screen-'+target).attr('src','')
+            $('#btn-close-'+target).hide()
+        });
+    })
+    $(function () {
+        $.ajax({
+            url: '{% url "live:get_all" 3 %}',
+            method: 'POST',
+            data: {
+                csrfmiddlewaretoken: '{{csrf_token}}' 
+            },
+            success: function (data) {
+                $('.lists').append(data);
+                // 데이터를 불러와서 어느쪽 리스트 인지 고르기
+            },
+            error: function (data) {
+                alert("twitch fail");
+            }
+        })
+    });
+</script>
+{% endblock %}

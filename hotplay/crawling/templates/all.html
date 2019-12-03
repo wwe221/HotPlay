@@ -1,0 +1,37 @@
+            {{length}}
+            <div style="float:left;">
+                {% for tmp in lives %}
+                <div class="card">
+                    <!-- onclick="location.href='{{tmp.stream_url}}'" -->
+                    <img style="height:10rem" src="{{tmp.stream_thumbnail}}" class="card-img-top" alt="...">
+                    <div class="card-body text-left">
+                        <div style="height:3rem">
+                            <p class="font-weight-bold mb-1" data-toggle="tooltip" data-placement="top"
+                                title="{{tmp.title}}">
+                                {% if tmp.tof == 1 %}
+                                {{tmp.title|slice:":20"}}...
+                                {% else %}
+                                {{tmp.title}}
+                                {% endif %}
+                            </p>
+                        </div>
+                        <div style="height:3rem; width:10rem">
+                            <p class="text-monospace">{{tmp.channel_name}}
+                                <span class="font-weight-lighter">{{tmp.stream_views}}</span>
+                            </p>
+                        </div>
+                        {% if split >= 1 %}
+                        <div>
+                            <button class="multi-btn btn btn-primary"
+                                aria-label="Radio button for following text input"
+                                value="{{tmp.stream_embed_url}}"data-target="left">왼쪽</button>
+                            <button class="multi-btn btn btn-primary"
+                                aria-label="Radio button for following text input"
+                                value="{{tmp.stream_embed_url}}"data-target="right">오른쪽</button>
+                            <!-- <a href="#" class="btn btn-primary">{{tmp.stream_views}}</a> -->
+                        </div>
+                        {% endif %}
+                    </div>
+                    </div>
+                    {% endfor %}
+                </div>
