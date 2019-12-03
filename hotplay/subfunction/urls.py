@@ -6,4 +6,4 @@ urlpatterns = [
     path('getlives/', boot_views.getlives, name="getlives"),
     path('double_screen/', boot_views.double_screen, name="double_screen"),
 ]
-frequnctly()
+# frequnctly()

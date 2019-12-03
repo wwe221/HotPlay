@@ -99,12 +99,7 @@
                     var url = $('#stream-url-'+cur).val();
                     $('#thumbnail-'+cur).hide()
                     $('#stream-'+cur).attr('src',url)
-                    $('#stream-'+cur).show()                    
-                // 슬라이드 이동 할 때 마다 지금 화면에 녀석을 넣기?
-                // 이전 화면은 어떡하냐?
-                // 현재 화면만 영상을 로딩하고
-                // 다음 화면이랑 이전 화면은 주소만 뒤에서 갖고 있다가 불러오는게 좋을 것 같다.
-                // 현재 슬라이드가 되면 iframe 으로 바꾸고, 아니면 url만 어디에 갖고 있으면 되겠군.
+                    $('#stream-'+cur).show() 
                 })
             var id = $(this).data('id');
             console.log(id);

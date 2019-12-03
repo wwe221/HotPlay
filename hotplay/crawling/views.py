@@ -10,10 +10,11 @@ import threading
 # Create your views here.
 
 def frequnctly():
-    print("--------@@@@@@@@@@@---------")
+    print("....Crawling Stared....")
     getYoutube()
     getTwitch()
-    getAfreeca()   
+    getAfreeca()
+    print("....Crawling End....")
     threading.Timer(600,frequnctly).start()
 
     return
@@ -41,7 +42,7 @@ def allHTML(request):
     return render(request, 'twitch.html',context)
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='Y:/chromedriver'
+    path ='C:/chromedriver'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -159,7 +160,7 @@ def getTwitch():
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='Y:/chromedriver'
+    path ='C:/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
@@ -247,14 +248,20 @@ def ret_afreeca(request):
     return render(request,'all.html',context)
 
 def ret_stream(request,platform):
+    split = 0
     if platform < 3:
-        stream = Stream.objects.filter(platform=platform)
-    else :
-        stream= Stream.objects.all().order_by('stream_views')
+        stream = Stream.objects.filter(platform=platform).order_by('stream_views').reverse()
+    elif platform ==3 :
+        stream = Stream.objects.all().order_by('stream_views').reverse()
+        split = 1
+    elif platform ==4:
+        stream = Stream.objects.all().order_by('stream_views').reverse()[50:100]
+        split = 2
     length = len(stream)
     context={
         'lives':stream,
-        'length':length
+        'length':length,
+        'split':split
     }
     return render(request,'all.html',context)
 def getslide(request):    
