@@ -35,7 +35,8 @@
 
     <!-- Custom styles for this template-->
     <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
-
+<link rel="stylesheet" type="text/css" media="screen"
+     href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
@@ -68,7 +69,28 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">Hot Play <sup>2</sup></div>
             </a>
-
+    <div class="well">
+    <div id="datetimepicker3" class="input-append">
+        <input data-format="hh:mm:ss" id="target_time "type="text"></input>
+        <span class="add-on">
+        <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+        </i>asdf
+        </span>
+        <button id="time_select" class="btn">등록</button>
+    </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        $('#datetimepicker3').datetimepicker({
+        pickDate: false
+        });
+        $('#time_select').click(function(){
+        var picker = $('#datetimepicker3').data('datetimepicker');
+        console.log(picker)
+        {% comment %} http://tarruda.github.io/bootstrap-datetimepicker/ {% endcomment %}
+        })
+    });
+    </script>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -77,7 +99,7 @@
                 <a class="nav-link" href="/">
                     <!-- 나중에 urls.py 정리하고 링크를 index로 걸어주기 -->
                     <i class="fas fa-home"></i>
-                    <span>Main Page</span></a>
+                    <span>Main Page</span></a>                    
             </li>
 
             <!-- Divider -->
@@ -90,21 +112,21 @@
 
             <!-- Nav Item - Twitch TV -->
             <li class="nav-item">
-                <a class="nav-link" href="/twitch">
+                <a class="nav-link" href="{% url 'live:get_platform' 0 %}">
                     <i class="fab fa-twitch"></i>
                     <span>Twitch TV</span></a>
             </li>
 
             <!-- Nav Item - YOUTUBE -->
             <li class="nav-item">
-                <a class="nav-link" href="/youtube">
+                <a class="nav-link" href="{% url 'live:get_platform' 1 %}">
                     <i class="fab fa-youtube"></i>
                     <span>Youtube</span></a>
             </li>
 
             <!-- Nav Item - AfreecaTV -->
             <li class="nav-item">
-                <a class="nav-link" href="/afreeca">
+                <a class="nav-link" href="{% url 'live:get_platform' 2 %}">
                     <i class="fas fa-tv"></i>
                     <span>Afreeca TV</span></a>
             </li>
@@ -193,7 +215,9 @@
 
                     <!-- Topbar Navbar -->
                     <ul id = "topbarbg" class="navbar-nav ml-auto bg-gradient-primary">
-
+<body onload="showClock()">
+    <div id="divClock" class="clock"></div>
+</body>
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
@@ -376,6 +400,8 @@
 
                 </nav>
                 <!-- End of Topbar -->
+                <div class="well">
+  
                 {% block test %}
                 {% endblock test %}
                 <div class = "container-fluid bg-white2">
@@ -443,39 +469,58 @@
         <!-- Page level custom scripts -->
         <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
         <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
-        
+        <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
         <script>
-        var colormode = JSON.parse(localStorage.getItem('darkmode'))
-        {% comment %} dark mode == true {% endcomment %}
-        if (colormode) {
-            $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-            $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-            $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-            $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
-            $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
-            $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
-        } else {
-            $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-            $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-            $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-            $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
-            $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
-            $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
-        }
-
-        $(function(){
-            $('#dark').on('click', function(){
-                var currentMode = JSON.parse(localStorage.getItem('darkmode'));
-                localStorage.setItem('darkmode', !currentMode);
+            var colormode = JSON.parse(localStorage.getItem('darkmode'))
+            function showClock(){
+                var currentDate = new Date();
+                var divClock = document.getElementById("divClock");
+                var msg = "현재 시간:" +currentDate.getHours()+ "시"
+                msg += currentDate.getMinutes()+ "분";
+                msg += currentDate.getSeconds()+ "초";
+                var target = '';
+                target += currentDate.getHours()
+                target += currentDate.getMinutes();
+                target += currentDate.getSeconds();
+                divClock.innerText = msg;
+                {% comment %} setTimeout(showClock,1000); {% endcomment %}
+                localStorage.setItem('target', target);
+                console.log(JSON.parse(localStorage.getItem('target')));
+            }
+            {% comment %} dark mode == true {% endcomment %}
+            if (colormode) {
                 $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
                 $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
                 $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
                 $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
                 $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
                 $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
+            } else {
+                $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
+                $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
+                $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
+            }
+            $(function(){
+                $('#dark').on('click', function(){
+                    var currentMode = JSON.parse(localStorage.getItem('darkmode'));
+                    localStorage.setItem('darkmode', !currentMode);
+                    $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                    $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                    $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                    $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
+                    $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
+                    $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
+                })
             })
-        })
-        
+            
         </script>
 
         {% block script %}
