@@ -23,13 +23,7 @@ asdf
     <div id="carouselExampleControls" class="container carousel slide"  data-ride="carousel"
       data-interval="false">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <input type="hidden" class="idstore" value="1">
-          <input type="hidden" id="stream-url-1" value="https://player.twitch.tv/?channel=handongsuk">
-          <img id="thumbnail-1" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_handongsuk-320x180.jpg">
-          <iframe id="stream-1" class="d-block w-100" width="500" height="300" src="" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -142,11 +136,12 @@ asdf
         $(target).append(data);
       },
       error: function (data) {
-        alert("getSlide fail");
+        alert("getThumbnails fail");
       }
     })
   }
   $(function () {
+    
     var be4 = 0
     var be4url =''
     $('#carouselExampleControls').on('slide.bs.carousel',
@@ -180,6 +175,12 @@ asdf
       },
       success: function (data) {
         $('.carousel-inner').append(data);
+        var first = $(document).find('.carousel-inner div:first')
+        first.addClass('active')
+        var cur = first.find('input')[0]['value'];
+        var url = $('#stream-url-' + cur).val();
+        $('#stream-' + cur).attr('src', url)
+        
       },
       error: function (data) {
         alert("getSlide fail");
@@ -188,6 +189,7 @@ asdf
     get_thumb(0)
     get_thumb(1)
     get_thumb(2)
+    
   });
 </script>
 {% endblock script %}

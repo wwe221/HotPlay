@@ -73,7 +73,11 @@ def getYoutube():
         embed = f'{embed}{key[1]}'
         l = (f"https://www.youtube.com{tmp.select_one('.yt-lockup-title a')['href']}")        
         channel = (tmp.select_one('.yt-user-name').text)
-        vs = (tmp.select_one('ul .yt-lockup-meta-info li').text)        
+        vs = tmp.select_one('ul .yt-lockup-meta-info li')
+        if not vs is None:
+            vs = vs.text
+        else:
+            vs = '0'
         text_over_flag= 0        
         if len(t) > 20:
             text_over_flag= 1        
