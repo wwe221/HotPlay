@@ -12,6 +12,11 @@
     width:500px;
     heught:300px;
 }
+.carousel-btn{
+  width:7rem;
+  margin-bottom:4rem;
+  margin-top:4rem
+}
 {% endblock stylesheet %}
 <!-- Begin Page Content -->
 {% block test %}
@@ -24,11 +29,11 @@
       <div class="carousel-inner">
         
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <a class="carousel-control-prev carousel-btn" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <a class="carousel-control-next carousel-btn" href="#carouselExampleControls" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -163,7 +168,7 @@
         {% comment %} $('#stream-' + cur).show() {% endcomment %}
         {% comment %} $('#stream-' + be4).hide() {% endcomment %}
         $('#stream-' + be4).attr('src', '')
-        $('#stream-' + be4).attr('src', be4url)
+        {% comment %} $('#stream-' + be4).attr('src', be4url) {% endcomment %}
         $('#stream-' + cur).attr('src', url)
       })
     $.ajax({

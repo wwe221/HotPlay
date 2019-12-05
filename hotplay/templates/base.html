@@ -55,7 +55,7 @@
 {% block stylesheet %}
 {% endblock stylesheet %}
 </style>
-<body id="page-top">
+<body id="page-top" onload="showClock()">
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -79,18 +79,7 @@
         <button id="time_select" class="btn">등록</button>
     </div>
     </div>
-    <script type="text/javascript">
-    $(function() {
-        $('#datetimepicker3').datetimepicker({
-        pickDate: false
-        });
-        $('#time_select').click(function(){
-        var picker = $('#datetimepicker3').data('datetimepicker');
-        console.log(picker)
-        {% comment %} http://tarruda.github.io/bootstrap-datetimepicker/ {% endcomment %}
-        })
-    });
-    </script>
+    
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -130,7 +119,7 @@
                     <i class="fas fa-tv"></i>
                     <span>Afreeca TV</span></a>
             </li>
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -182,6 +171,10 @@
                 <button class="rounded-circle border-0" id="sidebarToggle">
                 </button>
             </div>
+            <li>
+            <span id="now_Clock" class="clock"></span>    
+            <span id="target_Clock" class="clock"></span>  
+            </li>
         </ul>
         <!-- End of Sidebar -->
 
@@ -215,9 +208,6 @@
 
                     <!-- Topbar Navbar -->
                     <ul id = "topbarbg" class="navbar-nav ml-auto bg-gradient-primary">
-<body onload="showClock()">
-    <div id="divClock" class="clock"></div>
-</body>
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
@@ -475,22 +465,43 @@
     <script type="text/javascript"
      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
     </script>
+    <script type="text/javascript">
+    $(function() {
+        $('#datetimepicker3').datetimepicker({
+            pickDate: false
+        });
+        $('#time_select').click(function(){
+            var picker = $('#datetimepicker3').data('date');
+            var time = picker.split(':')
+            console.log(time)
+            var target =''
+            time.forEach(function(tmp){
+                target+=tmp
+            })
+            localStorage.setItem('target', target);
+        })
+    });
+    </script>
         <script>
             var colormode = JSON.parse(localStorage.getItem('darkmode'))
             function showClock(){
                 var currentDate = new Date();
-                var divClock = document.getElementById("divClock");
                 var msg = "현재 시간:" +currentDate.getHours()+ "시"
                 msg += currentDate.getMinutes()+ "분";
                 msg += currentDate.getSeconds()+ "초";
-                var target = '';
-                target += currentDate.getHours()
-                target += currentDate.getMinutes();
-                target += currentDate.getSeconds();
-                divClock.innerText = msg;
-                {% comment %} setTimeout(showClock,1000); {% endcomment %}
-                localStorage.setItem('target', target);
-                console.log(JSON.parse(localStorage.getItem('target')));
+                var now = '';
+                now += currentDate.getHours()
+                now += currentDate.getMinutes()
+                now += currentDate.getSeconds();
+                $('#now_Clock').text(msg);
+                setTimeout(showClock,1000);    
+                var target = JSON.parse(localStorage.getItem('target'));
+                $('#target_Clock').text(target)
+                if(target!= 0 && target < now){
+                    var frames = $(document).find('iframe')
+                    frames.attr('src','')
+                    localStorage.setItem('target', 0);
+                }
             }
             {% comment %} dark mode == true {% endcomment %}
             if (colormode) {
