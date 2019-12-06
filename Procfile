@@ -1,1 +1,1 @@
-web: gunicorn hotplay.wsgi --log-file -
+web: gunicorn hotplay/hotplay.wsgi --log-file -
