@@ -12,9 +12,12 @@ import threading
 
 def frequnctly():
     print("....Crawling Stared....")
-    getYoutube()
-    getTwitch()
-    getAfreeca()
+    t1 = threading.Thread(target=getYoutube)
+    t1.start()    
+    t2 = threading.Thread(target=getTwitch)
+    t2.start()    
+    t3 = threading.Thread(target=getAfreeca)
+    t3.start()    
     print("....Crawling End....")
     threading.Timer(600,frequnctly).start()
 
@@ -73,7 +76,11 @@ def getYoutube():
         embed = f'{embed}{key[1]}'
         l = (f"https://www.youtube.com{tmp.select_one('.yt-lockup-title a')['href']}")        
         channel = (tmp.select_one('.yt-user-name').text)
-        vs = (tmp.select_one('ul .yt-lockup-meta-info li').text)        
+        vs = tmp.select_one('ul .yt-lockup-meta-info li')
+        if not vs is None:
+            vs = vs.text
+        else:
+            vs = '0'
         text_over_flag= 0        
         if len(t) > 20:
             text_over_flag= 1        
@@ -247,7 +254,12 @@ def ret_afreeca(request):
         'length':length
     }
     return render(request,'subfunction/afreeca.html',context)
-
+def platform(request,platform):
+    lives = Stream.objects.filter(platform=platform).order_by('stream_views').reverse()
+    context={
+        'lives':lives,
+    }
+    return render(request,'subfunction/sort_platform.html',context)
 def ret_stream(request,platform):
     split = 0
     if platform < 3:

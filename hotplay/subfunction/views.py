@@ -3,13 +3,7 @@ from django.http.response import HttpResponse
 import json
 
 # Create your views here.
-def index(request):
-    twitch
-    context={
-        'twitch':'',
-        'youtube':'',
-        'afreeca':'',
-    }
+def index(request):    
     return render(request, 'index.html',) 
 
 def twitch(request):
