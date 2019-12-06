@@ -125,6 +125,7 @@ STATIC_URL은 정적 파일이 실제 위치한 경로를 참조하며,
 이 실제 경로는 STATICFILES_DIRS 설정 항목에 지정된 경로가 아닌 STATIC_ROOT 설정 항목에 지정된 경로
 """
 STATIC_ROOT = os.path.join(BASE_DIR, 'static'),
+
 """
 STATIC_ROOT는 Django 프로젝트에서 사용하는 모든 정적 파일을 한 곳에 모아넣는 경로
 한 곳에 모으는 기능은 manage.py 파일의 collectstatic 명령어로 수행
@@ -134,3 +135,6 @@ Django가 모든 파일을 검사하여 정적 파일로 사용하는지 여부�
 STATIC_ROOT는 실 서비스 환경을 위한 설정 항목
 개발 과정에선 STATIC_ROOT에 지정한 경로가 실제로 존재하지 않거나 STATIC_ROOT 설정 항목 자체가 없어도 문제없이 동작
 """
+
+import django_heroku
+django_heroku.settings(locals())
