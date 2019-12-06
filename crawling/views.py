@@ -66,7 +66,7 @@ def getYoutube():
         l = (f"https://www.youtube.com{tmp.select_one('.yt-lockup-title a')['href']}")        
         channel = (tmp.select_one('.yt-user-name').text)
         vs = tmp.select_one('ul .yt-lockup-meta-info li')
-        if not vs is None:
+        if not vs == None:
             vs = vs.text
         else:
             vs = '0'
