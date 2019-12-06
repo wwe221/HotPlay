@@ -92,7 +92,7 @@ def getYoutube():
         a = 0
         for tp in cma[0].split(','):
             a *=1000
-            a += int(tp)
+            a += tp
         v = a
         if Stream.objects.filter(channel_name=channel).exists():
             stream = Stream.objects.get(channel_name=channel)
