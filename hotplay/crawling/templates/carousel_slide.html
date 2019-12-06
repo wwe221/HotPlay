@@ -1,0 +1,10 @@
+{% for tmp in lives %}
+<div class="carousel-item " >
+    <input type="hidden" class="idstore" value="{{tmp.id}}">
+    <input type="hidden" id="stream-url-{{tmp.id}}" value="{{tmp.stream_embed_url}}">
+    {% comment %} <img class="slide-thumbnail"id="thumbnail-{{tmp.id}}" src="{{tmp.stream_thumbnail}}"> {% endcomment %}
+    <iframe id="stream-{{tmp.id}}"class="d-block w-100" width="640" height="360" src=""
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</div>
+{% endfor %}

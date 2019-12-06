@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block stylesheet %}
+.container {
+}
+.w-30 {
+    margin: auto;
+    float: left;
+    width: 20rem;
+}
+.slide-thumbnail{
+    width:500px;
+    heught:300px;
+}
+.carousel-btn{
+  width:7rem;
+  margin-bottom:4rem;
+  margin-top:4rem
+}
+{% endblock stylesheet %}
+<!-- Begin Page Content -->
+{% block test %}
+<div style="width:100%; background-color : ivory;">
+<div id="outsidebg" class=" bg-white">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div id="carouselExampleControls" class="container carousel slide"  data-ride="carousel"
+      data-interval="false">
+      <div class="carousel-inner">
+        
+      </div>
+      <a class="carousel-control-prev carousel-btn" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next carousel-btn" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock test %}
+{% block content %}
+  <!-- Content Row (PlatForm Video Position) -->
+  <div class="row">
+
+    <div class="home_categories_ctn" id="contentbg">
+      <!-- 전체 배경 화면 색이 위 class에 잡혀있는데 우리가 가지고 있는 파일에서 수정
+              불가, 그래서 style을 줘서 변경해야 할 듯 -->
+      <div class="home_pagecontent_ctn" id="sale_tag_categories">
+
+
+        <!-- First PlatForm Start -->
+        <div class="home_category_ctn">
+          <div class="home_category_title_ctn" style="background: #6441a5">
+            <!-- style="background: linear-gradient( 330deg, #96436a 0%, #e0744a 90% );" 나중에 그라데이션 추가-->
+            <div class="home_category_title"><b>Twitch<br>
+                TV</b><br>
+            </div>
+          </div>
+          <div class="home_category_games_ctn" id="twitch_main" style="background: rgba( 150, 67, 106, 0.3 );">
+          </div>
+          <a class="see_more_link" href="https://store.steampowered.com/tags/en/Visual%20Novel/">See more...
+          </a>
+        </div>
+        <!-- First PlatForm End -->
+
+
+
+
+        <!-- Second  PlatForm Start -->
+        <div class="home_category_ctn">
+          <div class="home_category_title_ctn" style="background:#FF0000">
+            <!-- linear-gradient( 330deg, #c98446 0%, #d9ab64 45%, #eed290 90% ); -->
+            <div class="home_category_title"><b>YOUTUBE<br>
+                KOREA</b><br>
+            </div>
+          </div>
+          <div class="home_category_games_ctn" id="youtube_main" style="background: rgba( 201, 132, 70, 0.3 );">
+          </div>
+          <a class="see_more_link" href="https://store.steampowered.com/tags/en/Hack%20and%20Slash/">See more...
+          </a>
+        </div>
+        <!-- Second PlatForm End -->
+
+
+
+
+        <!-- Third PlatForm Start -->
+        <div class="home_category_ctn">
+          <div class="home_category_title_ctn" style="background: #1b4de8">
+            <!--linear-gradient( 330deg, #c98446 0%, #d9ab64 45%, #eed290 90% );  -->
+            <!-- 1b4de8 -->
+            <div class="home_category_title"><b>Afreeca<br>
+                TV</b><br>
+            </div>
+          </div>
+          <div class="home_category_games_ctn" id="afreeca_main" style="background: rgba( 201, 132, 70, 0.3 );">
+          </div>
+          <a class="see_more_link" href="https://store.steampowered.com/tags/en/Hack%20and%20Slash/">See more...
+          </a>
+        </div>
+        <!-- Third PlatForm End -->
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- END PlatForm Video Position -->
+
+
+  <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+{% endblock %}
+
+{% block script %}
+<script>
+  function get_thumb(platform) {
+    var url = '{% url "live:get_main_thumbnail" 1234 %}'.replace('1234', platform)
+    var target = ''
+    if (platform == 0)
+      target = '#twitch_main'
+    else if (platform == 1)
+      target = '#youtube_main'
+    else
+      target = '#afreeca_main'
+    $.ajax({
+      url: url,
+      method: 'POST',
+      data: {
+        csrfmiddlewaretoken: '{{csrf_token}}'
+      },
+      success: function (data) {
+        $(target).append(data);
+      },
+      error: function (data) {
+        alert("getThumbnails fail");
+      }
+    })
+  }
+  $(function () {
+    
+    var be4 = 0
+    var be4url =''
+    $('#carouselExampleControls').on('slide.bs.carousel',
+      function () { //슬라이드가 이동 시작 , 이전 녀석의 영상을 썸네일로 바꾸고 이동한다.
+        var cur = $('div.active').find('input')[0]['value'];
+        be4=cur        
+        var url = $('#stream-url-' + cur).val()
+        be4url = url
+        var total = $('.carousel-item').length;
+        {% comment %} $('#stream-' + cur).attr('src', '') {% endcomment %}
+      })
+    $('#carouselExampleControls').on('slid.bs.carousel',
+      function () { //슬라이드가 이동 완료 시 썸네일을 영상으로 바꾼다
+        var cur = $('div.active').find('input')[0]['value']; // 현재 슬라이드
+        console.log(cur)
+        var total = $('.carousel-item').length; // 전체 슬라이드
+        var url = $('#stream-url-' + cur).val();
+        {% comment %} $('#thumbnail-'+cur).hide()
+        $('#thumbnail-'+be4).show() {% endcomment %}
+        {% comment %} $('#stream-' + cur).show() {% endcomment %}
+        {% comment %} $('#stream-' + be4).hide() {% endcomment %}
+        $('#stream-' + be4).attr('src', '')
+        {% comment %} $('#stream-' + be4).attr('src', be4url) {% endcomment %}
+        $('#stream-' + cur).attr('src', url)
+      })
+    $.ajax({
+      url: '{% url "live:get_slide" %}',
+      method: 'POST',
+      data: {
+        csrfmiddlewaretoken: '{{csrf_token}}'
+      },
+      success: function (data) {
+        $('.carousel-inner').append(data);
+        var first = $(document).find('.carousel-inner div:first')
+        first.addClass('active')
+        var cur = first.find('input')[0]['value'];
+        var url = $('#stream-url-' + cur).val();
+        $('#stream-' + cur).attr('src', url)
+        
+      },
+      error: function (data) {
+        alert("getSlide fail");
+      }
+    })
+    get_thumb(0)
+    get_thumb(1)
+    get_thumb(2)
+    
+  });
+</script>
+{% endblock script %}
