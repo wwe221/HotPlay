@@ -1,0 +1,2119 @@
+[{
+    "model": "crawling.stream",
+    "pk": 1,
+    "fields": {
+        "channel_name": "\uce68\ucc29\ub9e8",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uae40\ud48d \uc791\uac00\ub2d8\uacfc \ud32c\ubbf8\ud305 \uc120\ubb3c \uac1c\ubd09\uc2dd",
+        "stream_url": "https://www.twitch.tv/zilioner",
+        "stream_embed_url": "https://player.twitch.tv/?channel=zilioner",
+        "stream_views": 5310,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_zilioner-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 2,
+    "fields": {
+        "channel_name": "\uc30d\ubca0",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc790\ub0b3\ub300 \uc815\uae00\uc0c1\ud488",
+        "stream_url": "https://www.twitch.tv/pacific8815",
+        "stream_embed_url": "https://player.twitch.tv/?channel=pacific8815",
+        "stream_views": 4019,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_pacific8815-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 3,
+    "fields": {
+        "channel_name": "\uad34\ubb3c\uc950123",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub2e4\uc774\uc5441",
+        "stream_url": "https://www.twitch.tv/tmxk319",
+        "stream_embed_url": "https://player.twitch.tv/?channel=tmxk319",
+        "stream_views": 3626,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tmxk319-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 4,
+    "fields": {
+        "channel_name": "\ud3ec\uc154",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "11k \uc2dc\uc791. \uc544\uc2dc\uc544 1.06K\uae4c\uc9c0 \ub2ec\ub9bc.",
+        "stream_url": "https://www.twitch.tv/portialyn",
+        "stream_embed_url": "https://player.twitch.tv/?channel=portialyn",
+        "stream_views": 2600,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_portialyn-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 5,
+    "fields": {
+        "channel_name": "\uc6b0\uc815\uc789",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u3139 \u3131 ",
+        "stream_url": "https://www.twitch.tv/nanajam777",
+        "stream_embed_url": "https://player.twitch.tv/?channel=nanajam777",
+        "stream_views": 2381,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nanajam777-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 6,
+    "fields": {
+        "channel_name": "\uac15\uc9c0",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc7a0\uc774 \uc548\uc640\uc787",
+        "stream_url": "https://www.twitch.tv/rkdwl12",
+        "stream_embed_url": "https://player.twitch.tv/?channel=rkdwl12",
+        "stream_views": 1909,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rkdwl12-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 7,
+    "fields": {
+        "channel_name": "\uc2a4\ucf54\uc5b4_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "score  \ud611\uace1\ud574\ubcf4\uc790",
+        "stream_url": "https://www.twitch.tv/score1992",
+        "stream_embed_url": "https://player.twitch.tv/?channel=score1992",
+        "stream_views": 1831,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_score1992-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 8,
+    "fields": {
+        "channel_name": "\ub618\ub618\ub618\uc774_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubd80\uc7a3\uc9d1 \uac8c\uc784\uae30 \uccb4\ud5d8",
+        "stream_url": "https://www.twitch.tv/jungtaejune",
+        "stream_embed_url": "https://player.twitch.tv/?channel=jungtaejune",
+        "stream_views": 1819,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_jungtaejune-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 9,
+    "fields": {
+        "channel_name": "\uac10\ube14\ub7ec",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uac10\ube14\ub7ec \ucf54\uc2a4\ud504\ub808",
+        "stream_url": "https://www.twitch.tv/9ambler",
+        "stream_embed_url": "https://player.twitch.tv/?channel=9ambler",
+        "stream_views": 1542,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_9ambler-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 10,
+    "fields": {
+        "channel_name": "\ucca0\uba74\uc218\uc2ec",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uae08\uc694\uc77c\uc758 \ucca0\uba74\uc218\uc2ec",
+        "stream_url": "https://www.twitch.tv/109ace",
+        "stream_embed_url": "https://player.twitch.tv/?channel=109ace",
+        "stream_views": 1395,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_109ace-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 11,
+    "fields": {
+        "channel_name": "\ub8e8\uc2dc\uc544",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\ub8e8\uc2dc\uc544] \uccad\uc8fc\uc57c\ubc29",
+        "stream_url": "https://www.twitch.tv/lucia94",
+        "stream_embed_url": "https://player.twitch.tv/?channel=lucia94",
+        "stream_views": 1204,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lucia94-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 12,
+    "fields": {
+        "channel_name": "\uc6b0\uc641\uad73",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc6b0\uc641\uad73 \ubc29\uc1a1 \uc2dc\uc791\ud588\ub2e4!",
+        "stream_url": "https://www.twitch.tv/woowakgood",
+        "stream_embed_url": "https://player.twitch.tv/?channel=woowakgood",
+        "stream_views": 1189,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_woowakgood-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 13,
+    "fields": {
+        "channel_name": "\uae08\uc0ac\ud5a5",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uce74\ud2b8\ub4dc\ub9ac\ud504\ud2b8 cbt",
+        "stream_url": "https://www.twitch.tv/sah_yang",
+        "stream_embed_url": "https://player.twitch.tv/?channel=sah_yang",
+        "stream_views": 1176,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sah_yang-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 14,
+    "fields": {
+        "channel_name": "heavyRainism",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud638\uc6b0!",
+        "stream_url": "https://www.twitch.tv/heavyrainism",
+        "stream_embed_url": "https://player.twitch.tv/?channel=heavyrainism",
+        "stream_views": 1104,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_heavyrainism-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 15,
+    "fields": {
+        "channel_name": "\uc9c4\uc2180",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud3f0\uccb4\ub85c \uc694\uc591\uc911",
+        "stream_url": "https://www.twitch.tv/jinsooo0",
+        "stream_embed_url": "https://player.twitch.tv/?channel=jinsooo0",
+        "stream_views": 773,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_jinsooo0-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 16,
+    "fields": {
+        "channel_name": "\uc090\ubd80",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc090\ubd80] \uc774\ub300\ub85c \uad1c\ucc2e\uc740\uac00..",
+        "stream_url": "https://www.twitch.tv/s1032204",
+        "stream_embed_url": "https://player.twitch.tv/?channel=s1032204",
+        "stream_views": 738,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_s1032204-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 17,
+    "fields": {
+        "channel_name": "\ub8e8\ub2e4\ub2d8_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub8e8\ub2e4] \ub864 ",
+        "stream_url": "https://www.twitch.tv/leehunnyeo",
+        "stream_embed_url": "https://player.twitch.tv/?channel=leehunnyeo",
+        "stream_views": 639,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_leehunnyeo-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 18,
+    "fields": {
+        "channel_name": "\ud587\uc0b4\uc0b4",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\ud587\uc0b4\uc0b4] \uc624\ubc84\uc6cc\uce58 \uc5b8\uc81c\uae4c\uc9c0 \ube0c\ub860\uc988\ud560\uaebc\uc57c!!!  (\u2740\u2579\u25e1\u2579)\uff89",
+        "stream_url": "https://www.twitch.tv/hatsalsal",
+        "stream_embed_url": "https://player.twitch.tv/?channel=hatsalsal",
+        "stream_views": 586,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_hatsalsal-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 19,
+    "fields": {
+        "channel_name": "\uae40\ubfe1_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubfe1\uc774) \uac31\uc2a4\ud130\ubfe1",
+        "stream_url": "https://www.twitch.tv/bbonge_",
+        "stream_embed_url": "https://player.twitch.tv/?channel=bbonge_",
+        "stream_views": 545,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_bbonge_-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 20,
+    "fields": {
+        "channel_name": "\uc774\ucd08\ud64d",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubc18\uac11\uc2b5\ub2c8\ub2e4",
+        "stream_url": "https://www.twitch.tv/h920103",
+        "stream_embed_url": "https://player.twitch.tv/?channel=h920103",
+        "stream_views": 526,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_h920103-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 21,
+    "fields": {
+        "channel_name": "\ubbf8\ub0b4\uae30\uc694",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "wow\uc640\uc6b0 \ubbf8\ub0b4\uae30 \nmage minaegi",
+        "stream_url": "https://www.twitch.tv/psjqkrtjdwn",
+        "stream_embed_url": "https://player.twitch.tv/?channel=psjqkrtjdwn",
+        "stream_views": 506,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_psjqkrtjdwn-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 22,
+    "fields": {
+        "channel_name": "\ubbf8\ub85c_03",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc720\uc77c\ud55c \ub7ad\ucee4 \uc708\ubd95\uc774. \ub098.",
+        "stream_url": "https://www.twitch.tv/miro_geng",
+        "stream_embed_url": "https://player.twitch.tv/?channel=miro_geng",
+        "stream_views": 496,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_miro_geng-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 23,
+    "fields": {
+        "channel_name": "\uc720\uce7c68",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc720\uce7c lol \ubc31\uc218 fa c1 1100\uc810",
+        "stream_url": "https://www.twitch.tv/ucal68",
+        "stream_embed_url": "https://player.twitch.tv/?channel=ucal68",
+        "stream_views": 490,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ucal68-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 24,
+    "fields": {
+        "channel_name": "\uc0e4\ucf54\ud0c0\uc784",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "DAY29)\ud55c\ub2ec\uc548\uc5d0\ucc4c \ubabb\uac00\uba74\ub864\uc811\uc2b5\ub2c8\ub2e4 \uc9c4\uc2ec\uc785\ub2c8\ub2e4 (kr shaco rank1)",
+        "stream_url": "https://www.twitch.tv/asa0921",
+        "stream_embed_url": "https://player.twitch.tv/?channel=asa0921",
+        "stream_views": 490,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_asa0921-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 25,
+    "fields": {
+        "channel_name": "Charming_Jo",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc774\uc820 \ub0b4\uac00 \uac8c\uc784\uc2a4\ud2b8\ub9ac\uba38 \uc778\uc9c0 \uc74c\uc545\uc2a4\ud2b8\ub9ac\uba38\uc778\uc9c0",
+        "stream_url": "https://www.twitch.tv/charming_jo",
+        "stream_embed_url": "https://player.twitch.tv/?channel=charming_jo",
+        "stream_views": 488,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_charming_jo-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 26,
+    "fields": {
+        "channel_name": "\uae40\ub3c4",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubc25",
+        "stream_url": "https://www.twitch.tv/kimdoe",
+        "stream_embed_url": "https://player.twitch.tv/?channel=kimdoe",
+        "stream_views": 440,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kimdoe-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 27,
+    "fields": {
+        "channel_name": "\uce78\ub370\ub974\ub2c8\uc544",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubc29\uc885 \ud6c4 \ub9c1\ud53c\ud2b8 34\uc77c\uc9f8",
+        "stream_url": "https://www.twitch.tv/jmjdoc",
+        "stream_embed_url": "https://player.twitch.tv/?channel=jmjdoc",
+        "stream_views": 436,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_jmjdoc-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 28,
+    "fields": {
+        "channel_name": "\ube45\ud5e4\ub4dc",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud070\uba38\ub9ac - \uce74\ud2b8\ub77c\uc774\ub3542",
+        "stream_url": "https://www.twitch.tv/bighead033",
+        "stream_embed_url": "https://player.twitch.tv/?channel=bighead033",
+        "stream_views": 427,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_bighead033-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 29,
+    "fields": {
+        "channel_name": "\ub2e8\ud33d\uc774",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud3b8\uc758\uc810\ubc29\uc1a1",
+        "stream_url": "https://www.twitch.tv/danpaeng2",
+        "stream_embed_url": "https://player.twitch.tv/?channel=danpaeng2",
+        "stream_views": 397,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_danpaeng2-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 30,
+    "fields": {
+        "channel_name": "\uafc0\ud61c",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uace0\uba10\ubbf8",
+        "stream_url": "https://www.twitch.tv/coppag2",
+        "stream_embed_url": "https://player.twitch.tv/?channel=coppag2",
+        "stream_views": 389,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_coppag2-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 31,
+    "fields": {
+        "channel_name": "\uae40\ubc18\ud76c",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc624\ub9ac \ub0a0\uac1c \ud280\uae40 \uba39\ubc29(\u10e6 \u02d8 \u2323 \u02d8 \u10e6 )",
+        "stream_url": "https://www.twitch.tv/bonnysurang",
+        "stream_embed_url": "https://player.twitch.tv/?channel=bonnysurang",
+        "stream_views": 381,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_bonnysurang-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 32,
+    "fields": {
+        "channel_name": "\ubbf8\ub974\ub2e4\uc694",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubc30\uadf8 \uc2e0\ubaa8\ub4dc \ub4e0\ud0a8\ub3c4\ub098\uce20 \ubaa8\ub4dc",
+        "stream_url": "https://www.twitch.tv/mirdayo",
+        "stream_embed_url": "https://player.twitch.tv/?channel=mirdayo",
+        "stream_views": 359,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_mirdayo-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 33,
+    "fields": {
+        "channel_name": "\ub9c9\uc774\ub9c8\uae30",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\ub9c9\uc774] \ud750\uc74c(\u30fb\u00b4\u0437`\u30fb)",
+        "stream_url": "https://www.twitch.tv/makiymagi",
+        "stream_embed_url": "https://player.twitch.tv/?channel=makiymagi",
+        "stream_views": 352,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_makiymagi-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 34,
+    "fields": {
+        "channel_name": "\uc624\ub80c\uc9c0\ub9c8\uba40",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[wow \uc624\ub9c8\uba40] \uc804\uc7a5 \uc900\ube44",
+        "stream_url": "https://www.twitch.tv/orangemm89",
+        "stream_embed_url": "https://player.twitch.tv/?channel=orangemm89",
+        "stream_views": 344,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_orangemm89-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 35,
+    "fields": {
+        "channel_name": "SC2TYTY",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "TYTY Long time no see\n\uc624\ub79c\ub9cc\uc774\uc5d0\uc720..",
+        "stream_url": "https://www.twitch.tv/sc2tyty",
+        "stream_embed_url": "https://player.twitch.tv/?channel=sc2tyty",
+        "stream_views": 343,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sc2tyty-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 36,
+    "fields": {
+        "channel_name": "\uc0ac\ub77c\uc591",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc548\ub155\ud558\uc138\uc694!",
+        "stream_url": "https://www.twitch.tv/sa_vely",
+        "stream_embed_url": "https://player.twitch.tv/?channel=sa_vely",
+        "stream_views": 329,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sa_vely-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 37,
+    "fields": {
+        "channel_name": "\ub370\ub2e8\uc7a5",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "5604\u3163999 \uc9c4\uc624\uc6b0\uac70 \uc544\uc885 \ubb34\uae30 \ubc29\uc5b4\uad6c \ub2e4 \ub9cc\ub4ec! \ud14c\uc2a4\ud2b8 \ubc0f \uae30\uc874 \ubb34\uae30 \ucee4\uc2a4\ud140 \ubcc0\uacbd \ubb34\ud398\ud1a0-\uc9c0\ubc14 \uacf5\ub7b5 \ub4f1 \ud50c\ub798\ud2f0\ub118 \ud2b8\ub85c\ud53c,\ubaa8\ub4e0 \ubb34\uae30,\ubc29\uc5b4\uad6c,\uc7a5\uc2dd\uc8fc,\uce58\uc7a5\ud488 (MHW:IB Completionist)  #\ubaac\ud5cc #\uc544\uc774\uc2a4\ubcf8 #\ub370\ub4dc\ud480",
+        "stream_url": "https://www.twitch.tv/rbhr",
+        "stream_embed_url": "https://player.twitch.tv/?channel=rbhr",
+        "stream_views": 317,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rbhr-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 38,
+    "fields": {
+        "channel_name": "\ub300\uc6a92",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u3161\ud398\u3161 ",
+        "stream_url": "https://www.twitch.tv/rbwls1245",
+        "stream_embed_url": "https://player.twitch.tv/?channel=rbwls1245",
+        "stream_views": 314,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rbwls1245-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 39,
+    "fields": {
+        "channel_name": "\uc774\ubd09\uaddcTV",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[19.12.06 \uc774\ubd09\uaddcTV LIVE] \uc774 \uc21c\uac04\uc5d0\ub3c4... \uc2ec\uc7ac\ucca0, \uae40\uc6a9\ub0a8, \uac15\uba85\ub3c4 [\uc815\uce58\uc625\ud0c0\uace4]",
+        "stream_url": "https://www.youtube.com/watch?v=WfUZemyuAOk",
+        "stream_embed_url": "https://www.youtube.com/embed/WfUZemyuAOk",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/WfUZemyuAOk/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBq4amg6n5EtiHliOqR1fDsFNgy3Q",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 40,
+    "fields": {
+        "channel_name": "\ub9db\uc788\ub294 \ub140\uc11d\ub4e4 (Tasty Guys)",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub2e4\uc2dc \uc6b0\ub9bd\ub2c8\ub2e4 \ub9db\uc788\ub294 \ub140\uc11d\ub4e4 \uc0ac\uace8 \uc2a4\ud2b8\ub9ac\ubc0d!!!  [\ub9db\uc788\ub294 \ub140\uc11d\ub4e4_Tasty Guys] \uc608\uc804\ubc29\uc1a1 \uc2a4\ud2b8\ub9ac\ubc0d",
+        "stream_url": "https://www.youtube.com/watch?v=wLClX5pB87E",
+        "stream_embed_url": "https://www.youtube.com/embed/wLClX5pB87E",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/wLClX5pB87E/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBTzAKZJjiUDOVxHDGJrfSXblDMug",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 41,
+    "fields": {
+        "channel_name": "Cafe Music BGM channel",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud83c\udf84\u26c4\ufe0f Christmas Songs Winter Jazz - Relaxing Slow Jazz Music with Fireplace",
+        "stream_url": "https://www.youtube.com/watch?v=_DqlxfcLez4",
+        "stream_embed_url": "https://www.youtube.com/embed/_DqlxfcLez4",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/_DqlxfcLez4/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBFj5DsmRJPt1MLuHMMuVrtDrFzLA",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 42,
+    "fields": {
+        "channel_name": "cpbc TV\uac00\ud1a8\ub9ad\ucf58\ud150\uce20\uc758 \ubaa8\ub4e0\uac83_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc218\uc6d0\uad50\uad6c 2019 \uc0ac\uc81c\uc11c\ud488\uc2dd _The ordination ceremony of priests at Diocese of Suwon, South Korea (LIVE)",
+        "stream_url": "https://www.youtube.com/watch?v=Cx6q0EQ1Xq4",
+        "stream_embed_url": "https://www.youtube.com/embed/Cx6q0EQ1Xq4",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/Cx6q0EQ1Xq4/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLDOyB096c8qtAY2kw4hqXqLJGUoIw",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 43,
+    "fields": {
+        "channel_name": "\uac00\ub85c\uc138\ub85c\uc5f0\uad6c\uc18c",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\uc0dd\ub85c\ubcd1\uc0ac] \uc870\ubbfc\ub3c4 \uc27d\uac8c \uc774\ud574\ud558\ub294 \uac15\uc6a9\uc11d\uc758 \uc0dd\ub85c\ubcd1\uc0ac!!!!",
+        "stream_url": "https://www.youtube.com/watch?v=AAsu8Ic4wBU",
+        "stream_embed_url": "https://www.youtube.com/embed/AAsu8Ic4wBU",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/AAsu8Ic4wBU/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLA9x0riKDkJOpU3C_sd_klN3b6mKA",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 44,
+    "fields": {
+        "channel_name": "SBS DRAMAi CLASSIC",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u2b50\uc57c\uc778\uc2dc\ub300 \ub2e4\uc2dc\ubcf4\uae30 [68-72] 71/72\ud68c\ubd80\ud130 \uc815\uc8fc\ud589\u2b50",
+        "stream_url": "https://www.youtube.com/watch?v=7ZAzBhK0wi0",
+        "stream_embed_url": "https://www.youtube.com/embed/7ZAzBhK0wi0",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/7ZAzBhK0wi0/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLDN0l_uYUiwIDuS14oKIRysbcG6gA",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 45,
+    "fields": {
+        "channel_name": "BGM channel",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "Winter Jazz - Smooth Cafe Bossa Music for Relaxing - \u51ac\u30ab\u30d5\u30a7BGM",
+        "stream_url": "https://www.youtube.com/watch?v=akxq7kYMy1o",
+        "stream_embed_url": "https://www.youtube.com/embed/akxq7kYMy1o",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/akxq7kYMy1o/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLCpDQsFpqewOVzVKnTzTXYV9Ntv9w",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 46,
+    "fields": {
+        "channel_name": "\uc774\uc911\uc120",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u3010\uce74\ud2b8\ub77c\uc774\ub354 \uc774\uc911\uc120\u3011 \uae08\uc694\uc77c \uc370\uc5b4\ubc84\ub9ac\ub294 \ubc29\uc1a1 (\ub8f0\ub81b \uc624\ud508)",
+        "stream_url": "https://www.twitch.tv/dhdtufdl1",
+        "stream_embed_url": "https://player.twitch.tv/?channel=dhdtufdl1",
+        "stream_views": 128,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dhdtufdl1-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 47,
+    "fields": {
+        "channel_name": "\ud329\ub9e8TV",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uccad\uc640\ub300 \uae30\ub465\ubfcc\ub9ac\uac00 \ubf51\ud788\uace0 \uc788\ub2e4",
+        "stream_url": "https://www.youtube.com/watch?v=vA7nR_aSc4M",
+        "stream_embed_url": "https://www.youtube.com/embed/vA7nR_aSc4M",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/vA7nR_aSc4M/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLD_rbL4VUJUgrfnJHCNYWXTqkgiCA",
+        "tof": 0,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 48,
+    "fields": {
+        "channel_name": "\ub108\uc54c\uc544TV2",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub108\uc54c\uc544TV2's broadcast",
+        "stream_url": "https://www.youtube.com/watch?v=yK4ZqjMT3fM",
+        "stream_embed_url": "https://www.youtube.com/embed/yK4ZqjMT3fM",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/yK4ZqjMT3fM/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLA7sXaf1R_A7lPwngLDd855Wbct_Q",
+        "tof": 0,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 49,
+    "fields": {
+        "channel_name": "\ubf40\ub85c\ub85c(Pororo)",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubf40\ub85c\ub85c\uc640\ub178\ub798\ud574\uc694 \uc774\uc5b4\ubcf4\uae30 | \ubf40\ub85c\ub85c \uc778\uae30\ub3d9\uc694 | \ubf40\ub85c\ub85c \ub178\ub798",
+        "stream_url": "https://www.youtube.com/watch?v=FngPXItsrps",
+        "stream_embed_url": "https://www.youtube.com/embed/FngPXItsrps",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/FngPXItsrps/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLAa_WZygQQ6XuFSgXAXMkdPxdBZsA",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 50,
+    "fields": {
+        "channel_name": "\uc6d0\ucc3d\uc5f0 WonChangYeon",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\uc2e4\uc2dc\uac04] \uc6d0\ucc3d\uc5f0 5\uc5b5 \uc21c\uacbd\uc804\uc6a9\uc2a4\ucffc\ub4dc! \ud53c\ud30c4",
+        "stream_url": "https://www.youtube.com/watch?v=gH6sGffluVs",
+        "stream_embed_url": "https://www.youtube.com/embed/gH6sGffluVs",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/gH6sGffluVs/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLB7H-bYnBW4uD9nDPXhPbT2rRAQ7Q",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 51,
+    "fields": {
+        "channel_name": "HooChoonism",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\ub77c\uc774\uc988 \uc624\ube0c \ud0b9\ub364\uc988] \ub77c\uc624\ud0b9 \ud6c4\ucd94\ub2c8\uc998 \uc804\uc7c1\uc774\ub2e4!",
+        "stream_url": "https://www.youtube.com/watch?v=EtumXewiNok",
+        "stream_embed_url": "https://www.youtube.com/embed/EtumXewiNok",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/EtumXewiNok/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLC53J42p3Mbl1LcjiPFKXi47pl86g",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 52,
+    "fields": {
+        "channel_name": "\ubc15\uc7ac\ud604R6",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud2b8\uc704\uce58 \ub77c\uc774\ubc8c\uc988 \ub2e4\uc2dc\ubcf4\uae30",
+        "stream_url": "https://www.youtube.com/watch?v=MBuTO8_N-08",
+        "stream_embed_url": "https://www.youtube.com/embed/MBuTO8_N-08",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/MBuTO8_N-08/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLDWSAHQSxxErkBr59yVtfPJoDJEjw",
+        "tof": 0,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 53,
+    "fields": {
+        "channel_name": "\ub354\ub4dc\ud29c\ube0c",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\ub354\ub4dc\ud29c\ube0c] \uc548\ub155\ud558\uc138\uc694~ \uc2a4 \ud0c0 \ud300\ud50c \ud5cc\ud130 DudTube Star TeamPlay 2019-12-06 \uae08\uc694\uc77c Live",
+        "stream_url": "https://www.youtube.com/watch?v=Rp0Aapnxf5s",
+        "stream_embed_url": "https://www.youtube.com/embed/Rp0Aapnxf5s",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/Rp0Aapnxf5s/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLAT8mGrarAq0MVPcw5Xu-CVxoPigw",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 54,
+    "fields": {
+        "channel_name": "\ub9db\ub098\ub294\uaf2c\uaf2c",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ucc4c\ub9b0\uc800 \uc232\uc0ac\uc790 \uc6d0\ud234 \uc7a5\uc778 \ub864\ud1a0\uccb4\uc2a4 TFT",
+        "stream_url": "https://www.twitch.tv/wnsdn3000",
+        "stream_embed_url": "https://player.twitch.tv/?channel=wnsdn3000",
+        "stream_views": 183,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_wnsdn3000-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 55,
+    "fields": {
+        "channel_name": "\uc0e4\ucf54\ud0c0\uc784shacotime",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "DAY29)\ud55c\ub2ec\uc548\uc5d0\ucc4c \ubabb\uac00\uba74\ub864\uc811\uc2b5\ub2c8\ub2e4 \uc9c4\uc2ec\uc785\ub2c8\ub2e4 (kr shaco rank1)",
+        "stream_url": "https://www.youtube.com/watch?v=qk3zEiUuPlg",
+        "stream_embed_url": "https://www.youtube.com/embed/qk3zEiUuPlg",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/qk3zEiUuPlg/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLA3SaajjPlHxod73MEHxHMe3A_-4A",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 56,
+    "fields": {
+        "channel_name": "\uc1a1\uc18c\ud76c\ud2f0\ube44",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub9b02m \ubc14\uce20\uc12d \ubcf4\ud0d0&\uc804\uc7c1 (\ub9ac\ub2c8\uc9c0m \uc5ec\ucea0 \ub9ac\ub2c8\uc9c0 \ub9b0m \ub9ac\ub2c8\uc9c02m \ub9ac\ub2c8\uc9c02",
+        "stream_url": "https://www.youtube.com/watch?v=s6zA3hhI5lE",
+        "stream_embed_url": "https://www.youtube.com/embed/s6zA3hhI5lE",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/s6zA3hhI5lE/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBw9maqJVcfFbkPxFxfpdDX2nYxJw",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 57,
+    "fields": {
+        "channel_name": "\uc724\uc774\uc0d8",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\uc724\uc774\uc0d8] \uc624\ub298 \ub098 \uc544\ud30c... \u266c",
+        "stream_url": "https://www.twitch.tv/e_saem",
+        "stream_embed_url": "https://player.twitch.tv/?channel=e_saem",
+        "stream_views": 307,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_e_saem-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 58,
+    "fields": {
+        "channel_name": "\ud478\uc0ac",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud558\uc2a4 \ud478\uc0ac \ud328\uce58 \uae30\ub150 \uc804\uc7a5 \ud559\uc0b4\ud6c4 \ub0b4\uc77c \ub7ad\ud06c \ud559\uc0b4\uac11\ub2c8\ub2e4",
+        "stream_url": "https://www.twitch.tv/pusa6019",
+        "stream_embed_url": "https://player.twitch.tv/?channel=pusa6019",
+        "stream_views": 95,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_pusa6019-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 59,
+    "fields": {
+        "channel_name": "\ubd88\ubc95\ub0e5",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\uc640\uc6b0 \ud074\ub798\uc2dd] #84 \uc0ac\ub78c\uc774 \ud560 \uc9d3\uc774 \uc544\ub2c8\ub2e4.. \ub2e8\uba85\uac12 \ucc9c\uace8 \ubcf5\uad6c! +\ud22c\ub2c9\uc2dc\uc544 \ubc95\uc0ac \ub69d\ubc30\uae30 (\ud074\ub798\uc2dd \uad00\ub828 \uc9c8\ubb38, \uc18c\ud1b5 \ud658\uc601\ud569\ub2c8\ub2e4!)",
+        "stream_url": "https://www.youtube.com/watch?v=YlI20mswn78",
+        "stream_embed_url": "https://www.youtube.com/embed/YlI20mswn78",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/YlI20mswn78/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLB9pXKv4iv3FeL5BX8-tD0IzTnZ1w",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 60,
+    "fields": {
+        "channel_name": "\uacf5\uc124",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\uba54\uc774\ud50c] \uad34\ub86d\ud798 \uae08\uc9c0 ...!!! \u314b\u314b\u314b\u314b \u3160\u3160\u3160\u3160",
+        "stream_url": "https://www.youtube.com/watch?v=hwdvuLTwbeg",
+        "stream_embed_url": "https://www.youtube.com/embed/hwdvuLTwbeg",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/hwdvuLTwbeg/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLC-MujCHN4sqr1EY8mLIF0sQyGsTg",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 61,
+    "fields": {
+        "channel_name": "\ub2e5\ucd78 TV",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub85c\uc2a4\ud2b8\uc544\ud06c] \ud640\ub9ac \ub098\uc774\ud2b8 \ubb34\uacfc\uae08 \uc804\ubb38 - \uc2e0\uaddc, \ubcf5\uadc0 \uc720\uc800 \uc9c8\ubb38\ubc29",
+        "stream_url": "https://www.youtube.com/watch?v=d4Jj2qTp55M",
+        "stream_embed_url": "https://www.youtube.com/embed/d4Jj2qTp55M",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/d4Jj2qTp55M/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBaPI5yjXhhMB5JaGUXTFlMvt8FCA",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 62,
+    "fields": {
+        "channel_name": "YTN NEWS",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[YTN LIVE] \ub300\ud55c\ubbfc\uad6d 24\uc2dc\uac04 \ub274\uc2a4 \ucc44\ub110 YTN",
+        "stream_url": "https://www.youtube.com/watch?v=U_sYIKWhJvk",
+        "stream_embed_url": "https://www.youtube.com/embed/U_sYIKWhJvk",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/U_sYIKWhJvk/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLD6A78CBTRpsj0uQwmQwIyAHtvkng",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 63,
+    "fields": {
+        "channel_name": "\ud0d1\uac00\ub80c",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud0d1\uac00\ub80c ] \ub85c\ud06c\ud640\ub77c \uc288\ud37c\uc804\uc0ac \uc720\uacbd\uc6b0 ~",
+        "stream_url": "https://www.twitch.tv/yugyungwoo",
+        "stream_embed_url": "https://player.twitch.tv/?channel=yugyungwoo",
+        "stream_views": 303,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_yugyungwoo-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 64,
+    "fields": {
+        "channel_name": "\uac04\uc7a5\u314e",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc6d4\ub4dc\uc624\ube0c\uc6cc\ud06c\ub798\ud504\ud2b8 \ub3c4\uc801 \uc624\ub298\ub3c4 \ub6a0\ub6a0 50~~ (~\u02d8\u25be\u02d8)~",
+        "stream_url": "https://www.twitch.tv/kanjang7",
+        "stream_embed_url": "https://player.twitch.tv/?channel=kanjang7",
+        "stream_views": 287,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kanjang7-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 65,
+    "fields": {
+        "channel_name": "\ubaa8\uce74\ud615",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[12.06] \uc77c\ucc0d\uc77c\uc5b4\ub098\ubc84\ub838\uc9c0! \ubaa9\uc18c\ub9ac\uc5ec\ub7ec\uac1c\uc778\uc0ac\ub78c",
+        "stream_url": "https://www.twitch.tv/oilj_far",
+        "stream_embed_url": "https://player.twitch.tv/?channel=oilj_far",
+        "stream_views": 275,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_oilj_far-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 66,
+    "fields": {
+        "channel_name": "\uc950\u3164",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc2e0\uc791 \uce74\ud2b8\ub77c\uc774\ub354 \ub4dc\ub9ac\ud504\ud2b8",
+        "stream_url": "https://www.twitch.tv/moonbowzz",
+        "stream_embed_url": "https://player.twitch.tv/?channel=moonbowzz",
+        "stream_views": 273,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_moonbowzz-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 67,
+    "fields": {
+        "channel_name": "\uc288\ud37c\ub178\ubc14_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc2a4\ud0c02 \uba54\uce74\ub2c9 \uc7a5\uc778",
+        "stream_url": "https://www.twitch.tv/root_supernova",
+        "stream_embed_url": "https://player.twitch.tv/?channel=root_supernova",
+        "stream_views": 256,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_root_supernova-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 68,
+    "fields": {
+        "channel_name": "\ud0b9\ub098\ub3c4\ud2f0\ube44",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc2a4\ud0c0\uadf8\ub798\ud504\ud2b8 \uad70\ub2e8\uc758\uc2ec\uc7a5 \uac00\uc988\uc544!",
+        "stream_url": "https://www.twitch.tv/nadotv86",
+        "stream_embed_url": "https://player.twitch.tv/?channel=nadotv86",
+        "stream_views": 253,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nadotv86-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 69,
+    "fields": {
+        "channel_name": "\uc11c\ub098\ub791",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud50c\ub808 \uae30\uac15 \uc7a1\uae30",
+        "stream_url": "https://www.twitch.tv/tjskdutls",
+        "stream_embed_url": "https://player.twitch.tv/?channel=tjskdutls",
+        "stream_views": 244,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tjskdutls-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 70,
+    "fields": {
+        "channel_name": "\uc774\uc120\uc0dd84",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "TOP",
+        "stream_url": "https://www.twitch.tv/drlee_kor",
+        "stream_embed_url": "https://player.twitch.tv/?channel=drlee_kor",
+        "stream_views": 239,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drlee_kor-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 71,
+    "fields": {
+        "channel_name": "\uac70\ud130",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud53c\ub2c9\uc2a4 \ud3ec\uc778\ud2b8 \ud558\ub294 \ubc29\uc1a1",
+        "stream_url": "https://www.twitch.tv/gutterlife",
+        "stream_embed_url": "https://player.twitch.tv/?channel=gutterlife",
+        "stream_views": 225,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_gutterlife-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 72,
+    "fields": {
+        "channel_name": "\uc18c\ubc0d",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u2728\ud83d\ude37\u2728",
+        "stream_url": "https://www.twitch.tv/soming1907",
+        "stream_embed_url": "https://player.twitch.tv/?channel=soming1907",
+        "stream_views": 219,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_soming1907-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 73,
+    "fields": {
+        "channel_name": "\ub2e5\ucd78",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub85c\uc2a4\ud2b8\uc544\ud06c] \ud640\ub9ac \ub098\uc774\ud2b8 - \uc2e0\uaddc, \ubcf5\uadc0 \uc9c8\ubb38\ubc29",
+        "stream_url": "https://www.twitch.tv/dakchyo",
+        "stream_embed_url": "https://player.twitch.tv/?channel=dakchyo",
+        "stream_views": 200,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dakchyo-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 74,
+    "fields": {
+        "channel_name": "\uc871\ubcf4\ubc1c\ub9ac\ub2e8\uae4c\uc58f\ud3ed\uc2a4",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubc1c\ub9ac \uc871\ubcf4 24\uc2dc\uac04 \u2665\ufe0f\ub2e8\uae4c\uc58f\u2665\ufe0f  #\ub2e8\uae4c\uc58f #\ubc1c\ub9ac\ud3ed\uc2a4 #\ubc84\uacbd #\uc871\ubcf4 #\ubc1c\ub9ac #\ub2e8\ube44 #\ub2e8\ubf40\uc58f\uc2e0\ub098 \u2665\ufe0f \uc624\ub298\ub3c4 \ub2e8\uae4c\uc58f\uacfc \ud568\uaed8 \ub2ec\ub824\ubcfc\uae4c\uc694? \u2665\ufe0f",
+        "stream_url": "https://www.twitch.tv/79bbbb",
+        "stream_embed_url": "https://player.twitch.tv/?channel=79bbbb",
+        "stream_views": 200,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_79bbbb-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 75,
+    "fields": {
+        "channel_name": "\ub098\ub77c\uce74\uc77c\u314b",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub77c\uc774\uc5c7 \ub864 \uc62c\uc2a4\ud0c0 \ub77c\uc2a4\ubca0\uac00\uc2a4\uc758 \ud558\ub8e8^^",
+        "stream_url": "https://www.twitch.tv/nara_kyle",
+        "stream_embed_url": "https://player.twitch.tv/?channel=nara_kyle",
+        "stream_views": 191,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nara_kyle-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 76,
+    "fields": {
+        "channel_name": "\ubc1c\ub9ac\ud3ed\uc2a4\ud640\uc9dd\uc871\ubcf4",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u313124\uc2dc\uac04 \ubc1c\ub9ac \ud3ed\uc2a4 \ud640\uc9dd\uc871\ubcf4\ubc29\uc1a1\u2605\uc6d0\ud22c\uc871\ubcf4\u2605  #\ub2e8\uae4c\uc58f #\uaf43\uc790\ub9e4 #\ub188\ub188\ub188\n#\ud48d\uc545\uc774\ub124 #\ub3c4\ub3c4\uc36c\uc774 #\ubc84\ub2c8\ud558\ub2c8",
+        "stream_url": "https://www.twitch.tv/smkorea13",
+        "stream_embed_url": "https://player.twitch.tv/?channel=smkorea13",
+        "stream_views": 191,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_smkorea13-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 77,
+    "fields": {
+        "channel_name": "\uc9c0\ub2c8\uc5b4\uc2a4\ub9e4\ub4dc",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubcc0\ud615\ub9ac\uadf8 \uc815\ubcf4\ub77c\ub3c4 \ud480\uc5b4\ub77c \uc774\ub9d0\uc774\uc57c",
+        "stream_url": "https://www.twitch.tv/genius_mad",
+        "stream_embed_url": "https://player.twitch.tv/?channel=genius_mad",
+        "stream_views": 188,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_genius_mad-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 78,
+    "fields": {
+        "channel_name": "\ud559\ub825\ud3c9\uac00",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc0c8\ub85c\uc6b4 \uc2dc\uc98c! \uc0c8\ub85c\uc6b4 \ub9c8\uc74c\uc73c\ub85c!",
+        "stream_url": "https://www.twitch.tv/gkrfurvudrk",
+        "stream_embed_url": "https://player.twitch.tv/?channel=gkrfurvudrk",
+        "stream_views": 184,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_gkrfurvudrk-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 79,
+    "fields": {
+        "channel_name": "\uc8fc\ub204\ud53c",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uce74\ud2b8\ub77c\uc774\ub354 \uc2e0\uc791 \ub4dc\ub9ac\ud504\ud2b8 CBT",
+        "stream_url": "https://www.twitch.tv/junyoop",
+        "stream_embed_url": "https://player.twitch.tv/?channel=junyoop",
+        "stream_views": 181,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_junyoop-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 80,
+    "fields": {
+        "channel_name": "\uc775\uc0b0\ub204\ub204",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "(C1) \ucc4c 1000\uc810 \uc815\uae00\ub7ec ",
+        "stream_url": "https://www.twitch.tv/nunu836836",
+        "stream_embed_url": "https://player.twitch.tv/?channel=nunu836836",
+        "stream_views": 181,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nunu836836-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 81,
+    "fields": {
+        "channel_name": "\uc5d8\ub77c\ub028",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud638\ub4dc",
+        "stream_url": "https://www.twitch.tv/lruhon5",
+        "stream_embed_url": "https://player.twitch.tv/?channel=lruhon5",
+        "stream_views": 179,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lruhon5-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 82,
+    "fields": {
+        "channel_name": "0\ub300\uc18c\ubb38\uc790",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub370\ubc14\ub370 \uc2e0DLC \uc2e4\uc804",
+        "stream_url": "https://www.twitch.tv/dydwp545",
+        "stream_embed_url": "https://player.twitch.tv/?channel=dydwp545",
+        "stream_views": 174,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dydwp545-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 83,
+    "fields": {
+        "channel_name": "\uba54\uba54_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubcf8\uce90 \ub9c8\uc2a4\ud130 \uac15\ub4f1 \ubc29\uc5b4\uc804",
+        "stream_url": "https://www.twitch.tv/gudwns9047",
+        "stream_embed_url": "https://player.twitch.tv/?channel=gudwns9047",
+        "stream_views": 166,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_gudwns9047-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 84,
+    "fields": {
+        "channel_name": "ATK",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc0b0\uc18c \uc5c6\ub294 \uac8c\uc784",
+        "stream_url": "https://www.twitch.tv/atk",
+        "stream_embed_url": "https://player.twitch.tv/?channel=atk",
+        "stream_views": 161,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_atk-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 85,
+    "fields": {
+        "channel_name": "\uc784\uc218\uc544",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud574\uc704\ud574\uc704",
+        "stream_url": "https://www.twitch.tv/limsua_",
+        "stream_embed_url": "https://player.twitch.tv/?channel=limsua_",
+        "stream_views": 152,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_limsua_-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 86,
+    "fields": {
+        "channel_name": "\ub9e5\ub610\ub9c8\ub610",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc0db\uae38\ub85c \uac00!",
+        "stream_url": "https://www.twitch.tv/megthomatho",
+        "stream_embed_url": "https://player.twitch.tv/?channel=megthomatho",
+        "stream_views": 146,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_megthomatho-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 87,
+    "fields": {
+        "channel_name": "\uacf0\uce90\uc2a4\ud2b8",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "-\uaca9- \ud30c\uc6cc \uc804\uc7a5 Ai \uc8fc\uac04 _ \ud1a0\uc77c\uc6d4 \ud734\ubc29(2\ud68c \uc410\uae30\ub3cc \ucc4c\ub9b0\uc9c0)",
+        "stream_url": "https://www.twitch.tv/pdgom",
+        "stream_embed_url": "https://player.twitch.tv/?channel=pdgom",
+        "stream_views": 143,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_pdgom-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 88,
+    "fields": {
+        "channel_name": "\uace0\uba10\uc789",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc598\uae30\ud558\uc790 !",
+        "stream_url": "https://www.twitch.tv/rhaia11",
+        "stream_embed_url": "https://player.twitch.tv/?channel=rhaia11",
+        "stream_views": 134,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rhaia11-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 89,
+    "fields": {
+        "channel_name": "\uc5f0\ud569\ub274\uc2a4TV",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\uc0dd\ubc29\uc1a1] \ub274\uc2a41\ubc88\uc9c0 / \uc5f0\ud569\ub274\uc2a4TV (YonhapnewsTV)",
+        "stream_url": "https://www.youtube.com/watch?v=agzr02qCi1A",
+        "stream_embed_url": "https://www.youtube.com/embed/agzr02qCi1A",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/agzr02qCi1A/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLB-grBs6v2NH6rrf81SaWdlUkZ-sQ",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 90,
+    "fields": {
+        "channel_name": "KBS News",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[LIVE] KBS \uc0ac\uc0ac\uac74\uac74 2019\ub144 12\uc6d4 6\uc77c(\uae08)",
+        "stream_url": "https://www.youtube.com/watch?v=BEohgmutjpQ",
+        "stream_embed_url": "https://www.youtube.com/embed/BEohgmutjpQ",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/BEohgmutjpQ/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLAqShmFI3wC1B2r32-xYzimPbzlEQ",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 91,
+    "fields": {
+        "channel_name": "SBS \ub274\uc2a4",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[LIVE] PLAY! \ub274\uc2a4\ub77c\uc774\ud504, SBS \ubaa8\ubc14\uc77c24",
+        "stream_url": "https://www.youtube.com/watch?v=tc06WL0Daj0",
+        "stream_embed_url": "https://www.youtube.com/embed/tc06WL0Daj0",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/tc06WL0Daj0/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLCBDMw5nxEwbHRphKi3vP06783kDg",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 92,
+    "fields": {
+        "channel_name": "GKTV",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[LIVE] 12/6 \uc560\ub4e4\ub808\uc774\ub4dc vs \uc9c8\ub871",
+        "stream_url": "https://www.youtube.com/watch?v=ytwXr3omfmI",
+        "stream_embed_url": "https://www.youtube.com/embed/ytwXr3omfmI",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/ytwXr3omfmI/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLAjzdJug3mx86JVZiiTL2QBVROAvw",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 93,
+    "fields": {
+        "channel_name": "SIMZZANG [\uc2ec\uc9f1\uace8\ud504]",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "2\ud0c4 \ud640\uc778\uc6d0 \ub420 \ub54c\uae4c\uc9c0 \uacf5\uce58\uae30  \uc0dd\ubc29\uc1a1",
+        "stream_url": "https://www.youtube.com/watch?v=s1z9MDppYOk",
+        "stream_embed_url": "https://www.youtube.com/embed/s1z9MDppYOk",
+        "stream_views": 10,
+        "stream_thumbnail": "https://i.ytimg.com/vi/s1z9MDppYOk/hqdefault_live.jpg?sqp=CNCLqO8F-oaymwEiCMQBEG5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBe8xmXS8w97Rq0ksm-p-gXs3WyOw",
+        "tof": 1,
+        "platform": 1
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 94,
+    "fields": {
+        "channel_name": "\uc0c1\uc9f1\ub9e8",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc544\uc81c\ub85c\uc2a4 \ubcf4\uc548\uad00 \uc0c1\uc9f1\ub9e8",
+        "stream_url": "https://www.twitch.tv/holypower7777",
+        "stream_embed_url": "https://player.twitch.tv/?channel=holypower7777",
+        "stream_views": 131,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_holypower7777-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 95,
+    "fields": {
+        "channel_name": "_\uc96c\ub514_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc2e0\uc785 22\uc77c\ucc28) \ub178\ub798\uc640 \uc18c\ud1b5",
+        "stream_url": "https://www.twitch.tv/judy_730_",
+        "stream_embed_url": "https://player.twitch.tv/?channel=judy_730_",
+        "stream_views": 128,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_judy_730_-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 96,
+    "fields": {
+        "channel_name": "\ud749\uc0b4",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "290\uace0\u3147 \u3160 \ub2ec\uc131",
+        "stream_url": "https://www.twitch.tv/ssm1588",
+        "stream_embed_url": "https://player.twitch.tv/?channel=ssm1588",
+        "stream_views": 125,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ssm1588-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 97,
+    "fields": {
+        "channel_name": "\ud558\ub098\ub098",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud83d\udc96 \ud638\ub791\uc774\ub791 \uc0ac\uc790\uac00 \uc2f8\uc6b0\uba74 \ub204\uac00 \uc774\uae38\uac00? \ud83d\udc96",
+        "stream_url": "https://www.twitch.tv/hanana0408",
+        "stream_embed_url": "https://player.twitch.tv/?channel=hanana0408",
+        "stream_views": 119,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_hanana0408-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 98,
+    "fields": {
+        "channel_name": "\ub77c\ub808\uce04",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "D3 \uce74\ud0c0\ub9ac\ub098 \uc548\ub0e5\ud558\uc138\uc694^\u3145^",
+        "stream_url": "https://www.twitch.tv/kush1001",
+        "stream_embed_url": "https://player.twitch.tv/?channel=kush1001",
+        "stream_views": 119,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kush1001-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 99,
+    "fields": {
+        "channel_name": "_\ub2e8\uc988",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud3d0\uad00\uc218\ub828..\u2605",
+        "stream_url": "https://www.twitch.tv/danz_59",
+        "stream_embed_url": "https://player.twitch.tv/?channel=danz_59",
+        "stream_views": 115,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_danz_59-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 100,
+    "fields": {
+        "channel_name": "\uc591\ube60\ub098",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub610\uc57c! ",
+        "stream_url": "https://www.twitch.tv/hana7120",
+        "stream_embed_url": "https://player.twitch.tv/?channel=hana7120",
+        "stream_views": 114,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_hana7120-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 101,
+    "fields": {
+        "channel_name": "\uc9c0\ud0f1\uc774_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\uc9c0\ud0f1\uc774_\ud83d\udc96] \ub9ac\ub2c8\uc9c02 M \ub9ac\uc624\ub09802\uc12d\ud83c\udfa5\ud608\uc6d0 \ubaa8\uc9d1\uc911 +_+\n",
+        "stream_url": "https://www.twitch.tv/zteng",
+        "stream_embed_url": "https://player.twitch.tv/?channel=zteng",
+        "stream_views": 112,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_zteng-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 102,
+    "fields": {
+        "channel_name": "\uc2e0\uae30\ud574",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubb50!? \uc5b4\uc81c \ub2cc\uc790\ub9cc \uc14b? \uc0ac\uc0ac\uac8c \uc77d\uc5b4\uc8fc\ub294 \ud2b8\ub864",
+        "stream_url": "https://www.twitch.tv/1am_shin",
+        "stream_embed_url": "https://player.twitch.tv/?channel=1am_shin",
+        "stream_views": 111,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_1am_shin-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 103,
+    "fields": {
+        "channel_name": "ruhana",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub9e5\uc2ec \ubaa8\ub378 \ubaa8\uc784\ud83d\udc9b",
+        "stream_url": "https://www.twitch.tv/ruhana",
+        "stream_embed_url": "https://player.twitch.tv/?channel=ruhana",
+        "stream_views": 107,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ruhana-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 104,
+    "fields": {
+        "channel_name": "\uc140\uc639",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubb38\uba856 \ubc30\uc6cc\ubcf4\uc790, \uc140\uc639",
+        "stream_url": "https://www.twitch.tv/junes82",
+        "stream_embed_url": "https://player.twitch.tv/?channel=junes82",
+        "stream_views": 106,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_junes82-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 105,
+    "fields": {
+        "channel_name": "\ubca0\ub098_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubca0\ub098_ \ub514\uc5442 \ud558\ucf54 \ub9e8\ub545 \ub291\ub4dc\ub8e8 Hardcore DRU",
+        "stream_url": "https://www.twitch.tv/rms3tjd2",
+        "stream_embed_url": "https://player.twitch.tv/?channel=rms3tjd2",
+        "stream_views": 105,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rms3tjd2-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 106,
+    "fields": {
+        "channel_name": "classboso",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u0295\u2022\u072b\u2022\u0294  \uc6d4\ub4dc \ud50c\ub9ac\ud37c l World Flipper POG",
+        "stream_url": "https://www.twitch.tv/classboso",
+        "stream_embed_url": "https://player.twitch.tv/?channel=classboso",
+        "stream_views": 104,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_classboso-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 107,
+    "fields": {
+        "channel_name": "\ub355\ud574",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uba85\uc810 \ud0a4\uc624\uc2a4\ud06c  \uc090\ube45-",
+        "stream_url": "https://www.twitch.tv/djejrgo1115",
+        "stream_embed_url": "https://player.twitch.tv/?channel=djejrgo1115",
+        "stream_views": 103,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_djejrgo1115-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 108,
+    "fields": {
+        "channel_name": "\uae40\uc815\ubbfc",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ub370\uc2a4\uc719\uc774 \ub098\uc654\ub124??",
+        "stream_url": "https://www.twitch.tv/themarinekr",
+        "stream_embed_url": "https://player.twitch.tv/?channel=themarinekr",
+        "stream_views": 101,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_themarinekr-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 109,
+    "fields": {
+        "channel_name": "\uacac\ubc31",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "C1  Jungle \ubd80\uce90\ub3c4 \ucc4c\ub9b0\uc800\u3153\u3153\uac04\ub2f9",
+        "stream_url": "https://www.twitch.tv/gyeon_100",
+        "stream_embed_url": "https://player.twitch.tv/?channel=gyeon_100",
+        "stream_views": 97,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_gyeon_100-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 110,
+    "fields": {
+        "channel_name": "\ud1b5\uae61\uc774",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc804\uc9c1 \uc218\ud559 \uc120\uc0dd\ub2d8\uacfc \ud604\uc9c1 \uace0\ub4f1\ud559\uc0dd \uc2dc\uc988 \ub4c0\uc624",
+        "stream_url": "https://www.twitch.tv/ktmrgl",
+        "stream_embed_url": "https://player.twitch.tv/?channel=ktmrgl",
+        "stream_views": 97,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ktmrgl-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 111,
+    "fields": {
+        "channel_name": "\ud544\uba54",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc544\uc774\uc5b8\ud0c8\ucd9c \ube0c\ub860\uc9883 (9\uc2dc \ud654\uc2ec\ub808\uc774\ub4dc) ^^ \ub864\ud1a0\uccb4\uc2a4 lol \ud544\uba54 wow",
+        "stream_url": "https://www.twitch.tv/verv6",
+        "stream_embed_url": "https://player.twitch.tv/?channel=verv6",
+        "stream_views": 95,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_verv6-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 112,
+    "fields": {
+        "channel_name": "\ubc15\uae40\ub840",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u3000",
+        "stream_url": "https://www.twitch.tv/bbaktube",
+        "stream_embed_url": "https://player.twitch.tv/?channel=bbaktube",
+        "stream_views": 94,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_bbaktube-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 113,
+    "fields": {
+        "channel_name": "\uc601\uc6b0\ucfe4",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u30a2\u30f3\u30e9\u30f3\u30af\u304b\u3089\u30c1\u30e3\u30ec\u30f3\u30b8\u30e3\u30fc\u307e\u3067",
+        "stream_url": "https://www.twitch.tv/jyw_zz",
+        "stream_embed_url": "https://player.twitch.tv/?channel=jyw_zz",
+        "stream_views": 93,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_jyw_zz-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 114,
+    "fields": {
+        "channel_name": "\uc11c\ub791\uadf8\ub9bc",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc77c\ub2e8 \uadf8\ub9bc\ubc29\uc1a1\uc774\uae34 \ud558\uac70\ub4e0\uc694",
+        "stream_url": "https://www.twitch.tv/seorang_sr",
+        "stream_embed_url": "https://player.twitch.tv/?channel=seorang_sr",
+        "stream_views": 92,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_seorang_sr-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 115,
+    "fields": {
+        "channel_name": "\uc5ec\ub984\uc7a5\ub9c8_",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "Rain | \ubcf4\uc0b4\ub2d8, \uc2dc\uc8fc\ud558\uc138\uc694. | ",
+        "stream_url": "https://www.twitch.tv/summerraintv",
+        "stream_embed_url": "https://player.twitch.tv/?channel=summerraintv",
+        "stream_views": 91,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_summerraintv-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 116,
+    "fields": {
+        "channel_name": "\ub450\ubd80\uc7bc",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ud638\ub4dc \uc7a1\ub294 \ub3c5\uc218\ub9ac \ud83e\udd85 ",
+        "stream_url": "https://www.twitch.tv/doobu25",
+        "stream_embed_url": "https://player.twitch.tv/?channel=doobu25",
+        "stream_views": 90,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_doobu25-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 117,
+    "fields": {
+        "channel_name": "\ub610\ub8e8\uc2dc",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\u3134\u3139\u314a",
+        "stream_url": "https://www.twitch.tv/d_dosi",
+        "stream_embed_url": "https://player.twitch.tv/?channel=d_dosi",
+        "stream_views": 90,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_d_dosi-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 118,
+    "fields": {
+        "channel_name": "\uac13\ubcf4\uae30",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\ubc14\ub2e5\ubd80\ud130 \uc2dc\uc791\ud558\ub294 \uc804\uc7a5\uc0dd\ud65c (\uc2a4\ud0c02 \ucea0\ud398\uc778 \uc2f9 \uc644\ub8cc)",
+        "stream_url": "https://www.twitch.tv/godbokihs",
+        "stream_embed_url": "https://player.twitch.tv/?channel=godbokihs",
+        "stream_views": 87,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_godbokihs-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 119,
+    "fields": {
+        "channel_name": "\uce74\uac8c\ud6c4\ubbf8",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[WOW]  \ud074\ub798\uc2dd \uc124\ud37c\uc804\uc0ac Bboost ",
+        "stream_url": "https://www.twitch.tv/pakusyo",
+        "stream_embed_url": "https://player.twitch.tv/?channel=pakusyo",
+        "stream_views": 86,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_pakusyo-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 120,
+    "fields": {
+        "channel_name": "\uc6d0\ud380\ub9e8\uc740\uc0b4\uc544\uc788\ub2e4",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc804\ucc4c \uc6cc\uc705\uc7a5\uc778 \uc6cc\uc7051\uc704 \uc6d0\ud380\ub9e8\uc785\ub2c8\ub2e4!",
+        "stream_url": "https://www.twitch.tv/boolnami",
+        "stream_embed_url": "https://player.twitch.tv/?channel=boolnami",
+        "stream_views": 85,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_boolnami-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 121,
+    "fields": {
+        "channel_name": "Olleh",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "9.23 ",
+        "stream_url": "https://www.twitch.tv/olleh",
+        "stream_embed_url": "https://player.twitch.tv/?channel=olleh",
+        "stream_views": 83,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_olleh-320x180.jpg",
+        "tof": 0,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 122,
+    "fields": {
+        "channel_name": "\ub110\ub9ac\ub9ac",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "[\ub110\ub9ac\ub9ac] \uad70\ub3c4 pvp \ucd08\ubcf4!!! \uc640\uc6b0\uc640\uc6b0",
+        "stream_url": "https://www.twitch.tv/arang9876",
+        "stream_embed_url": "https://player.twitch.tv/?channel=arang9876",
+        "stream_views": 83,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_arang9876-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "crawling.stream",
+    "pk": 123,
+    "fields": {
+        "channel_name": "\ub545\uc6b0\uc591",
+        "channel_url": null,
+        "channel_thumbnail": null,
+        "title": "\uc804\ud504\ub85c\uc6d0\ub51c \ucc4c\ub9b0\uc800 \ud604\uadf8\ub9c8 \uc2e4\ub825\ubc29\uc1a1 \uc2e0\uc785\uc2a4\ud2b8\ub9ac\uba38 2\uc77c\ucc28^__^",
+        "stream_url": "https://www.twitch.tv/zz5152zz",
+        "stream_embed_url": "https://player.twitch.tv/?channel=zz5152zz",
+        "stream_views": 83,
+        "stream_thumbnail": "https://static-cdn.jtvnw.net/previews-ttv/live_user_zz5152zz-320x180.jpg",
+        "tof": 1,
+        "platform": 0
+    }
+}, {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "crawling",
+        "model": "stream"
+    }
+}, {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+}, {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+}, {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+}, {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+}, {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+}, {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add stream",
+        "content_type": 1,
+        "codename": "add_stream"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change stream",
+        "content_type": 1,
+        "codename": "change_stream"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete stream",
+        "content_type": 1,
+        "codename": "delete_stream"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view stream",
+        "content_type": 1,
+        "codename": "view_stream"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 2,
+        "codename": "add_logentry"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 2,
+        "codename": "change_logentry"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 2,
+        "codename": "delete_logentry"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 2,
+        "codename": "view_logentry"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 3,
+        "codename": "add_permission"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 3,
+        "codename": "change_permission"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 3,
+        "codename": "delete_permission"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 3,
+        "codename": "view_permission"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 4,
+        "codename": "add_group"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 4,
+        "codename": "change_group"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 4,
+        "codename": "delete_group"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 4,
+        "codename": "view_group"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 5,
+        "codename": "add_user"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 5,
+        "codename": "change_user"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 5,
+        "codename": "delete_user"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 5,
+        "codename": "view_user"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 6,
+        "codename": "add_contenttype"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 6,
+        "codename": "change_contenttype"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 6,
+        "codename": "delete_contenttype"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 6,
+        "codename": "view_contenttype"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 7,
+        "codename": "add_session"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 7,
+        "codename": "change_session"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 7,
+        "codename": "delete_session"
+    }
+}, {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 7,
+        "codename": "view_session"
+    }
+}]
