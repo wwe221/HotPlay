@@ -194,7 +194,8 @@
     get_thumb(2)
     $(document).on('click','.btn-fav',function(){
         var id = $(this).data('id')
-        console.log(id)
+        var button = $(this)
+        console.log(button)
         $.ajax({
           url:'{% url "favorite" %}',
           method:'POST',
@@ -203,7 +204,8 @@
             stream:id
           },
           success:function(data){
-            console.log(data)
+            button.find('i').toggleClass(['fas','far'])
+            button.toggleClass('text-white')
           },
           error:function(data){
 

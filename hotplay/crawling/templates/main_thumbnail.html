@@ -14,9 +14,9 @@
             </div>
             {% if user.is_authenticated  %}
                 {% if user in tmp.fav_user.all %}
-                    <div class="btn-fav" data-id="{{tmp.id}}"><i class="fas fa-star"></i></div>
+                    <div class="btn-fav text-white" data-id="{{tmp.id}}"><i class="fas fa-star"></i></div>
                 {% else %}
-                    <div class="btn-fav" data-id="{{tmp.id}}"><i class="far fa-star"></i></div>
+                    <div class="btn-fav " data-id="{{tmp.id}}"><i class="far fa-star"></i></div>
                 {% endif %}
             {% endif %}
         </div>
