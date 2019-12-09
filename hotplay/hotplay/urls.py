@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('subfunction.urls')),
     path('live/', include('crawling.urls')),
+    path('accounts',include('accounts.urls'))
 ]

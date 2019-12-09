@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http.response import HttpResponse
 import json
+from django.shortcuts import render
 
 # Create your views here.
 def index(request):    
@@ -13,4 +14,5 @@ def getlives(request):
 
 def double_screen(request):
     return render(request, 'double_screen.html')
+
 
