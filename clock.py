@@ -2,7 +2,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from django.shortcuts import render
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from .models import Stream
+from crawling.models import Stream
 import requests
 import json
 import time
