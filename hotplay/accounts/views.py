@@ -40,3 +40,7 @@ def login(request):
 def logout(request):
     auth_logout(request)
     return redirect('boot')
+
+def favorite(request):
+    
+    return ''

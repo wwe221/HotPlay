@@ -580,7 +580,12 @@
                     $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
                 })
             })
-            
+            $(function(){
+                $(document).on('click','.btn-fav',function(){
+                    var id = $(this).data('id')
+                    console.log(id)
+                });
+            })    
         </script>
 
         {% block script %}
