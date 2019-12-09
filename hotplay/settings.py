@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_crontab',
 ]
+CRONTAB_DJANGO_SETTINGS_MODULE='hotplay.settings.local_settings'
 CRONJOBS=[
     ('*/5 * * * *', 'crawling.cron.freq'),
 ]
