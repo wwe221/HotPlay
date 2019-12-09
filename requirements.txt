@@ -1,3 +1,4 @@
+APScheduler==3.6.3
 asgiref==3.2.3
 beautifulsoup4==4.8.1
 bootstrap4==0.1.0
@@ -19,5 +20,6 @@ selenium==3.141.0
 six==1.13.0
 soupsieve==1.9.5
 sqlparse==0.3.0
+tzlocal==2.0.0
 urllib3==1.25.7
 whitenoise==4.1.4
