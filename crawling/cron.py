@@ -1,0 +1,3 @@
+def freq():
+    print("---@@@@@---@@@@@")
+    return
