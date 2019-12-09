@@ -144,8 +144,7 @@
       }
     })
   }
-  $(function () {
-    
+  $(function () {    
     var be4 = 0
     var be4url =''
     $('#carouselExampleControls').on('slide.bs.carousel',
@@ -193,7 +192,25 @@
     get_thumb(0)
     get_thumb(1)
     get_thumb(2)
-    
+    $(document).on('click','.btn-fav',function(){
+        var id = $(this).data('id')
+        console.log(id)
+        $.ajax({
+          url:'{% url "favorite" %}',
+          method:'POST',
+          data:{
+            csrfmiddlewaretoken:'{{csrf_token }}',
+            stream:id
+          },
+          success:function(data){
+            console.log(data)
+          },
+          error:function(data){
+
+          }
+        })
+    })
   });
+  
 </script>
 {% endblock script %}

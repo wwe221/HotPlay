@@ -2,6 +2,9 @@ from django.shortcuts import render , redirect
 from .forms import AuthenticationForm,UserCreationForm 
 from django.contrib.auth import login as  auth_login, logout as auth_logout
 from .forms import CustomAuthenticationForm, CustomUserCreateionForm
+from crawling.models import Stream
+from django.http.response import HttpResponse
+import json
 # Create your views here.
 
 def signup(request):
@@ -42,5 +45,22 @@ def logout(request):
     return redirect('boot')
 
 def favorite(request):
-    
-    return ''
+    if request.user.is_authenticated and request.method =="POST":
+        id = request.POST['stream']
+        user = request.user
+        stream = Stream.objects.get(id=id)
+        if request.user in stream.fav_user.all():           
+            user.favorite.remove(stream)
+        else:
+            user.favorite.add(stream)
+        context={
+        }
+        return HttpResponse(json.dumps(context),status=200,content_type='application/json')
+    else:
+        return redirect('boot')
+def favlist(request):
+    l = request.user.favorite.all()
+    context = {
+        'favs':l
+    }
+    return render(request,'subfunction/favorite_list.html',context)

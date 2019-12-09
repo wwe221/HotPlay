@@ -389,6 +389,11 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{user.username}}</span>
                                <i class="far fa-user"></i>
                             </a>
+                         <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="{% url 'favlist' %}" >
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Favorite</span>                               
+                            </a>
+                        </li
                         {% else %}
                          <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="{% url 'login' %}" >

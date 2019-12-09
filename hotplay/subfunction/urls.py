@@ -15,5 +15,6 @@ urlpatterns = [
     path('logout/', account_views.logout, name="logout"),
     path('signup/', account_views.signup, name="signup"),
     path('favorite/',account_views.favorite, name="favorite"),
+    path('favlist/',account_views.favlist, name="favlist"),
 ]   
-# frequnctly()
+frequnctly()

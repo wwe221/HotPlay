@@ -46,7 +46,7 @@ def allHTML(request):
     return render(request, 'twitch.html',context)
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='C:/chromedriver'
+    path ='Y:/chromedriver'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -106,13 +106,14 @@ def getYoutube():
         stream.stream_thumbnail = img
         stream.platform = 1
         stream.tof=text_over_flag
+        stream.on_air = 1
         stream.save()
         lives.append(channel)      
     before = Stream.objects.filter(platform=1)
     for tmp in before:
         t = tmp.channel_name
         if not t in lives:
-            tmp.delete()
+            tmp.on_air = 0
     print("getYoutube done")
     return
 def getTwitch():    
@@ -157,18 +158,19 @@ def getTwitch():
         stream.stream_thumbnail = thumbnail
         stream.platform = 0
         stream.tof=text_over_flag
+        stream.on_air = 1
         stream.save() 
         lives.append(channel)
     before = Stream.objects.filter(platform=0)
     for tmp in before:
         t = tmp.channel_name
         if not t in lives:
-            tmp.delete()
+            tmp.on_air = 0
     print("getTwitch done")
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='C:/chromedriver'
+    path ='Y:/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
@@ -215,19 +217,20 @@ def getAfreeca():
         stream.stream_thumbnail = thumbnail
         stream.platform = 2
         stream.tof=text_over_flag
+        stream.on_air = 1
         stream.save()
         lives.append(channel)
     before = Stream.objects.filter(platform=2)
     for tmp in before:
         t = tmp.channel_name
         if not t in lives:
-            tmp.delete()
+            tmp.on_air = 0
     print("getAfreeca done")
     return
 
 
 def ret_youtube(request):
-    stream = Stream.objects.filter(platform=1)
+    stream = Stream.objects.filter(platform=1,on_air = 1)
     lives = stream
     length = len(stream)
     context={
@@ -237,7 +240,7 @@ def ret_youtube(request):
     return render(request,'subfunction/youtube.html',context)
 
 def ret_twitch(request):
-    stream = Stream.objects.filter(platform=0)
+    stream = Stream.objects.filter(platform=0 ,on_air = 1)
     lives = stream
     length = len(stream)
     context={
@@ -246,7 +249,7 @@ def ret_twitch(request):
     }
     return render(request,'subfunction/twitch.html',context)
 def ret_afreeca(request):
-    stream = Stream.objects.filter(platform=2)
+    stream = Stream.objects.filter(platform=2 ,on_air = 1)
     lives = stream
     length = len(stream)
     context={
@@ -255,7 +258,7 @@ def ret_afreeca(request):
     }
     return render(request,'subfunction/afreeca.html',context)
 def platform(request,platform):
-    lives = Stream.objects.filter(platform=platform).order_by('stream_views').reverse()
+    lives = Stream.objects.filter(platform=platform, on_air = 1).order_by('stream_views').reverse()
     context={
         'lives':lives,
     }
