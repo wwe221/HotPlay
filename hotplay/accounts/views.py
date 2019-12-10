@@ -20,7 +20,7 @@ def signup(request):
         context={
             'form':form
         }
-        return render(request , 'accounts/signup.html', context)
+        return render(request , 'accounts/signup2.html', context)
     else:
         return redirect('boot')
 def login(request):
@@ -39,7 +39,7 @@ def login(request):
         context={
             'form':form
         }
-        return render(request , 'accounts/login.html', context)
+        return render(request , 'accounts/login2.html', context)
 def logout(request):
     auth_logout(request)
     return redirect('boot')
