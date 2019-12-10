@@ -43,29 +43,26 @@
 {% endblock %}
 
 {% block content %}
-
 {% for live in lives %}
-<div onclick="location.href='{{live.stream_url}}'"class="col-md-4" style="float:left">
-    <div class="card mb-4 shadow-sm">
-    <img style="height:10rem" src="{{live.stream_thumbnail}}" class="card-img-top" alt="...">
-        
-        <!--이 부분 class 속성 줘서 다크모드에 따라 토글클래스 주기-->
-        <div class="card-body text-left" style="background-color:black;">
-            <div style="height:3rem">
-                <p class="font-weight-bold mb-1 stream_thumbnail_title" data-toggle="tooltip" data-placement="top"
-                title="{{live.title}}">
-                    {% if live.tof == 1 %}
-                    {{live.title|slice:":20"}}...
-                    {% else %}
-                    {{live.title}}
-                    {% endif %}
-                </p>
+<div class="col-lg-4 col-md-6">
+    <div class="room-items">
+        <div class="room-img set-bg">
+            <img src="{{live.stream_thumbnail}}" style="width:100%; height:100%;">
+            <a href="#" class="room-content">
+                <i class="far fa-heart"></i>
+            </a>
+        </div>
+        <div class="room-text">
+            <div class="room-details">
+                <div class="room-title">
+                    <h5>{{live.title}}</h5>
+                    <a href="#"><i class="fas fa-broadcast-tower"></i> <span>{{live.channel_name}}</span></a>
+                    <a href="#" class="large-width"><i class="fas fa-user"></i>
+                        <span>{{live.stream_views}}</span></a>
+                </div>
             </div>
-            <div style="height:2rem;">
-            <div class="justify-content-between align-items-center text-right">
-                <p><i class="fas fa-id-badge">&nbsp{{live.channel_name}}</i> / <i class="fas fa-users">&nbsp{{live.stream_views}}</i></p>
-            </div>
-            </div>
+            <a href="#" class="site-btn btn-line">Left</a>
+            <a href="#" class="site-btn btn-line">Right</a>
         </div>
     </div>
 </div>

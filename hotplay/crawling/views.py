@@ -20,30 +20,8 @@ def frequnctly():
     t3.start()    
     print("....Crawling End....")
     threading.Timer(600,frequnctly).start()
-
     return
-def main(request):
-    test = getbysele()
-    #lives= getYoutube()
-    # context= {
-    #     'lives':lives,
-    # }    
-    # return render(request, 'main.html',context)
-    data = getAfreeca()
-    context = {
-        'lives': data,
-        'test':test
-    }
-    return render(request, 'main.html',context)
-def slideTest(request):
-    return render(request, 'slideTest.html')
-
-def allHTML(request):    
-    html = getTwitch()
-    context ={
-        'lives':html
-    }
-    return render(request, 'twitch.html',context)
+    
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
     path ='C:/chromedriver'
@@ -231,35 +209,6 @@ def getAfreeca():
     print("getAfreeca done")
     return
 
-
-def ret_youtube(request):
-    stream = Stream.objects.filter(platform=1,on_air = 1)
-    lives = stream
-    length = len(stream)
-    context={
-        'lives':lives,
-        'length':length
-    }
-    return render(request,'subfunction/youtube.html',context)
-
-def ret_twitch(request):
-    stream = Stream.objects.filter(platform=0 ,on_air = 1)
-    lives = stream
-    length = len(stream)
-    context={
-        'lives':lives,
-        'length':length
-    }
-    return render(request,'subfunction/twitch.html',context)
-def ret_afreeca(request):
-    stream = Stream.objects.filter(platform=2 ,on_air = 1)
-    lives = stream
-    length = len(stream)
-    context={
-        'lives':lives,
-        'length':length
-    }
-    return render(request,'subfunction/afreeca.html',context)
 def platform(request,platform):
     lives = Stream.objects.filter(platform=platform, on_air = 1).order_by('stream_views').reverse()
     context={
@@ -282,7 +231,7 @@ def ret_stream(request,platform):
         'length':length,
         'split':split
     }
-    return render(request,'all.html',context)
+    return render(request,'multi.html',context)
 def getslide(request):    
     stream = Stream.objects.filter(on_air=1)
     lives = list(stream)

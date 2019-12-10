@@ -18,8 +18,7 @@
         rel="stylesheet" type="text/css">
     <link href="https://steamstore-a.akamaihd.net/public/shared/css/buttons.css?v=6uRURryOh96m&amp;l=english"
         rel="stylesheet" type="text/css">
-    <link href="https://steamstore-a.akamaihd.net/public/css/v6/store.css?v=ZI_5VEPYpykL&amp;l=english" rel="stylesheet"
-        type="text/css">
+    <link href="{% static 'css/store.css' %}" rel="stylesheet"
     <link href="https://steamstore-a.akamaihd.net/public/css/v6/home.css?v=Mr_QfRqGty0B&amp;l=english" rel="stylesheet"
         type="text/css">
     <link href="{% static 'css/autumn2019_sale.css' %}" rel="stylesheet">
@@ -49,11 +48,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     {% block headstyle %}
     {% endblock %}
 </head>
 <style>
+.test{
+        
+        height: 50%;
+        box-sizing: border-box;
+
+    }
 {% block stylesheet %}
 {% endblock stylesheet %}
 </style>
@@ -120,36 +131,16 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                ???
+                ETC
             </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
+           <li class="nav-item">
+                <a class="nav-link" href="{% url 'double_screen' %}">
+                    <i class="fas fa-columns"></i>
+                    <span>Multi Screen</span></a>
             </li>
+            <!-- Nav Item - Pages Collapse Menu -->            
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
+            <!-- Nav Item - Charts -->            
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -165,11 +156,7 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle">
                 </button>
-            </div>
-            <li>
-            <span id="now_Clock" class="clock"></span>    
-            <span id="target_Clock" class="clock"></span>  
-            </li>
+            </div>            
         </ul>
         <!-- End of Sidebar -->
 
@@ -225,6 +212,10 @@
                                     </div>
                                 </form>
                             </div>
+                        </li>
+                        <li style="border: 2px solid #FFFFFF !important; ">
+                            <span id="now_Clock" class="clock" style="color:#FFFFFF !important; border-bottom: 4px solid #FFFFFF; height:35px !important; display:inline-block;"></span>    
+                            <span id="target_Clock" class="clock" style="color:#FFFFFF; height:35px !important; display:block;"></span>  
                         </li>
                         <li class="nav-item dropdown no-arrow mx-1" >
                             <button type="button" class="nav-link dropdown-toggle btn btn-primary" data-toggle="modal" data-target="#alarm_modal">
@@ -412,12 +403,15 @@
                 <!-- End of Topbar -->
                 <div class="well">
   
-                {% block test %}
-                {% endblock test %}
-                <div class = "container-fluid bg-white2">
+                {% block slide %}
+                {% endblock slide %}
+                <div class="row">
+
+                <div class = "container-fluid ">
                 {% block content %}
 
                 {% endblock %}
+                </div>
                 </div>
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white" id = "footerbg">
