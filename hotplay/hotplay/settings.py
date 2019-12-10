@@ -40,7 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
 ]
+
+CRONJOBS = [
+    ('*/1 * * * *', 'crawling.cron.cron'),
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

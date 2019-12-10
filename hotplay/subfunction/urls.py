@@ -2,6 +2,9 @@ from django.urls import path
 from . import views as boot_views
 from crawling import views as craw_views
 from crawling.views import frequnctly
+
+app_name='subfunction'
+
 urlpatterns = [
     path('', boot_views.index, name="boot"),
     path('twitch/', craw_views.ret_twitch, name="get_twitch"),
@@ -10,4 +13,3 @@ urlpatterns = [
     path('getlives/', boot_views.getlives, name="getlives"),
     path('double_screen/', boot_views.double_screen, name="double_screen"),
 ]
-frequnctly()

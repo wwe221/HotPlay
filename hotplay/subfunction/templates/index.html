@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
+
 {% block stylesheet %}
 .container {
 }
@@ -7,7 +8,6 @@
     margin: auto;
     float: left;
     width: 20rem;
-}
 .slide-thumbnail{
     width:500px;
     heught:300px;
@@ -18,6 +18,7 @@
   margin-top:4rem
 }
 {% endblock stylesheet %}
+
 <!-- Begin Page Content -->
 {% block test %}
 <div style="width:100%; background-color : ivory;">
@@ -41,6 +42,7 @@
   </div>
 </div>
 {% endblock test %}
+
 {% block content %}
   <!-- Content Row (PlatForm Video Position) -->
   <div class="row">
@@ -67,8 +69,6 @@
         <!-- First PlatForm End -->
 
 
-
-
         <!-- Second  PlatForm Start -->
         <div class="home_category_ctn">
           <div class="home_category_title_ctn" style="background:#FF0000">
@@ -83,8 +83,6 @@
           </a>
         </div>
         <!-- Second PlatForm End -->
-
-
 
 
         <!-- Third PlatForm Start -->
@@ -107,17 +105,12 @@
       </div>
     </div>
   </div>
-
-
-
   <!-- END PlatForm Video Position -->
-
-
   <!-- /.container-fluid -->
-
 </div>
 <!-- End of Main Content -->
 {% endblock %}
+
 
 {% block script %}
 <script>

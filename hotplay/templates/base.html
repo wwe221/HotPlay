@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,14 +18,14 @@
         rel="stylesheet" type="text/css">
     <link href="https://steamstore-a.akamaihd.net/public/shared/css/buttons.css?v=6uRURryOh96m&amp;l=english"
         rel="stylesheet" type="text/css">
-    <link href="https://steamstore-a.akamaihd.net/public/css/v6/store.css?v=ZI_5VEPYpykL&amp;l=english" rel="stylesheet"
+    <link href="{% static 'css/store.css' %}" rel="stylesheet"
         type="text/css">
     <link href="https://steamstore-a.akamaihd.net/public/css/v6/home.css?v=Mr_QfRqGty0B&amp;l=english" rel="stylesheet"
         type="text/css">
     <link href="{% static 'css/autumn2019_sale.css' %}" rel="stylesheet">
     <link href="https://steamstore-a.akamaihd.net/public/shared/css/shared_responsive.css?v=GXt0zg7hRLhk&amp;l=english"
         rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -38,7 +38,21 @@
     
     <link rel="stylesheet" type="text/css" media="screen"
         href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-combined..css' %}">
+   
+
+    <!-- Css Styles_HOME -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
@@ -54,6 +68,21 @@
     {% endblock %}
 </head>
 <style>
+    .modal-content, .modal-fullsize
+    {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0; 
+    }
+
+    .test{
+        
+        height: 50%;
+        box-sizing: border-box;
+
+    }
+
+
 {% block stylesheet %}
 {% endblock stylesheet %}
 </style>
@@ -71,10 +100,7 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">Hot Play <sup>2</sup></div>
             </a>
-    <div class="well">
-    
-    </div>
-    
+ 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -120,10 +146,16 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                ???
+                ETC
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'subfunction:double_screen' %}">
+                    <i class="fas fa-columns"></i>
+                    <span>Multi Screen</span></a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -166,10 +198,10 @@
                 <button class="rounded-circle border-0" id="sidebarToggle">
                 </button>
             </div>
-            <li>
+            {% comment %} <li>
             <span id="now_Clock" class="clock"></span>    
             <span id="target_Clock" class="clock"></span>  
-            </li>
+            </li> {% endcomment %}
         </ul>
         <!-- End of Sidebar -->
 
@@ -226,27 +258,34 @@
                                 </form>
                             </div>
                         </li>
+                        <!-- ----시계 영역 START TOGGLE CLASS 추가해서 다크모드 적용하기--- -->
+                        <li style="border: 2px solid #FFFFFF !important; ">
+                            <span id="now_Clock" class="clock" style="color:#FFFFFF !important; border-bottom: 4px solid #FFFFFF; height:35px !important; display:inline-block;"></span>    
+                            <span id="target_Clock" class="clock" style="color:#FFFFFF; height:35px !important; display:block;"></span>  
+                        </li>
+                        <!-- ----시계 영역 END----- -->
+                        <!-- ---------------------------------------------------------------------- -->
                         <li class="nav-item dropdown no-arrow mx-1" >
                             <button type="button" class="nav-link dropdown-toggle btn btn-primary" data-toggle="modal" data-target="#alarm_modal">
                                 <i class="fas fa-stopwatch"></i>
                             </button>
                         </li>
-                        <div class="modal fade" id="alarm_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <div class="modal fade" id="alarm_modal" style="text-align: center;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-fullsize" role="document">
+                                <div class="modal-content modal-fullsize">
+                                <div class="modal-header" style="align-self:center; border-bottom:solid; width:100%;">
+                                    <h3 class="modal-title" id="exampleModalLabel">Set Alarm</h3>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body modal-fullsize">
                                     <div id="datetimepicker3" class="input-append">
-                                    <input data-format="hh:mm:ss" placeholder"시간 선택" id="target_time "type="text"></input>
+                                    <input size="10" data-format="hh:mm:ss" placeholder"시간 선택" id="target_time "type="text"></input>
                                     <span class="add-on">
                                     <i class="fas fa-calendar-alt"></i>
                                     </span>
-                                    <button type="button" id="time_select"  data-dismiss="modal" class="btn btn-primary">Save</button>
+                                    <button type="button" id="time_select" data-dismiss="modal" class="btn btn-primary">Save</button>
                                     </div>
                                     <hr>
                                     <div id="stopwatch">
@@ -260,13 +299,14 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- ---------------------------------------------------------------------- -->
+
+                        <!-- ---------------------------------------------------------------------- -->
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
+                                <i class="fas fa-stopwatch fa-fw"></i>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -310,7 +350,8 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
-
+                        <!-- ---------------------------------------------------------------------- -->
+                        
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -418,15 +459,31 @@
 
                 </nav>
                 <!-- End of Topbar -->
-                <div class="well">
+         
   
                 {% block test %}
                 {% endblock test %}
-                <div class = "container-fluid bg-white2">
+                
+
+
+                <!--다크 모드 적용 및 위치 이쁘게 하기 위해서-->
+                <!--div 하나 더 줌 나중에 class 속성 줘서 다크 모드 true 일떄는 black
+                아닐 경우 false에는 흰색으로 설정해주기
+                근데 들여쓰기 다 맞춰주면 위에 nav 내려옴
+                여기 부분 수정하지 말기
+                원래 bg-white2라고 지정해뒤서 검은색이었는데
+                현재 잘 보이게 할려고 white라고 지정-->
+                <div class="row">
+                <div class = "container-fluid bg-white mt-5 mb-5 ml-5 mr-5">
                 {% block content %}
 
                 {% endblock %}
                 </div>
+                </div>
+                <!--content 부분 배경색 주기 전, 다크모드 설정하기-->
+
+
+
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white" id = "footerbg">
                     <div class="container my-auto">
@@ -487,14 +544,14 @@
         <!-- Page level custom scripts -->
         <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
         <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
-        <script type="text/javascript"
-     src="{% static 'js/datetimepicker.min.js'%}">
+        <script type="text/javascript" src="{% static 'js/datetimepicker.min.js'%}">
     </script>
     <script type="text/javascript"
      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
     </script>
     <script type="text/javascript">
     $(function() {
+
         $(document).on('change','.stopwatch',function(){
             var currentDate = new Date();
             var now_hour = currentDate.getHours();
@@ -508,6 +565,7 @@
             msg += target_sec+"초 후"
             $('#target_stopwatch').text(msg)
         })
+
         $(document).on('click', '#stopwatch_select', function(){
             var currentDate = new Date();
             var now_hour = currentDate.getHours();
@@ -525,11 +583,12 @@
             target_hour += target_hour % 60
             target_min = target_min / 60
             target_hour = target_hour % 24
-
         })
+
         $('#datetimepicker3').datetimepicker({
             pickDate: false
         });
+
         $('#time_select').click(function(){
             var picker = $('#datetimepicker3').data('date');
             var time = picker.split(':')
@@ -540,6 +599,7 @@
             })
             localStorage.setItem('target', target);
         })
+
     });
     </script>
         <script>

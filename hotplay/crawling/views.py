@@ -20,8 +20,8 @@ def frequnctly():
     t3.start()    
     print("....Crawling End....")
     threading.Timer(600,frequnctly).start()
-
     return
+
 def main(request):
     test = getbysele()
     #lives= getYoutube()
@@ -35,6 +35,7 @@ def main(request):
         'test':test
     }
     return render(request, 'main.html',context)
+
 def slideTest(request):
     return render(request, 'slideTest.html')
 
@@ -44,9 +45,10 @@ def allHTML(request):
         'lives':html
     }
     return render(request, 'twitch.html',context)
+
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='C:/chromedriver'
+    path ='C:/chromedriver/chromedriver.exe'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -58,6 +60,7 @@ def getbysele():
     # for tmp in item_sctions:
     #     print(tmp)
     return soup
+
 def getYoutube():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'    
     data = requests.get(url).text
@@ -115,6 +118,7 @@ def getYoutube():
             tmp.delete()
     print("getYoutube done")
     return
+
 def getTwitch():    
     url = "https://api.twitch.tv/kraken/streams/"
     params ={
@@ -166,9 +170,10 @@ def getTwitch():
             tmp.delete()
     print("getTwitch done")
     return
+
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='C:/chromedriver'
+    path ='C:/chromedriver/chromedriver.exe'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
@@ -245,6 +250,7 @@ def ret_twitch(request):
         'length':length
     }
     return render(request,'subfunction/twitch.html',context)
+
 def ret_afreeca(request):
     stream = Stream.objects.filter(platform=2)
     lives = stream
@@ -254,29 +260,14 @@ def ret_afreeca(request):
         'length':length
     }
     return render(request,'subfunction/afreeca.html',context)
+
 def platform(request,platform):
     lives = Stream.objects.filter(platform=platform).order_by('stream_views').reverse()
     context={
         'lives':lives,
     }
     return render(request,'subfunction/sort_platform.html',context)
-def ret_stream(request,platform):
-    split = 0
-    if platform < 3:
-        stream = Stream.objects.filter(platform=platform).order_by('stream_views').reverse()
-    elif platform ==3 :
-        stream = Stream.objects.all().order_by('stream_views').reverse()
-        split = 1
-    elif platform ==4:
-        stream = Stream.objects.all().order_by('stream_views').reverse()[50:100]
-        split = 2
-    length = len(stream)
-    context={
-        'lives':stream,
-        'length':length,
-        'split':split
-    }
-    return render(request,'all.html',context)
+
 def getslide(request):    
     stream = Stream.objects.all()
     lives = list(stream)
@@ -293,3 +284,22 @@ def get_main_thumbnail(request, platform):
         'lives':lives
     }
     return render(request,'main_thumbnail.html',context)
+
+# 아래 함수가 멀티 스크린 리스트 함수
+def ret_stream(request,platform):
+    split = 0
+    if platform < 3:
+        stream = Stream.objects.filter(platform=platform).order_by('stream_views').reverse()
+    elif platform ==3 :
+        stream = Stream.objects.all().order_by('stream_views').reverse()
+        split = 1
+    elif platform ==4:
+        stream = Stream.objects.all().order_by('stream_views').reverse()[50:100]
+        split = 2
+    length = len(stream)
+    context={
+        'lives':stream,
+        'length':length,
+        'split':split
+    }
+    return render(request,'multi.html',context)
