@@ -1,7 +1,7 @@
 <div class="salerow salerow3 multiline">
     {% for  tmp in lives %}
     <div class="sale_capsule app_impression_tracked" data-ds-appid="787480" >
-        <a href="{{tmp.stream_url}}" target="_blank">
+        <a href="{% url 'show_one' tmp.id %}">
         <div class="sale_capsule_image_ctn">
             <div class="sale_capsule_image_hover"></div><img class="sale_capsule_image autosize"
             src="{{tmp.stream_thumbnail}}">

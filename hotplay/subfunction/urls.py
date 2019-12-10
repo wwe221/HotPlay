@@ -10,7 +10,8 @@ urlpatterns = [
     path('afreeca/', craw_views.ret_afreeca, name="get_afreeca"),
     path('getlives/', boot_views.getlives, name="getlives"),
     path('double_screen/', boot_views.double_screen, name="double_screen"),
-    
+    path('show_stream/<int:stream_id>',boot_views.show_one_stream, name="show_one"),
+
     path('login/', account_views.login, name="login"),
     path('logout/', account_views.logout, name="logout"),
     path('signup/', account_views.signup, name="signup"),
