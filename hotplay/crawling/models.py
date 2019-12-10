@@ -13,3 +13,4 @@ class Stream(models.Model):
     stream_thumbnail = models.CharField(max_length=100)
     tof = models.IntegerField(null=True)
     platform = models.IntegerField()
+    on_air = models.IntegerField()
