@@ -519,6 +519,7 @@
             var target = target_hour.toString()
             target +=target_min.toString()
             target +=target_sec.toString()
+            console.log(target+"으로 세팅")
             localStorage.setItem('target', target);
         })
         $('#datetimepicker3').datetimepicker({
@@ -551,7 +552,7 @@
                 setTimeout(showClock,1000);
                 var target = (localStorage.getItem('target'));
                 $('#target_Clock').text(target)
-                if(target!= 0 && target < now){
+                if(target!= 0 && Number(target) < Number(now)){
                     var frames = $(document).find('iframe')
                     frames.attr('src','')
                     localStorage.setItem('target', 0);

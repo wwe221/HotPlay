@@ -46,7 +46,7 @@ def allHTML(request):
     return render(request, 'twitch.html',context)
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='Y:/chromedriver'
+    path ='C:/chromedriver'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -114,6 +114,7 @@ def getYoutube():
         t = tmp.channel_name
         if not t in lives:
             tmp.on_air = 0
+            tmp.save()
     print("getYoutube done")
     return
 def getTwitch():    
@@ -166,11 +167,12 @@ def getTwitch():
         t = tmp.channel_name
         if not t in lives:
             tmp.on_air = 0
+            tmp.save()
     print("getTwitch done")
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='Y:/chromedriver'
+    path ='C:/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
@@ -225,6 +227,7 @@ def getAfreeca():
         t = tmp.channel_name
         if not t in lives:
             tmp.on_air = 0
+            tmp.save()
     print("getAfreeca done")
     return
 
@@ -266,12 +269,12 @@ def platform(request,platform):
 def ret_stream(request,platform):
     split = 0
     if platform < 3:
-        stream = Stream.objects.filter(platform=platform).order_by('stream_views').reverse()
+        stream = Stream.objects.filter(platform=platform, on_air=1).order_by('stream_views').reverse()
     elif platform ==3 :
-        stream = Stream.objects.all().order_by('stream_views').reverse()
+        stream = Stream.objects.filter(on_air=1).order_by('stream_views').reverse()
         split = 1
     elif platform ==4:
-        stream = Stream.objects.all().order_by('stream_views').reverse()[50:100]
+        stream = Stream.objects.filter(on_air=1).order_by('stream_views').reverse()[50:100]
         split = 2
     length = len(stream)
     context={
@@ -281,7 +284,7 @@ def ret_stream(request,platform):
     }
     return render(request,'all.html',context)
 def getslide(request):    
-    stream = Stream.objects.all()
+    stream = Stream.objects.filter(on_air=1)
     lives = list(stream)
     lives = random.sample(lives,10)
     context ={
@@ -290,7 +293,7 @@ def getslide(request):
     return render(request,'carousel_slide.html',context)
 
 def get_main_thumbnail(request, platform):
-    stream = Stream.objects.filter(platform=platform).order_by('stream_views').reverse()[0:12]
+    stream = Stream.objects.filter(platform=platform,on_air=1).order_by('stream_views').reverse()[0:12]
     lives = stream    
     context={
         'lives':lives
