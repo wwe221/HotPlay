@@ -39,7 +39,7 @@
   <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
-  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-combined..css' %}">
+  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-combined.min.css' %}">
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous">
@@ -70,16 +70,13 @@
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
               <form method="post">
-    {% csrf_token %}
-     {% bootstrap_form form %} 
-    <button class="btn btn-primary">signUp</button>
-</form>
-              <hr>
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <button class="btn btn-primary" style="width:100%; font-size:20px;">SIGNUP</button>
+              </form>
               <div class="text-center">
-                <a class="small" href="forgot-password.html">Forgot Password?</a>
-              </div>
-              <div class="text-center">
-                <a class="small" href="login.html">Already have an account? Login!</a>
+                <a class="small" href="{% url 'accounts:login' %}"><button class="btn btn-primary"
+                    style="width:100%; font-size:20px;">Already have an Account? Login!</button></a>
               </div>
             </div>
           </div>
@@ -90,14 +87,14 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
 
 </body>
 

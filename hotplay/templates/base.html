@@ -434,7 +434,7 @@
                         {% if user.is_authenticated %}
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="{% url 'logout' %}" >
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{user.username}}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{user.nickname}}</span>
                                <i class="far fa-user"></i>
                             </a>
                          <li class="nav-item dropdown no-arrow">
@@ -570,7 +570,6 @@
             var target = target_hour.toString()+":"
             target +=target_min.toString()+":"
             target +=target_sec.toString()
-            console.log(target+"으로 세팅")
             localStorage.setItem('target', target);
             $('#set_clock_div').hide()
         })
@@ -580,7 +579,6 @@
         $('#time_select').click(function(){
             var picker = $('#datetimepicker3').data('date');
             var time = picker.split(':')
-            console.log(time)
             var target =''
             time.forEach(function(tmp){
                 target+=tmp
@@ -605,7 +603,6 @@
                 var picker = (localStorage.getItem('target'));
                 $('#target_Clock').text(picker)
                 var time = picker.split(':')
-                console.log(time)
                 var target =''
                 time.forEach(function(tmp){
                     target+=tmp
@@ -647,7 +644,6 @@
             $(function(){
                 $(document).on('click','.btn-fav',function(){
                     var id = $(this).data('id')
-                    console.log(id)
                 });
                 $('#show_timer').on('click' , function(){
                     $('#set_clock_div').show()
