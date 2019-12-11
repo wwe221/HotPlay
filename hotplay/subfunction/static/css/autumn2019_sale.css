@@ -1,4 +1,10 @@
 
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
+body, div, a, ul, li, h1, h2, h3{
+	font-family: "NanumSquareRound", sans-serif !important;
+}
+
 body.v6.autumn2019_sale_home {
     background: #13181f;
 }
@@ -50,7 +56,7 @@ body.v6 .discount_block {
    background: #000000;
    text-align: right;
    margin-left: auto;
-           font-family: "Motiva Sans", Sans-serif;
+   font-family: "NanumSquareRound", sans-serif
        font-weight: normal; /* normal */
 
        }
@@ -65,7 +71,7 @@ body.v6 .sale_capsule {
    letter-spacing: 0.05em;
    color: #FFF;
    margin-bottom: 10px;
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: 300; /* light */
 
        }
@@ -206,7 +212,7 @@ body.v6 .sale_capsule {
 }
 
 .home_morefeatured_ctn .home_section_title {
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: 300; /* light */
 
            text-transform: uppercase;
@@ -228,12 +234,14 @@ body.v6 .sale_capsule {
    background: #171a21;
    padding-top: 1px;
    padding-bottom: 1px;
+   width:100%;
 }
 
 .home_category_ctn {
    display: flex;
    margin: 80px 0;
    position: relative;
+   width:100%;
 }
 
 .home_category_ctn .home_category_title_ctn {
@@ -243,7 +251,7 @@ body.v6 .sale_capsule {
    display: flex;
    justify-content: space-around;
    align-items: center;
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: bold; /* bold */
 
        }
@@ -278,14 +286,14 @@ body.v6 .sale_capsule {
    word-wrap: break-word;
    min-width: 70%;
    max-width: 95%;
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: 200; /* thin */
 
        }
 
 .home_category_title b {
    font-size: 1.25em;
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: bold; /* bold */
 
        }
@@ -535,7 +543,7 @@ body.v6 .sale_capsule {
    letter-spacing: 0.05em;
    color: #FFF;
    margin-bottom: 12px;
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: 300; /* light */
 
        }
@@ -685,7 +693,7 @@ body.v6 .sale_capsule {
 .home_broadcast_ctn .home_broadcast_sections .home_broadcast_more_ctn .home_section_title {
    background: #1B2838;
    padding-left: 30px;
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: 200; /* thin */
 
        }
@@ -809,7 +817,7 @@ body.v6 .sale_capsule {
    opacity: .7;
    display: inline-block;
    cursor: pointer;
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: normal; /* normal */
 
        }
@@ -1031,7 +1039,7 @@ body.v6 .sale_capsule .discount_block_inline
    right: 0;
    top: 100%;
    background: linear-gradient( to bottom, #294971 0%, #113158 100% );
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: normal; /* normal */
 
            color: #ffffff;
@@ -1114,7 +1122,7 @@ body.v6 .sale_capsule .discount_block_inline
 
 .hero_name
 {
-           font-family: "Motiva Sans", Sans-serif;
+           font-family: "NanumSquareRound", sans-serif;
        font-weight: bold; /* bold */
 
            font-size: 2em;

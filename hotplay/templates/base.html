@@ -24,7 +24,7 @@
     <link href="{% static 'css/autumn2019_sale.css' %}" rel="stylesheet">
     <link href="https://steamstore-a.akamaihd.net/public/shared/css/shared_responsive.css?v=GXt0zg7hRLhk&amp;l=english"
         rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -37,7 +37,7 @@
     
     <link rel="stylesheet" type="text/css" media="screen"
         href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-combined..css' %}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-combined.min.css' %}">
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
@@ -55,10 +55,82 @@
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+
     {% block headstyle %}
     {% endblock %}
 </head>
 <style>
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+
+
+
+
 .test{
         
         height: 50%;
@@ -77,14 +149,12 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
+                <div class="sidebar-brand-icon rotate-n-15 neon">
                     <i class="fab fa-gripfire"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Hot Play <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3 neon">Hot Play</div>
             </a>
-    <div class="well">
     
-    </div>
     
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -213,10 +283,20 @@
                                 </form>
                             </div>
                         </li>
-                        <li style="border: 2px solid #FFFFFF !important; ">
-                            <span id="now_Clock" class="clock" style="color:#FFFFFF !important; border-bottom: 4px solid #FFFFFF; height:35px !important; display:inline-block;"></span>    
-                            <span id="target_Clock" class="clock" style="color:#FFFFFF; height:35px !important; display:block;"></span>  
+
+
+
+                        <li style="display: table; margin-left: auto; margin-right: auto; ">
+                            <span id="now_Clock" class="clock" style="font-size:20px !important;vertical-align:middle; text-align:center; color:#FFFFFF !important;  display:inline-block;"></span>
+                            {% comment %} <span id="target_Clock" class="clock" style="color:#FFFFFF; height:35px !important; display:block;"></span>   {% endcomment %}
                         </li>
+                        <li style="width:20px;">
+                        </li>
+                        <li style="display: table; margin-left: auto; margin-right: auto; ">
+                            <span id="target_Clock" class="clock" style="font-size:20px !important;vertical-align:middle; text-align:center; color:#FFFFFF !important;  display:inline-block;"></span>
+                        </li>
+
+
                         <li class="nav-item dropdown no-arrow mx-1" >
                             <button type="button" class="nav-link dropdown-toggle btn btn-primary" data-toggle="modal" data-target="#alarm_modal">
                                 <i class="fas fa-stopwatch"></i>
@@ -388,12 +468,12 @@
                         {% else %}
                          <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="{% url 'login' %}" >
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">login</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600" style="vertical-align:middle; text-align:center;">LOGIN</span>
                         </a>
                         </li>
                          <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="{% url 'signup' %}" >
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">signup</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600" style="vertical-align:middle; text-align:center;">SIGNUP</span>
                         </a>
                         </li>
                         {% endif %}
@@ -401,7 +481,7 @@
 
                 </nav>
                 <!-- End of Topbar -->
-                <div class="well">
+                {% comment %} <div class="well"> {% endcomment %}
   
                 {% block slide %}
                 {% endblock slide %}
@@ -535,9 +615,9 @@
             var colormode = JSON.parse(localStorage.getItem('darkmode'))
             function showClock(){
                 var currentDate = new Date();
-                var msg = "현재 시간:" +currentDate.getHours()+ "시"
-                msg += currentDate.getMinutes()+ "분";
-                msg += currentDate.getSeconds()+ "초";
+                var msg = currentDate.getHours()+ " : "
+                msg += currentDate.getMinutes()+ " : ";
+                msg += currentDate.getSeconds();
                 var now = '';
                 now += currentDate.getHours()
                 now += currentDate.getMinutes()

@@ -7,6 +7,14 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+ @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+ body .discount_pct{
+    font-size: 17px;
+ }
+ body .discount_final_price{
+    font-size: 14px;
+ }
+ 
 article,
 aside,
 details,
@@ -273,7 +281,7 @@ a:hover {
 }
 
 .row {
-    margin-left: -20px;
+    
     *zoom: 1
 }
 
@@ -1045,10 +1053,10 @@ label,
 input,
 button,
 select,
-textarea {
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 20px
+textarea{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px
 }
 
 input,
@@ -1081,10 +1089,10 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
     display: inline-block;
-    height: 20px;
+    height: 40px;
     padding: 4px 6px;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 20px;
     color: #555;
     vertical-align: middle;

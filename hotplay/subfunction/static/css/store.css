@@ -1,7 +1,7 @@
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
 
-* {
-	padding: 0;
-	margin: 0;
+body, div, a, ul, li, h1, h2, h3{
+	font-family: "NanumSquareRound", sans-serif !important;
 }
 
 img {
@@ -1003,7 +1003,7 @@ a#store_search_link img {
 
 .discount_block_inline .discount_final_price {
 	padding-left: 4px;
-	font-size: 11px;
+	
 }
 
 .discount_block_inline.no_discount .discount_final_price {

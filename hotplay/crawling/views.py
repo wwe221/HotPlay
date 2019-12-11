@@ -24,7 +24,7 @@ def frequnctly():
     
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='C:/chromedriver'
+    path ='C:/chromedriver/chromedriver.exe'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -150,7 +150,7 @@ def getTwitch():
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='C:/chromedriver'
+    path ='C:/chromedriver/chromedriver.exe'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')

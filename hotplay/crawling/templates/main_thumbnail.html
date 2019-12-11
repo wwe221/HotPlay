@@ -11,7 +11,7 @@
             <div class="discount_pct">{{tmp.title}}</div>
             <div class="discount_prices">
                 <div class="discount_original_price"></div>
-                <div class="discount_final_price">{{tmp.channel_name}} / {{tmp.stream_views}}</div>
+                <div class="discount_final_price"><i class="fas fa-id-badge mt-1 mr-1"></i>{{tmp.channel_name}} / <i class="fas fa-users mt-1 mr-1"></i>{{tmp.stream_views}}</div>
             {% if user.is_authenticated  %}
                 {% if user in tmp.fav_user.all %}
                     <span class="btn-fav text-white" data-id="{{tmp.id}}"><i class="fas fa-star"></i></span>

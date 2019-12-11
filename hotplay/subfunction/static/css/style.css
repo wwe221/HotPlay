@@ -30,13 +30,26 @@ Created:
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body, div, a, ul, li, h1, h2, h3{
+	font-family: "NanumSquareRound", sans-serif !important;
+	font-size: 14px !important;
+}
+
+#now_Clock, #target_Clock{
+	font-family: 'Orbitron', sans-serif !important;
+}
+.topbar .nav-item .nav-link {
+	height: auto !important;
+}
 
 html,
 body {
 	height: 100%;
-	font-family: "Roboto", sans-serif;
+	font-family: "NanumSquareRound", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 }
 
 h1,
