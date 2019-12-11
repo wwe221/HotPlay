@@ -60,7 +60,10 @@ def favorite(request):
         return redirect('boot')
 def favlist(request):
     l = request.user.favorite.all()
+    length= len(l)
     context = {
-        'favs':l
+        'favs':l,
+        'len':length
+
     }
     return render(request,'subfunction/favorite_list.html',context)

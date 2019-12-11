@@ -13,5 +13,7 @@ urlpatterns = [
     path('signup/', account_views.signup, name="signup"),
     path('favorite/',account_views.favorite, name="favorite"),
     path('favlist/',account_views.favlist, name="favlist"),
+
+    path('crawling_stream_all/',craw_views.fre_test, name="crawling_stream"),
 ]   
-frequnctly()
+# frequnctly()

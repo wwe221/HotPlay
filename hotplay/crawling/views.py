@@ -2,6 +2,7 @@ from django.shortcuts import render
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from .models import Stream
+from django.http import JsonResponse
 import requests
 import json
 import time
@@ -9,6 +10,13 @@ import random
 import threading
 
 # Create your views here.
+def fre_test(request):
+    print("....Crawling Stared....")
+    getYoutube()
+    getTwitch()
+    getAfreeca()   
+    print("....Crawling End....")
+    return JsonResponse({'status':200})
 
 def frequnctly():
     print("....Crawling Stared....")
@@ -24,7 +32,7 @@ def frequnctly():
     
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
-    path ='C:/chromedriver/chromedriver.exe'
+    path ='subfunction/static/chromedriver'
     options = webdriver.ChromeOptions()
     browser = webdriver.Chrome(path,chrome_options=options)
     browser.get(url)
@@ -150,7 +158,7 @@ def getTwitch():
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='C:/chromedriver/chromedriver.exe'
+    path ='subfunction/static/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')

@@ -43,38 +43,43 @@
 
 
 {% block content %}
-
-{% for fav in favs %}
-{% if fav.on_air == 1 %}
-<div onclick="location.href='{{fav.stream_url}}'"class="col-md-4" style="float:left">
-    <div class="card mb-4 shadow-sm">
-    <img style="height:10rem" src="{{fav.stream_thumbnail}}" class="card-img-top" alt="...">
-        <div class="card-body text-left">
-            <div style="height:3rem">
-                <p class="font-weight-bold mb-1 stream_thumbnail_title" data-toggle="tooltip" data-placement="top"
-                title="{{fav.title}}">
-                    {% if fav.tof == 1 %}
-                    {{fav.title|slice:":20"}}...
-                    {% else %}
-                    {{fav.title}}
-                    {% endif %}
-                </p>
-            </div>
-            <div style="height:2rem;">
-            <div class="justify-content-between align-items-center text-right">
-                <p>{{fav.channel_name}} / {{fav.stream_views}}</p>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% if len == 0%}
+<h1>즐겨 찾기한 방송이 없습니다</h1>
+<img src="{% static 'img/hing.jpg' %}" style="width:100%;">
 {% else %}
+    {% for fav in favs %}
+    {% if fav.on_air == 1 %}
+    <div class="col-md-4" style="float:left">
+        <a href="{% url 'show_one' fav.id %}">
+            <div class="card mb-4 shadow-sm">
+                <img style="height:10rem" src="{{fav.stream_thumbnail}}" class="card-img-top" alt="...">
+                <div class="card-body text-left">
+                    <div style="height:3rem">
+                        <p class="font-weight-bold mb-1 stream_thumbnail_title" data-toggle="tooltip" data-placement="top"
+                            title="{{fav.title}}">
+                            {% if fav.tof == 1 %}
+                            {{fav.title|slice:":20"}}...
+                            {% else %}
+                            {{fav.title}}
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div style="height:2rem;">
+                        <div class="justify-content-between align-items-center text-right">
+                            <p>{{fav.channel_name}} / {{fav.stream_views}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% else %}
     <div class="card mb-4 shadow-sm">
-        방송중이 아닙니다
         <div class="card-body text-left">
+            <p>방송중이 아닙니다</p>
             <div style="height:3rem">
                 <p class="font-weight-bold mb-1 stream_thumbnail_title" data-toggle="tooltip" data-placement="top"
-                title="{{fav.title}}">
+                    title="{{fav.title}}">
                     {% if fav.tof == 1 %}
                     {{fav.title|slice:":20"}}...
                     {% else %}
@@ -83,13 +88,14 @@
                 </p>
             </div>
             <div style="height:2rem;">
-            <div class="justify-content-between align-items-center text-right">
-                <p>{{fav.channel_name}} / {{fav.stream_views}}</p>
-            </div>
+                <div class="justify-content-between align-items-center text-right">
+                    <p>{{fav.channel_name}} / {{fav.stream_views}}</p>
+                </div>
             </div>
         </div>
     </div>
-{% endif %}
+    {% endif %}
 {% endfor %}
+{% endif %}
 
 {% endblock %}

@@ -45,7 +45,8 @@
 {% block content %}
 
 {% for live in lives %}
-<div onclick="location.href='{{live.stream_url}}'"class="col-md-4" style="float:left">
+<div class="col-md-4" style="float:left">
+     <a href="{% url 'show_one' live.id %}">
     <div class="card mb-4 shadow-sm">
     <img style="height:10rem" src="{{live.stream_thumbnail}}" class="card-img-top" alt="...">
         
@@ -68,6 +69,7 @@
             </div>
         </div>
     </div>
+    </a>
 </div>
 {% endfor %}
 {% endblock %}
