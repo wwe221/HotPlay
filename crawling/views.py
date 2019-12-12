@@ -74,7 +74,7 @@ def getYoutube():
             continue
         if vs[0:2] =='조회':            
             continue
-        cma = vs.split('명')
+        cma = vs.split('watching')
         a = 0
         for tp in cma[0].split(','):
             a *=1000
