@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Stream(models.Model):
-    id =  models.AutoField(auto_created=True,serialize=False, verbose_name='ID', primary_key=True)
+    # id =  models.AutoField(auto_created=True,serialize=False, verbose_name='ID', primary_key=True)
     channel_name = models.CharField(max_length=50)
     channel_url = models.CharField(max_length=100, null=True)
     channel_thumbnail = models.CharField(max_length=100 , null=True)
