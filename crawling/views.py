@@ -12,7 +12,7 @@ import threading
 # Create your views here.
 def fre_test(request):
     print("....Crawling Stared....")
-    # getYoutube()
+    getYoutube()
     getTwitch()
     getAfreeca()   
     print("....Crawling End....")
@@ -69,6 +69,7 @@ def getYoutube():
             vs = '0'
         vs = vs.split(' ')
         print(vs)
+        print(type(vs))
         print(" ----vs----")
         text_over_flag= 0
         if len(t) > 20:
