@@ -67,7 +67,9 @@ def getYoutube():
             vs = vs.text
         else:
             vs = '0'
-        text_over_flag= 0        
+        print(vs)
+        print(" ----vs----")
+        text_over_flag= 0    
         if len(t) > 20:
             text_over_flag= 1        
         if vs[0:2] =='시작':
