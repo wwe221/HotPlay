@@ -74,7 +74,7 @@ def getYoutube():
         text_over_flag= 0
         if len(t) > 20:
             text_over_flag= 1
-        if vs[1] =='시작':
+        if vs[1] =='Starts':
             continue
         if vs[1] =='views':
             continue
