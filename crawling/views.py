@@ -67,22 +67,19 @@ def getYoutube():
             vs = vs.text
         else:
             vs = '0'
-        vs = vs.split(' ')
-        print(vs)
-        print(type(vs))
-        print(" ----vs----")
+        vs = vs.split(' ')       
         text_over_flag= 0
         if len(t) > 20:
             text_over_flag= 1
         if vs[0] =='Starts:\xa0':
             continue
         if vs[1] =='views':
-            continue
+            continue        
         cma = vs[0]
         print(cma)
         print(" ----cma----")
         a = 0
-        for tp in cma[0].split(','):
+        for tp in cma.split(','):
             a *=1000           
             a += int(tp)
         v = a
