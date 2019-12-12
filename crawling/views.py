@@ -74,10 +74,12 @@ def getYoutube():
             continue
         if vs[0:2] =='조회':            
             continue
+        print(cma+" ----cma")
         cma = vs.split('watching')
         a = 0
         for tp in cma[0].split(','):
             a *=1000
+            print(tp+" ----tp")
             a += int(tp)
         v = a
         if Stream.objects.filter(channel_name=channel).exists():
