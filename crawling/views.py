@@ -72,7 +72,7 @@ def getYoutube():
             text_over_flag= 1        
         if vs[0:2] =='시작':
             continue
-        if vs[0:2] =='조회':            
+        if vs[0:2] =='views':            
             continue
         cma = vs.split('watching')        
         print(cma)
