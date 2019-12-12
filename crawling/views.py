@@ -45,7 +45,7 @@ def getbysele():
     #     print(tmp)
     return soup
 def getYoutube():
-    url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'    
+    url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
     data = requests.get(url).text
     html = BeautifulSoup(data,'html.parser')
     # lives = html.select('#items .style-scope .yt-horizontal-list-renderer')
@@ -75,7 +75,8 @@ def getYoutube():
         if vs[0:2] =='조회':            
             continue
         cma = vs.split('watching')
-        print(cma+" ----cma")
+        for ttt in cma
+            print(ttt + " ----cma")
         a = 0
         for tp in cma[0].split(','):
             a *=1000
