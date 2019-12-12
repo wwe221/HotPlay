@@ -171,7 +171,7 @@ def getAfreeca():
     options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
     options.binary_location = GOOGLE_CHROME_PATH
-    browser = webdriver.Chrome(path=path, chrome_options=options)
+    browser = webdriver.Chrome(path, chrome_options=options)
     browser.get(url)
     g = browser.find_elements_by_css_selector('.onAir')
     html = browser.page_source
