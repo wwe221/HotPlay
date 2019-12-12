@@ -12,7 +12,7 @@ import threading
 # Create your views here.
 def fre_test(request):
     print("....Crawling Stared....")
-    getYoutube()
+    # getYoutube()
     getTwitch()
     getAfreeca()   
     print("....Crawling End....")
@@ -70,9 +70,9 @@ def getYoutube():
         vs = vs.split(' ')
         print(vs)
         print(" ----vs----")
-        text_over_flag= 0    
+        text_over_flag= 0
         if len(t) > 20:
-            text_over_flag= 1        
+            text_over_flag= 1
         if vs[1] =='시작':
             continue
         if vs[1] =='views':            
