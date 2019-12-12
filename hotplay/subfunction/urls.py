@@ -16,4 +16,4 @@ urlpatterns = [
 
     path('crawling_stream_all/',craw_views.fre_test, name="crawling_stream"),
 ]   
-# frequnctly()
+frequnctly()

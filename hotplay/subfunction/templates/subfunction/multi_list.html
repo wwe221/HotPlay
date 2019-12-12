@@ -47,10 +47,10 @@
 <div class="col-lg-4 col-md-6">
     <div class="room-items">
         <div class="room-img set-bg">
-            <img src="{{live.stream_thumbnail}}" style="width:100%; height:100%;">
-            <a href="#" class="room-content">
+            <img src="{{live.stream_thumbnail}}" style="width:100%; height:100%;">             
+            <button data-id="{{live.id}}" class="btn-fav room-content">
                 <i class="far fa-heart"></i>
-            </a>
+            </button>
         </div>
         <div class="room-text">
             <div class="room-details">
@@ -68,3 +68,29 @@
 </div>
 {% endfor %}
 {% endblock %}
+{% block script %}
+<script>
+$(function(){
+    $(document).on('click','.btn-fav',function(){
+            var id = $(this).data('id')
+            var button = $(this)
+            console.log(button)
+            $.ajax({
+            url:'{% url "favorite" %}',
+            method:'POST',
+            data:{
+                csrfmiddlewaretoken:'{{csrf_token }}',
+                stream:id
+            },
+            success:function(data){
+                button.find('i').toggleClass(['fas','far'])
+                button.toggleClass('text-white')
+            },
+            error:function(data){
+            }
+            })
+        })
+    });
+})
+</script>
+{% endblock script %}

@@ -8,7 +8,14 @@
         </div>
         </a>
         <div class="discount_block  discount_block_inline" data-price-final="2112000">
-            <div class="discount_pct">{{tmp.title}}</div>
+            <div class="discount_pct stream_thumbnail_title" data-toggle="tooltip" data-placement="top"
+                        title="{{tmp.title}}">
+            {% if tmp.tof == 1 %}
+                {{tmp.title|slice:":20"}}...
+            {% else %}
+                {{tmp.title}}
+            {% endif %}            
+            </div>
             <div class="discount_prices">
                 <div class="discount_original_price"></div>
                 <div class="discount_final_price"><i class="fas fa-id-badge mt-1 mr-1"></i>{{tmp.channel_name}} / <i class="fas fa-users mt-1 mr-1"></i>{{tmp.stream_views}}</div>
