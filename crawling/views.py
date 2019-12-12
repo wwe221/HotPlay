@@ -163,7 +163,7 @@ def getTwitch():
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='subfunction/static/chromedriver'
+    path ='subfunction/static/chromedriver.exe'
     GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
     CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
     options = webdriver.ChromeOptions()
@@ -171,7 +171,7 @@ def getAfreeca():
     options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
     options.binary_location = GOOGLE_CHROME_PATH
-    browser = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=options)
+    browser = webdriver.Chrome(path=path, chrome_options=options)
     browser.get(url)
     g = browser.find_elements_by_css_selector('.onAir')
     html = browser.page_source
