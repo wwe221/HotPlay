@@ -163,7 +163,7 @@ def getTwitch():
     return
 def getAfreeca():
     url = "http://www.afreecatv.com/"
-    path ='subfunction/static/chromedriver.exe'
+    path ='subfunction/static/chromedriver'
     GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
     CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
     options = webdriver.ChromeOptions()
