@@ -129,9 +129,9 @@ STATIC_URL은 정적 파일이 실제 위치한 경로를 참조하며,
 이 실제 경로는 STATICFILES_DIRS 설정 항목에 지정된 경로가 아닌 STATIC_ROOT 설정 항목에 지정된 경로
 """
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'subfunction/static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'subfunction/static'),
+# )
 """
 STATIC_ROOT는 Django 프로젝트에서 사용하는 모든 정적 파일을 한 곳에 모아넣는 경로
 한 곳에 모으는 기능은 manage.py 파일의 collectstatic 명령어로 수행
