@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -118,7 +119,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 AUTH_USER_MODEL = 'accounts.user'
-STATIC_URL = '/static/'
+
 """
 STATIC_URL은 웹 페이지에서 사용할 정적 파일의 최상위 URL 경로
 이 최상위 경로 자체는 실제 파일이나 디렉터리가 아니며, URL로만 존재하는 단위
@@ -128,10 +129,15 @@ http://localhost:8000/static/~/~
 STATIC_URL은 정적 파일이 실제 위치한 경로를 참조하며, 
 이 실제 경로는 STATICFILES_DIRS 설정 항목에 지정된 경로가 아닌 STATIC_ROOT 설정 항목에 지정된 경로
 """
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'subfunction/static'),
-# )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 """
 STATIC_ROOT는 Django 프로젝트에서 사용하는 모든 정적 파일을 한 곳에 모아넣는 경로
 한 곳에 모으는 기능은 manage.py 파일의 collectstatic 명령어로 수행
