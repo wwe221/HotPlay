@@ -168,9 +168,9 @@ def getAfreeca():
     CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
-    chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.binary_location = GOOGLE_CHROME_PATH
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
+    options.binary_location = GOOGLE_CHROME_PATH
     browser = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
     browser.get(url)
     g = browser.find_elements_by_css_selector('.onAir')
