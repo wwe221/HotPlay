@@ -214,8 +214,11 @@
 
           }
         })
-    })
+    })    
   });
+  function offline(id){
+    $('#thumbnail-'+id).attr('src','{% static "img/offline2.jpg" %}');
+  }
   
 </script>
 {% endblock script %}
