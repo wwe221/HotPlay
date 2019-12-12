@@ -19,7 +19,7 @@
 }
 {% endblock stylesheet %}
 <!-- Begin Page Content -->
-{% block test %}
+{% block slide %}
 <div style="width:100%; background-color : ivory;">
 <div id="outsidebg" class=" bg-white">
   <!-- Page Heading -->
@@ -40,7 +40,7 @@
     </div>
   </div>
 </div>
-{% endblock test %}
+{% endblock slide %}
 {% block content %}
   <!-- Content Row (PlatForm Video Position) -->
   <div class="row">
@@ -55,13 +55,14 @@
         <div class="home_category_ctn">
           <div class="home_category_title_ctn" style="background: #6441a5">
             <!-- style="background: linear-gradient( 330deg, #96436a 0%, #e0744a 90% );" 나중에 그라데이션 추가-->
-            <div class="home_category_title"><b>Twitch<br>
-                TV</b><br>
+            <div class="home_category_title">
+              <span style="font-weight: bold; font-size: 1.25em; line-height:100px;">Twitch<br></span>
+              <span style="font-weight: bold; font-size: 1.25em; line-height:100px;">TV<br></span>
             </div>
           </div>
           <div class="home_category_games_ctn" id="twitch_main" style="background: rgba( 150, 67, 106, 0.3 );">
           </div>
-          <a class="see_more_link" href="https://store.steampowered.com/tags/en/Visual%20Novel/">See more...
+          <a class="see_more_link" href="{% url 'live:get_platform' 0 %}">See more...
           </a>
         </div>
         <!-- First PlatForm End -->
@@ -73,13 +74,14 @@
         <div class="home_category_ctn">
           <div class="home_category_title_ctn" style="background:#FF0000">
             <!-- linear-gradient( 330deg, #c98446 0%, #d9ab64 45%, #eed290 90% ); -->
-            <div class="home_category_title"><b>YOUTUBE<br>
-                KOREA</b><br>
+            <div class="home_category_title">
+              <span style="font-weight: bold; font-size: 1.25em; line-height:100px;">YOUTUBE<br></span>
+              <span style="font-weight: bold; font-size: 1.25em; line-height:100px;">LIVE<br></span>
             </div>
           </div>
           <div class="home_category_games_ctn" id="youtube_main" style="background: rgba( 201, 132, 70, 0.3 );">
           </div>
-          <a class="see_more_link" href="https://store.steampowered.com/tags/en/Hack%20and%20Slash/">See more...
+          <a class="see_more_link" href="{% url 'live:get_platform' 1 %}">See more...
           </a>
         </div>
         <!-- Second PlatForm End -->
@@ -92,13 +94,14 @@
           <div class="home_category_title_ctn" style="background: #1b4de8">
             <!--linear-gradient( 330deg, #c98446 0%, #d9ab64 45%, #eed290 90% );  -->
             <!-- 1b4de8 -->
-            <div class="home_category_title"><b>Afreeca<br>
-                TV</b><br>
+            <div class="home_category_title">
+              <span style="font-weight: bold; font-size: 1.25em; line-height:100px;">Afreeca<br></span>
+              <span style="font-weight: bold; font-size: 1.25em; line-height:100px;">TV<br></span>
             </div>
           </div>
           <div class="home_category_games_ctn" id="afreeca_main" style="background: rgba( 201, 132, 70, 0.3 );">
           </div>
-          <a class="see_more_link" href="https://store.steampowered.com/tags/en/Hack%20and%20Slash/">See more...
+          <a class="see_more_link" href="{% url 'live:get_platform' 2 %}">See more...
           </a>
         </div>
         <!-- Third PlatForm End -->
@@ -144,8 +147,7 @@
       }
     })
   }
-  $(function () {
-    
+  $(function () {    
     var be4 = 0
     var be4url =''
     $('#carouselExampleControls').on('slide.bs.carousel',
@@ -193,7 +195,27 @@
     get_thumb(0)
     get_thumb(1)
     get_thumb(2)
-    
+    $(document).on('click','.btn-fav',function(){
+        var id = $(this).data('id')
+        var button = $(this)
+        console.log(button)
+        $.ajax({
+          url:'{% url "favorite" %}',
+          method:'POST',
+          data:{
+            csrfmiddlewaretoken:'{{csrf_token }}',
+            stream:id
+          },
+          success:function(data){
+            button.find('i').toggleClass(['fas','far'])
+            button.toggleClass('text-white')
+          },
+          error:function(data){
+
+          }
+        })
+    })
   });
+  
 </script>
 {% endblock script %}

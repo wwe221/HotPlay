@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+왜 안돼
+{% block content %}
+
+<div id="detail-{{stream.id}}">
+    <div class="discount_block  discount_block_inline" data-price-final="2112000">
+        <div class="discount_pct">{{stream.title}}</div>
+        <div class="discount_prices">
+            <div class="discount_original_price"></div>
+            <div class="discount_final_price">{{stream.channel_name}} / {{stream.stream_views}}</div>
+            {% if user.is_authenticated  %}
+            {% if user in stream.fav_user.all %}
+            <span class="btn-fav text-white" data-id="{{stream.id}}"><i class="fas fa-star"></i></span>
+            {% else %}
+            <span class="btn-fav " data-id="{{stream.id}}"><i class="far fa-star"></i></span>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<iframe id="stream-{{stream.id}}" class="d-block w-100" width="640" height="360" src="{{stream.stream_embed_url}}"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+{% if stream.platform == 0 %}
+<iframe src="{{chat}}" frameborder="0" scrolling="no" height="500"
+    width="100%"></iframe>
+{% endif %}
+</div>
+{% endblock  %}

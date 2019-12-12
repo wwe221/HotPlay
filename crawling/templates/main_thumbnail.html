@@ -1,18 +1,26 @@
 <div class="salerow salerow3 multiline">
     {% for  tmp in lives %}
-    <a class="sale_capsule app_impression_tracked" data-ds-appid="787480"
-        href="{{tmp.stream_url}}" target="_blank">
+    <div class="sale_capsule app_impression_tracked" data-ds-appid="787480" >
+        <a href="{% url 'show_one' tmp.id %}">
         <div class="sale_capsule_image_ctn">
             <div class="sale_capsule_image_hover"></div><img class="sale_capsule_image autosize"
             src="{{tmp.stream_thumbnail}}">
         </div>
+        </a>
         <div class="discount_block  discount_block_inline" data-price-final="2112000">
             <div class="discount_pct">{{tmp.title}}</div>
             <div class="discount_prices">
                 <div class="discount_original_price"></div>
-                <div class="discount_final_price">{{tmp.channel_name}} / {{tmp.stream_views}}</div>
+                <div class="discount_final_price"><i class="fas fa-id-badge mt-1 mr-1"></i>{{tmp.channel_name}} / <i class="fas fa-users mt-1 mr-1"></i>{{tmp.stream_views}}</div>
+            {% if user.is_authenticated  %}
+                {% if user in tmp.fav_user.all %}
+                    <span class="btn-fav text-white" data-id="{{tmp.id}}"><i class="fas fa-star"></i></span>
+                {% else %}
+                    <span class="btn-fav " data-id="{{tmp.id}}"><i class="far fa-star"></i></span>
+                {% endif %}
+            {% endif %}
             </div>
         </div>
-    </a>
+    </div>
     {% endfor %}
 </div>

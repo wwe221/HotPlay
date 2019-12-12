@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block headstyle %}
+<link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
+<!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/apple-touch-icon.png"
+    sizes="180x180">
+<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+    type="image/png">
+<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+    type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/safari-pinned-tab.svg"
+    color="#563d7c">
+<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="https://getbootstrap.com/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+<!-- Custom styles for this template -->
+<link href="https://getbootstrap.com/docs/4.4/examples/album/album.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+{% if len == 0%}
+<h1>즐겨 찾기한 방송이 없습니다</h1>
+<img src="{% static 'img/hing.jpg' %}" style="width:100%;">
+{% else %}
+    {% for fav in favs %}
+    {% if fav.on_air == 1 %}
+    <div class="col-md-4" style="float:left">
+        <a href="{% url 'show_one' fav.id %}">
+            <div class="card mb-4 shadow-sm">
+                <img style="height:10rem" src="{{fav.stream_thumbnail}}" class="card-img-top" alt="...">
+                <div class="card-body text-left">
+                    <div style="height:3rem">
+                        <p class="font-weight-bold mb-1 stream_thumbnail_title" data-toggle="tooltip" data-placement="top"
+                            title="{{fav.title}}">
+                            {% if fav.tof == 1 %}
+                            {{fav.title|slice:":20"}}...
+                            {% else %}
+                            {{fav.title}}
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div style="height:2rem;">
+                        <div class="justify-content-between align-items-center text-right">
+                            <p>{{fav.channel_name}} / {{fav.stream_views}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% else %}
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body text-left">
+            <p>방송중이 아닙니다</p>
+            <div style="height:3rem">
+                <p class="font-weight-bold mb-1 stream_thumbnail_title" data-toggle="tooltip" data-placement="top"
+                    title="{{fav.title}}">
+                    {% if fav.tof == 1 %}
+                    {{fav.title|slice:":20"}}...
+                    {% else %}
+                    {{fav.title}}
+                    {% endif %}
+                </p>
+            </div>
+            <div style="height:2rem;">
+                <div class="justify-content-between align-items-center text-right">
+                    <p>{{fav.channel_name}} / {{fav.stream_views}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}
+{% endif %}
+
+{% endblock %}

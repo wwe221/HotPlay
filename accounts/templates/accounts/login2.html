@@ -1,0 +1,139 @@
+{% load bootstrap4 %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>HOT Play</title>
+  <!--Steam StyleSheet  -->
+  <link href="https://use.typekit.net/bmd7vlq.css" rel="stylesheet" type="text/css">
+  <link href="https://steamstore-a.akamaihd.net/public/shared/css/motiva_sans.css?v=FAK4O46_mOLB&amp;l=english"
+    rel="stylesheet" type="text/css">
+  <link href="https://steamstore-a.akamaihd.net/public/shared/css/shared_global.css?v=q0s1SprRKA7P&amp;l=english"
+    rel="stylesheet" type="text/css">
+  <link href="https://steamstore-a.akamaihd.net/public/shared/css/buttons.css?v=6uRURryOh96m&amp;l=english"
+    rel="stylesheet" type="text/css">
+  <link href="https://steamstore-a.akamaihd.net/public/css/v6/store.css?v=ZI_5VEPYpykL&amp;l=english" rel="stylesheet"
+    type="text/css">
+  <link href="https://steamstore-a.akamaihd.net/public/css/v6/home.css?v=Mr_QfRqGty0B&amp;l=english" rel="stylesheet"
+    type="text/css">
+  <link href="{% static 'css/autumn2019_sale.css' %}" rel="stylesheet">
+  <link href="https://steamstore-a.akamaihd.net/public/shared/css/shared_responsive.css?v=GXt0zg7hRLhk&amp;l=english"
+    rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Custom fonts for this template-->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
+  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-combined.min.css' %}">
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <style>
+   #video{
+     
+     min-width: 100%;
+     min-height: 100%;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     overflow: hidden;
+   }
+
+   
+   html{
+     font-family: NanumSquareRound;
+   }
+   
+  {% block headstyle %}
+  {% endblock %}
+  </style>
+</head>
+
+<body>
+<div id="video">
+  {% comment %} <div style= "position: fixed; z-index: -99; width: 100%; height: 100%"> {% endcomment %}
+    {% comment %} <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wjAW0Kw4fU4?autoplay=1&autohide=1&loop=1&controls=0&modestbranding=1&disablekb=1&fs=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endcomment %}
+        {% comment %} <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wjAW0Kw4fU4?rel=0;autoplay=1;amp;loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endcomment %}
+    <video style="position:absolute;" src="{% static 'video/hotplay_login.mp4' %}" autoplay="true" loop="loop" muted="muted" volumn="0"></video>
+
+  {% comment %} </div> {% endcomment %}
+  
+   <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                  </div>
+                  <form method="post">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <button class="btn btn-primary" style="width:100%;">LOGIN</button>
+                  </form>
+                  <div class="text-center">
+                    <a style="color:#FFFFFF;" href="{% url 'accounts:signup' %}"><button class="btn btn-primary" style="width:100%;">SIGN UP</button></a>
+                  </div>
+                  <hr>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+</body>
+
+</html>
