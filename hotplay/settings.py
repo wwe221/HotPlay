@@ -128,7 +128,7 @@ http://localhost:8000/static/~/~
 STATIC_URL은 정적 파일이 실제 위치한 경로를 참조하며, 
 이 실제 경로는 STATICFILES_DIRS 설정 항목에 지정된 경로가 아닌 STATIC_ROOT 설정 항목에 지정된 경로
 """
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'subfunction/static'),
 # )
