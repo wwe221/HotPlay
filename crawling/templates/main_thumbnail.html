@@ -4,7 +4,7 @@
         <a href="{% url 'show_one' tmp.id %}">
         <div class="sale_capsule_image_ctn">
             <div class="sale_capsule_image_hover"></div><img class="sale_capsule_image autosize"
-            src="{{tmp.stream_thumbnail}}" onerror="this.src='{% static 'img/offline.jpg' %}';">
+            src="{{tmp.stream_thumbnail}}" onerror="this.src='{% static "img/offline.jpg" %}'">
         </div>
         </a>
         <div class="discount_block  discount_block_inline" data-price-final="2112000">
