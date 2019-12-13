@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from .models import Stream
 from django.http import JsonResponse
+from django.db.models import Q
 import requests
 import json
 import time
@@ -247,7 +248,7 @@ def ret_stream(request,platform):
     }
     return render(request,'multi.html',context)
 def getslide(request):    
-    stream = Stream.objects.filter(on_air=1)
+    stream = Stream.objects.filter(Q(on_air=1) & Q(platform=1)|Q(platform=0))
     lives = list(stream)
     lives = random.sample(lives,10)
     context ={
