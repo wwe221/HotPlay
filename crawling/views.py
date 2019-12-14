@@ -248,7 +248,7 @@ def ret_stream(request,platform):
     }
     return render(request,'multi.html',context)
 def getslide(request):    
-    stream = Stream.objects.filter(Q(on_air=1) & Q(platform=1)|Q(platform=0))
+    stream = Stream.objects.filter(Q(platform=1,on_air=1)|Q(platform=0,on_air=1))
     lives = list(stream)
     lives = random.sample(lives,10)
     context ={
