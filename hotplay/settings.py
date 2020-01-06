@@ -147,3 +147,8 @@ Django가 모든 파일을 검사하여 정적 파일로 사용하는지 여부�
 STATIC_ROOT는 실 서비스 환경을 위한 설정 항목
 개발 과정에선 STATIC_ROOT에 지정한 경로가 실제로 존재하지 않거나 STATIC_ROOT 설정 항목 자체가 없어도 문제없이 동작
 """
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'j89959343@gmail.com'
+EMAIL_HOST_PASSWORD = '******'
+EMAIL_USE_TLS = True
