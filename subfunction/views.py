@@ -3,6 +3,7 @@ from django.http.response import HttpResponse
 import json
 from django.shortcuts import render
 from crawling.models import Stream
+from django.db.models import Q
 
 # Create your views here.
 def index(request):    
@@ -15,6 +16,14 @@ def getlives(request):
 
 def double_screen(request):
     return render(request, 'double_screen.html')
+
+def search(request):
+    keyword = request.GET["keyword"]
+    result = Stream.objects.filter(Q(channel_name__contains=keyword)| Q(title__contains=keyword))
+    context = {
+        'results':result
+    }
+    return render(request,'subfunction/search_result.html',context)
 
 def show_one_stream(request,stream_id):
     stream = Stream.objects.get(id=stream_id)

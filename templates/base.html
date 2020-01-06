@@ -18,13 +18,14 @@
         rel="stylesheet" type="text/css">
     <link href="https://steamstore-a.akamaihd.net/public/shared/css/buttons.css?v=6uRURryOh96m&amp;l=english"
         rel="stylesheet" type="text/css">
-    <link href="{% static 'css/store.css' %}" rel="stylesheet"
-    <link href="https://steamstore-a.akamaihd.net/public/css/v6/home.css?v=Mr_QfRqGty0B&amp;l=english" rel="stylesheet"
+    <link href="{% static 'css/store.css' %}" rel="stylesheet" <link
+        href="https://steamstore-a.akamaihd.net/public/css/v6/home.css?v=Mr_QfRqGty0B&amp;l=english" rel="stylesheet"
         type="text/css">
     <link href="{% static 'css/autumn2019_sale.css' %}" rel="stylesheet">
     <link href="https://steamstore-a.akamaihd.net/public/shared/css/shared_responsive.css?v=GXt0zg7hRLhk&amp;l=english"
         rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -34,9 +35,8 @@
 
     <!-- Custom styles for this template-->
     <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
-    
-    <link rel="stylesheet" type="text/css" media="screen"
-        href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-combined.min.css' %}">
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -58,94 +58,106 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
 
     {% block headstyle %}
     {% endblock %}
 </head>
 <style>
-@font-face {
-  font-family: neon;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-}
+    @font-face {
+        font-family: neon;
+        src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+    }
 
-.container {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
+    .container {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
 
-.neon {
-  font-family: neon;
-  color: #FB4264;
-  font-size: 9vw;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #F40A35;
-}
+    .neon {
+        font-family: neon;
+        color: #FB4264;
+        font-size: 9vw;
+        line-height: 9vw;
+        text-shadow: 0 0 3vw #F40A35;
+    }
 
-.flux {
-  font-family: neon;
-  color: #426DFB;
-  font-size: 9vw;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #2356FF;
-}
+    .flux {
+        font-family: neon;
+        color: #426DFB;
+        font-size: 9vw;
+        line-height: 9vw;
+        text-shadow: 0 0 3vw #2356FF;
+    }
 
-.neon {
-  animation: neon 1s ease infinite;
-  -moz-animation: neon 1s ease infinite;
-  -webkit-animation: neon 1s ease infinite;
-}
+    .neon {
+        animation: neon 1s ease infinite;
+        -moz-animation: neon 1s ease infinite;
+        -webkit-animation: neon 1s ease infinite;
+    }
 
-@keyframes neon {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
-    color: #806914;
-  }
-}
+    @keyframes neon {
 
-.flux {
-  animation: flux 2s linear infinite;
-  -moz-animation: flux 2s linear infinite;
-  -webkit-animation: flux 2s linear infinite;
-  -o-animation: flux 2s linear infinite;
-}
+        0%,
+        100% {
+            text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+            color: #FED128;
+        }
 
-@keyframes flux {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
-  }
-}
+        50% {
+            text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+            color: #806914;
+        }
+    }
+
+    .flux {
+        animation: flux 2s linear infinite;
+        -moz-animation: flux 2s linear infinite;
+        -webkit-animation: flux 2s linear infinite;
+        -o-animation: flux 2s linear infinite;
+    }
+
+    @keyframes flux {
+
+        0%,
+        100% {
+            text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+            color: #28D7FE;
+        }
+
+        50% {
+            text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+            color: #146C80;
+        }
+    }
 
 
 
 
-.test{
-        
+    .test {
+
         height: 50%;
         box-sizing: border-box;
 
     }
-{% block stylesheet %}
-{% endblock stylesheet %}
+
+        {
+        % block stylesheet %
+    }
+
+        {
+        % endblock stylesheet %
+    }
 </style>
+
 <body id="page-top" onload="showClock()">
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul id = "sidebarbg" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul id="sidebarbg" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'boot' %}">
@@ -154,8 +166,8 @@
                 </div>
                 <div class="sidebar-brand-text mx-3 neon">Hot Play</div>
             </a>
-    
-    
+
+
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -164,7 +176,7 @@
                 <a class="nav-link" href="/">
                     <!-- 나중에 urls.py 정리하고 링크를 index로 걸어주기 -->
                     <i class="fas fa-home"></i>
-                    <span>Main Page</span></a>                    
+                    <span>Main Page</span></a>
             </li>
 
             <!-- Divider -->
@@ -195,7 +207,7 @@
                     <i class="fas fa-tv"></i>
                     <span>Afreeca TV</span></a>
             </li>
-            
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -203,17 +215,17 @@
             <div class="sidebar-heading">
                 ETC
             </div>
-           <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="{% url 'double_screen' %}">
                     <i class="fas fa-columns"></i>
                     <span>Multi Screen</span></a>
             </li>
-            <!-- Nav Item - Pages Collapse Menu -->            
+            <!-- Nav Item - Pages Collapse Menu -->
 
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a id = "dark" class="nav-link" href="#">
+                <a id="dark" class="nav-link" href="#">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Dark Mode</span></a>
             </li>
@@ -225,7 +237,7 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle">
                 </button>
-            </div>            
+            </div>
         </ul>
         <!-- End of Sidebar -->
 
@@ -236,7 +248,8 @@
             <div id="content">
 
                 <!-- Topbar class-->
-                <nav id="topnavbg" class="navbar navbar-expand navbar-light bg-gradient-primary topbar static-top shadow">
+                <nav id="topnavbg"
+                    class="navbar navbar-expand navbar-light bg-gradient-primary topbar static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -244,31 +257,42 @@
                     </button>
 
                     <!-- Topbar Search -->
+
                     <div>
                         <button type="button" class="nav-link btn btn-primary" id="show_timer">
                             <i class="fas fa-stopwatch"></i>
                         </button>
                         <span id="set_clock_div" style="display: none;">
-                            <input type="number" min="0" max="23"placeholder="시간"class="stopwatch text-center " id="stop_hour">
-                            <input type="number" min="0" max="60"placeholder="분"class="stopwatch text-center" id="stop_min">
-                            <input type="number" min="0" max="60"placeholder="초"class="stopwatch text-center" id="stop_sec">
-                            <button type="button" id="stopwatch_select"  data-dismiss="modal" class="btn btn-primary">Save</button>                                            
+                            <input type="number" min="0" max="23" placeholder="시간" class="stopwatch text-center "
+                                id="stop_hour">
+                            <input type="number" min="0" max="60" placeholder="분" class="stopwatch text-center"
+                                id="stop_min">
+                            <input type="number" min="0" max="60" placeholder="초" class="stopwatch text-center"
+                                id="stop_sec">
+                            <button type="button" id="stopwatch_select" data-dismiss="modal"
+                                class="btn btn-primary">Save</button>
                             <span id="target_stopwatch"> 후</span>
                         </span>
                     </div>
-                  
+                    <div>
+                    <form action="{% url 'search' %}">
+                        <input type="text" name="keyword" placeholder="search">
+                        <input type="submit"  class="btn btn-primary" value="search">
+                    </form>
+                    </div>
                     {% comment %} <div>
                         <div id="datetimepicker3" class="input-append">
-                            <input data-format="hh:mm:ss" placeholder"시간 선택" id="target_time "type="text"></input>
+                            <input data-format="hh:mm:ss" placeholder"시간 선택" id="target_time " type="text"></input>
                             <span class="add-on">
                                 <i class="fas fa-calendar-alt"></i>
                             </span>
-                            <button type="button" id="time_select"  data-dismiss="modal" class="btn btn-primary">Save</button>
+                            <button type="button" id="time_select" data-dismiss="modal"
+                                class="btn btn-primary">Save</button>
                         </div>
                     </div> {% endcomment %}
-                    
+
                     <!-- Topbar Navbar -->
-                    <ul id = "topbarbg" class="navbar-nav ml-auto bg-gradient-primary">
+                    <ul id="topbarbg" class="navbar-nav ml-auto bg-gradient-primary">
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
@@ -292,21 +316,24 @@
                                 </form>
                             </div>
                         </li>
-                        
+
 
 
                         <li style="display: table; margin-left: auto; margin-right: auto; ">
-                            <span id="now_Clock" class="clock" style="font-size:20px !important;vertical-align:middle; text-align:center; color:#FFFFFF !important;  display:inline-block;"></span>
-                            {% comment %} <span id="target_Clock" class="clock" style="color:#FFFFFF; height:35px !important; display:block;"></span>   {% endcomment %}
+                            <span id="now_Clock" class="clock"
+                                style="font-size:20px !important;vertical-align:middle; text-align:center; color:#FFFFFF !important;  display:inline-block;"></span>
+                            {% comment %} <span id="target_Clock" class="clock"
+                                style="color:#FFFFFF; height:35px !important; display:block;"></span> {% endcomment %}
                         </li>
                         <li style="width:20px;">
                         </li>
                         <li style="display: table; margin-left: auto; margin-right: auto; ">
-                            <span id="target_Clock" class="clock" style="font-size:20px !important;vertical-align:middle; text-align:center; color:#FFFFFF !important;  display:inline-block;"></span>
+                            <span id="target_Clock" class="clock"
+                                style="font-size:20px !important;vertical-align:middle; text-align:center; color:#FFFFFF !important;  display:inline-block;"></span>
                         </li>
-                        <li class="nav-item dropdown no-arrow mx-1" >
-                           
-                        </li>                        
+                        <li class="nav-item dropdown no-arrow mx-1">
+
+                        </li>
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
@@ -432,25 +459,25 @@
                         <!-- Nav Item - User Information -->
                         {% if user.is_authenticated %}
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="{% url 'logout' %}" >
+                            <a class="nav-link dropdown-toggle" href="{% url 'logout' %}">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{user.nickname}}</span>
-                               <i class="far fa-user"></i>
+                                <i class="far fa-user"></i>
                             </a>
-                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="{% url 'favlist' %}" >
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Favorite</span>                               
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="{% url 'favlist' %}">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Favorite</span>
                             </a>
-                        </li
-                        {% else %}
-                         <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="{% url 'login' %}" >
-                            <span class="mr-2 d-none d-lg-inline text-gray-600" style="vertical-align:middle; text-align:center;">LOGIN</span>
+                        </li {% else %} <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="{% url 'login' %}">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600"
+                                style="vertical-align:middle; text-align:center;">LOGIN</span>
                         </a>
                         </li>
-                         <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="{% url 'signup' %}" >
-                            <span class="mr-2 d-none d-lg-inline text-gray-600" style="vertical-align:middle; text-align:center;">SIGNUP</span>
-                        </a>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="{% url 'signup' %}">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600"
+                                    style="vertical-align:middle; text-align:center;">SIGNUP</span>
+                            </a>
                         </li>
                         {% endif %}
                     </ul>
@@ -458,196 +485,207 @@
                 </nav>
                 <!-- End of Topbar -->
                 {% comment %} <div class="well"> {% endcomment %}
-  
-                {% block slide %}
-                {% endblock slide %}
-                <div class="row">
 
-                <div class = "container ">
-                {% block content %}
+                    {% block slide %}
+                    {% endblock slide %}
+                    <div class="row">
 
-                {% endblock %}
-                </div>
-                </div>
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white" id = "footerbg">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2019</span>
+                        <div class="container ">
+                            {% block content %}
+
+                            {% endblock %}
                         </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white" id="footerbg">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; Your Website 2019</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+
+                </div>
+                <!-- End of Content Wrapper -->
 
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Page Wrapper -->
 
-        </div>
-        <!-- End of Page Wrapper -->
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="login.html">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Bootstrap core JavaScript-->
+            <!-- Bootstrap core JavaScript-->
 
-        <!-- <script src="vendor/jquery/jquery.min.js"></script>
+            <!-- <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+            <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+            <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
 
-        <!-- Page level plugins -->
-        <script type="text/javascript"
-     src="{% static 'js/datetimepicker.min.js'%}">
-    </script>
-    <script type="text/javascript"
-     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-    </script>
-    <script type="text/javascript">
-    $(function() {
-        $(document).on('change','.stopwatch',function(){
-            var currentDate = new Date();
-            var now_hour = currentDate.getHours();
-            var target_hour = $('#stop_hour').val()
-            var now_min = currentDate.getMinutes();
-            var target_min = $('#stop_min').val()
-            var now_sec = currentDate.getSeconds();
-            var target_sec = $('#stop_sec').val()
-            var msg = target_hour+ "시간 "
-            msg += target_min+"분 "
-            msg += target_sec+"초 후"
-            $('#target_stopwatch').text(msg)
-        })
-        $(document).on('click', '#stopwatch_select', function(){
-            var currentDate = new Date();
-            var now_hour = currentDate.getHours();
-            var now_min = currentDate.getMinutes();
-            var now_sec = currentDate.getSeconds();
-            var target_hour = Number($('#stop_hour').val()) + Number(now_hour)
-            var target_min = Number($('#stop_min').val()) + Number(now_min)
-            var target_sec = Number($('#stop_sec').val())+ Number(now_sec)
-            target_min += parseInt(target_sec / 60)
-            target_sec = parseInt(target_sec % 60)
-            target_hour += parseInt(target_min / 60)
-            target_min = parseInt(target_min % 60)
-            target_hour = parseInt(target_hour % 24)
-            msg = target_hour+ "시간 "
-            msg += target_min+"분 "
-            msg += target_sec+"초"
-            var target = target_hour.toString()+":"
-            target +=target_min.toString()+":"
-            target +=target_sec.toString()
-            localStorage.setItem('target', target);
-            $('#set_clock_div').hide()
-        })
-        $('#datetimepicker3').datetimepicker({
-            pickDate: false
-        });
-        $('#time_select').click(function(){
-            var picker = $('#datetimepicker3').data('date');
-            var time = picker.split(':')
-            var target =''
-            time.forEach(function(tmp){
-                target+=tmp
-            })
-            localStorage.setItem('target', target);
-        })
-    });
-    </script>
-        <script>
-            var colormode = JSON.parse(localStorage.getItem('darkmode'))
-            function showClock(){
-                var currentDate = new Date();
-                var msg = currentDate.getHours()+ " : "
-                msg += currentDate.getMinutes()+ " : ";
-                msg += currentDate.getSeconds();
-                var now = '';
-                now += currentDate.getHours()
-                now += currentDate.getMinutes()
-                now += currentDate.getSeconds();
-                $('#now_Clock').text(msg);
-                setTimeout(showClock,1000);
-                var picker = (localStorage.getItem('target'));
-                $('#target_Clock').text(picker)
-                var time = picker.split(':')
-                var target =''
-                time.forEach(function(tmp){
-                    target+=tmp
-                })
-                if(target!= 0 && Number(target) < Number(now)){
-                    var frames = $(document).find('iframe')
-                    frames.attr('src','')
-                    localStorage.setItem('target', "00:00:00");
+            <!-- Page level plugins -->
+            <script type="text/javascript" src="{% static 'js/datetimepicker.min.js'%}">
+            </script>
+            <script type="text/javascript"
+                src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+            </script>
+            <script type="text/javascript">
+                $(function () {
+                    $(document).on('click','#search_btn',function(){
+                        var keyword= $('#search_key').val()
+                        console.log(keyword)
+                    });
+                    $(document).on('change', '.stopwatch', function () {
+                        var currentDate = new Date();
+                        var now_hour = currentDate.getHours();
+                        var target_hour = $('#stop_hour').val()
+                        var now_min = currentDate.getMinutes();
+                        var target_min = $('#stop_min').val()
+                        var now_sec = currentDate.getSeconds();
+                        var target_sec = $('#stop_sec').val()
+                        var msg = target_hour + "시간 "
+                        msg += target_min + "분 "
+                        msg += target_sec + "초 후"
+                        $('#target_stopwatch').text(msg)
+                    })
+                    $(document).on('click', '#stopwatch_select', function () {
+                        var currentDate = new Date();
+                        var now_hour = currentDate.getHours();
+                        var now_min = currentDate.getMinutes();
+                        var now_sec = currentDate.getSeconds();
+                        var target_hour = Number($('#stop_hour').val()) + Number(now_hour)
+                        var target_min = Number($('#stop_min').val()) + Number(now_min)
+                        var target_sec = Number($('#stop_sec').val()) + Number(now_sec)
+                        target_min += parseInt(target_sec / 60)
+                        target_sec = parseInt(target_sec % 60)
+                        target_hour += parseInt(target_min / 60)
+                        target_min = parseInt(target_min % 60)
+                        target_hour = parseInt(target_hour % 24)
+                        msg = target_hour + "시간 "
+                        msg += target_min + "분 "
+                        msg += target_sec + "초"
+                        var target = target_hour.toString() + ":"
+                        target += target_min.toString() + ":"
+                        target += target_sec.toString()
+                        localStorage.setItem('target', target);
+                        $('#set_clock_div').hide()
+                    })
+                    $('#datetimepicker3').datetimepicker({
+                        pickDate: false
+                    });
+                    $('#time_select').click(function () {
+                        var picker = $('#datetimepicker3').data('date');
+                        var time = picker.split(':')
+                        var target = ''
+                        time.forEach(function (tmp) {
+                            target += tmp
+                        })
+                        localStorage.setItem('target', target);
+                    })
+                });
+            </script>
+            <script>
+                var colormode = JSON.parse(localStorage.getItem('darkmode'))
+
+                function showClock() {
+                    var currentDate = new Date();
+                    var msg = currentDate.getHours() + " : "
+                    msg += currentDate.getMinutes() + " : ";
+                    msg += currentDate.getSeconds();
+                    var now = '';
+                    now += currentDate.getHours()
+                    now += currentDate.getMinutes()
+                    now += currentDate.getSeconds();
+                    $('#now_Clock').text(msg);
+                    setTimeout(showClock, 1000);
+                    var picker = (localStorage.getItem('target'));
+                    $('#target_Clock').text(picker)
+                    var time = picker.split(':')
+                    var target = ''
+                    time.forEach(function (tmp) {
+                        target += tmp
+                    })
+                    if (target != 0 && Number(target) < Number(now)) {
+                        var frames = $(document).find('iframe')
+                        frames.attr('src', '')
+                        localStorage.setItem('target', "00:00:00");
+                    }
+                } {
+                    % comment %
                 }
-            }
-            {% comment %} dark mode == true {% endcomment %}
-            if (colormode) {
-                $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-                $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-                $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-                $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
-                $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
-                $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
-            } else {
-                $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-                $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-                $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
-                $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
-                $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
-                $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
-            }
-            $(function(){
-                $('#dark').on('click', function(){
-                    var currentMode = JSON.parse(localStorage.getItem('darkmode'));
-                    localStorage.setItem('darkmode', !currentMode);
+                dark mode == true {
+                    % endcomment %
+                }
+                if (colormode) {
                     $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
                     $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
                     $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
                     $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
                     $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
                     $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
+                } else {
+                    $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                    $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                    $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                    $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
+                    $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
+                    $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
+                }
+                $(function () {
+                    $('#dark').on('click', function () {
+                        var currentMode = JSON.parse(localStorage.getItem('darkmode'));
+                        localStorage.setItem('darkmode', !currentMode);
+                        $('#sidebarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                        $('#topbarbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                        $('#topnavbg').toggleClass(['bg-gradient-primary', 'bg-gradient-primary2']);
+                        $('#outsidebg').toggleClass(['bg-white', 'bg-white2']);
+                        $('#contentbg').toggleClass(['home_categories_ctn', 'home_categories_ctn2']);
+                        $('#footerbg').toggleClass(['bg-white', 'bg-gradient-primary2']);
+                    })
                 })
-            })
-            $(function(){
-                $(document).on('click','.btn-fav',function(){
-                    var id = $(this).data('id')
-                });
-                $('#show_timer').on('click' , function(){
-                    $('#set_clock_div').show()
+                $(function () {
+                    $(document).on('click', '.btn-fav', function () {
+                        var id = $(this).data('id')
+                    });
+                    $('#show_timer').on('click', function () {
+                        $('#set_clock_div').show()
+                    })
+                    
                 })
-            })    
-        </script>
+                
+            </script>
 
-        {% block script %}
+            {% block script %}
 
-        {% endblock %}
+            {% endblock %}
 </body>
 
 </html>
