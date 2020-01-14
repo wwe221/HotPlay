@@ -4,16 +4,36 @@ from django.contrib.auth import login as  auth_login, logout as auth_logout
 from .forms import CustomAuthenticationForm, CustomUserCreateionForm
 from crawling.models import Stream
 from django.http.response import HttpResponse
+from django.contrib.sites.shortcuts import get_current_site
+from django.template.loader import render_to_string
+from django.utils.http import urlsafe_base64_encode,urlsafe_base64_decode
+from django.core.mail import EmailMessage
+from django.utils.encoding import force_bytes, force_text
+from .tokens import account_activation_token
 import json
+
 # Create your views here.
 
 def signup(request):
     if not request.user.is_authenticated:
         if request.method == "POST":
-            form = CustomUserCreateionForm(request.POST)        
+            form = CustomUserCreateionForm(request.POST)  
+            email = form['email']     
+            print(email)
+            form.is_active = False
+            #form.save()
             if form.is_valid() :
-                user = form.save()
-                auth_login(request , user)
+                # user = form.save()
+                #auth_login(request , form)
+                # urrent_site = get_current_site(request) 
+                # message = render_to_string('activation_email.html', {
+                #     'user': form,
+                #     'token': account_activation_token.make_token(form),
+                # })
+                mail_title = "계정 활성화 확인 이메일"
+                mail_to = request.POST["email"]
+                email = EmailMessage(mail_title,"후아", to=[mail_to])
+                email.send()
                 return redirect('boot')
         else:
             form = CustomUserCreateionForm()
