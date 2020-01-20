@@ -1,1 +1,8 @@
-{{user.username}}님, 아래 링크를 클릭하여 계정을 활성화하세요:
+{% autoescape off %}
+    안녕하세요
+
+    아래 링크를 클릭하면 회원가입 인증이 완료됩니다.
+    
+    {% comment %} 회원가입 링크 : http://{{ domain }}{% url 'accounts:activate' uid64=uid token=token %} {% endcomment %}
+
+{% endautoescape %}
