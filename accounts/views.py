@@ -3,7 +3,9 @@ from .forms import AuthenticationForm,UserCreationForm
 from django.contrib.auth import login as  auth_login, logout as auth_logout
 from .forms import CustomAuthenticationForm, CustomUserCreateionForm
 from django.contrib.auth.models import User
+
 from .models import User as User2
+
 from crawling.models import Stream
 from django.http.response import HttpResponse
 from django.contrib.sites.shortcuts import get_current_site
@@ -38,20 +40,22 @@ def signup(request):
         if request.method == "POST":
             form = CustomUserCreateionForm(request.POST)  
             email = form['email']     
-            print(form)
+
             if form.is_valid() :
                 user = form.save()
                 user.is_active = False
                 user.save()
-                # user = User.objects.all()
+
+                
                 # auth_login(request , form)
                 current_site = get_current_site(request) 
                 # localhost:8000
-                print(user.id)
-                message = render_to_string('accounts/activation_email.html',                         {  
+               
+                message = render_to_string('accounts/activation_email.html',                         {
+
                     'user': user,
                     'domain': current_site.domain,
-                    'uid': urlsafe_base64_encode(force_bytes(user.id)).encode().decode(),
+                    'uid': force_text(urlsafe_base64_encode(force_bytes(user.id))),
                     'token': account_activation_token.make_token(user),
                 })
                 mail_title = "계정 활성화 확인 이메일"
@@ -115,3 +119,21 @@ def favlist(request):
 
     }
     return render(request,'subfunction/favorite_list.html',context)
+
+def activate(request, uid64, token):
+
+    uid = force_text(urlsafe_base64_decode(uid64))
+    user = User2.objects.get(id=uid)
+    
+    
+    if user is not None and account_activation_token.check_token(user, token):
+        user.is_active = True
+        user.save()
+        #auth.login(request, user)
+        return HttpResponse(
+                        '<div style="font-size: 40px; width: 100%; height:100%; display:flex; text-align:center; '
+                        'justify-content: center; align-items: center;">'
+                        '인증완료</span>'
+                        '</div>')
+    else:
+        return HttpResponse('비정상적인 접근입니다.')

@@ -151,5 +151,6 @@ STATIC_ROOT는 실 서비스 환경을 위한 설정 항목
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'j89959343@gmail.com'
-EMAIL_HOST_PASSWORD = '************'
+
+EMAIL_HOST_PASSWORD = '******'
 EMAIL_USE_TLS = True
