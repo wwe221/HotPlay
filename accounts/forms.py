@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm , AuthenticationForm
 from .models import User
 from django.conf import settings
 class CustomUserCreateionForm(UserCreationForm):
-    nickname = forms.CharField(min_length=3)
+    nickname = forms.CharField(max_length=200)
     username = forms.CharField(min_length=4)
     email = forms.EmailField()
     class Meta(UserCreationForm.Meta):
