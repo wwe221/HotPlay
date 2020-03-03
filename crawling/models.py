@@ -14,3 +14,4 @@ class Stream(models.Model):
     tof = models.IntegerField(null=True)
     platform = models.IntegerField()
     on_air = models.IntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
