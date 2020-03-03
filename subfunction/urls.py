@@ -14,6 +14,6 @@ urlpatterns = [
     path('favorite/',account_views.favorite, name="favorite"),
     path('favlist/',account_views.favlist, name="favlist"),
 
-    path('crawling_stream_all/',craw_views.fre_test, name="crawling_stream"),
+    path('crawling_stream_all/',craw_views.frequnctly, name="crawling_stream"),
 ]   
 # frequnctly()

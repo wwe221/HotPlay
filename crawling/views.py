@@ -19,7 +19,7 @@ def fre_test(request):
     print("....Crawling End....")
     return JsonResponse({'status':200})
 
-def frequnctly():
+def frequnctly(requests):
     print("....Crawling Stared....")
     t1 = threading.Thread(target=getYoutube)
     t1.start()    
@@ -28,7 +28,6 @@ def frequnctly():
     t3 = threading.Thread(target=getAfreeca)
     t3.start()    
     print("....Crawling End....")
-    threading.Timer(600,frequnctly).start()
     return
     
 def getbysele():
