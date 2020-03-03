@@ -19,7 +19,7 @@ def fre_test(request):
     print("....Crawling End....")
     return JsonResponse({'status':200})
 
-def frequnctly(requests):
+def frequnctly(request):
     print("....Crawling Stared....")
     t1 = threading.Thread(target=getYoutube)
     t1.start()    
@@ -28,7 +28,7 @@ def frequnctly(requests):
     t3 = threading.Thread(target=getAfreeca)
     t3.start()    
     print("....Crawling End....")
-    return
+    return redirect('boot')
     
 def getbysele():
     url = 'https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig'
